@@ -1,89 +1,100 @@
-cat("\014") # Clears history
+#########################   GRIN - Disturbance    ##############################
+#########################    NMDS - Community     ##############################
+#########################  University of Florida  ##############################
+#########################       Gage LaPierre     ##############################
+#########################          2022           ##############################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
 
-list.of.packages <- c("ggplot2", "reshape2", "gridExtra", "tidyverse", "grid", "labdsv")
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+######################### Clears Environment & History  ########################
+
+rm(list=ls(all=TRUE))
+cat("\014") 
+
+#########################     Installs Packages   ##############################
+
+list.of.packages <- c("tidyverse", "vegan")
+new.packages <- list.of.packages[!(list.of.packages %in% 
+                                     installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-library(ggplot2)
-library(reshape2)
-library(gridExtra)
+##########################     Loads Packages     ##############################
+
 library(tidyverse)
 library(vegan)
-library(grid)
-library(labdsv)
 
-set.seed(2)
+##########################     Read in Data       ##############################
+GRIN = read.csv("Data/GRIN.csv")
+GRIN$Coverage = as.numeric(GRIN$Coverage)
 
-## Pre & Post-Treatment Till Community Data NMDS & Species Area Curves ##
-# Read in Pre & Post-Treatment Data and Filter to Remove "." and "NA" Values #
+str(GRIN)
+summary(GRIN)
 
-GRIN = read.csv("GRIN.csv")
+# Create species pivot table #
+Spp = dplyr::select(GRIN, ID, Species, Coverage) %>% matrify()
 
-# Create Species Pivot Table #
+# Create grouped treatment/environment table and summaries to fit species table#
+Treat = group_by(GRIN, ID, Treatment) %>% summarise()
 
-Spp = dplyr::select(GRIN, Sub.Plot, Species, Coverage) %>% matrify() 
-
-# Create Grouped Treatment/ Environment Table and Summaries to fit Species Table #
-
-Treat = group_by(GRIN, Sub.Plot, Treatment) %>% summarise()
-
-# Run Bray-Curtis Dissimilarity on Pre & Post Treatment Data #
-
+# Run Bray-Curtis dissimilarity on pre & post treatment data #
 vegdist_ = vegdist(Spp, method = "bray")
 
-# Use dissimilarities to create scree plot - attain the number of dimensions for NMDS with least stress #
-# Using function that produces a stress vs. dimensional plot #
+# Use dissimilarities to create scree plot - attain the number of dimensions #
+# for NMDS with least stress. Using function that produces a # 
+# stress vs. dimensional plot #
 
 NMDS.scree <- function(x) { # x is the name of the data frame variable
   plot(rep(1, 10), replicate(10, metaMDS(x, autotransform = F, k = 1)$stress), 
-       xlim = c(1, 10),ylim = c(0, 0.30), xlab = "# of Dimensions", ylab = "Stress", 
-       main = "NMDS Stress Plot")
+       xlim = c(1, 10),ylim = c(0, 0.30), xlab = "# of Dimensions", 
+       ylab = "Stress", main = "NMDS Stress Plot")
   for (i in 1:10) {
     points(rep(i + 1,10),replicate(10, metaMDS(x, autotransform = F, k = i + 1)$stress))
   }
 }
 
-NMDS.scree(vegdist_)
+#NMDS.scree(vegdist_) 
+# --> Based on scree plot two dimensions will be sufficient for NMDS #
 
-# - Based on scree plot two dimensions will be sufficient for NMDS #
-
-# Run MDS and plot stress using a Shepherd Plot #
-
+# MDS and plot stress using a Shepherd Plot #
 MDS = metaMDS(vegdist_, distance = "bray", trymax = 500, maxit = 999, k=3, 
               trace = F, autotransform = FALSE, wascores = TRUE)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
+# --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
-# Shepherd plots showcase a not perfect, but acceptable R^2 value #
+# Create a frame for functional groups alongside species for NMDS graph #
+species_groups = group_by(GRIN, Species, Group) %>% summarise()
 
-spp_scrs <- 
-  sppscores(MDS) <- Spp
+# Extract  species scores & convert to a data.frame for NMDS graph #
+species.scores <- as.data.frame(scores(MDS, display="species"))
 
-species.scores <- as.data.frame(scores(MDS, display="species"))  #Using the scores function from vegan to extract the species scores and convert to a data.frame
-species.scores$species <- rownames(species.scores)  # create a column of species, from the rownames of species.scores
-head(species.scores)  #look at the data
+# create a column of species, from the row names of species.scores  #                                                            )  
+species.scores$species <- rownames(species.scores)
+
+# create a column for functional groups for NMDS graph #                                                       )  
+species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-
 NMDS = data.frame(MDS = MDS$points, Treat = Treat$Treatment, 
-                      Plot = Treat$Sub.Plot)
+                      Plot = Treat$ID)
 
 # NMDS Graphs
-
-# Treatment #
-
-ThePlot = 
+NMDS_plot = 
   ggplot() +
-  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat)) +
-  geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat), linetype = "dashed", show.legend = T) +
+  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, shape = Treat)) +
+  geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species, color = Group)) +
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2,  type = Treat), 
+               linetype = "dashed", show.legend = T) +
   theme_bw() +
-  labs(x="MDS1", y="MDS2", title = "", color = "Treatment") +
+  labs(x="MDS1", y="MDS2", title = "") +
   theme(plot.title = element_text(hjust = 0.5)) 
-ThePlot
+NMDS_plot
 
-ggsave("ThePlot.png", width = 10, height = 7)
+ggsave("Figures/NMDS.png", width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
 # Pre-Treatment Data
@@ -92,12 +103,3 @@ ggsave("ThePlot.png", width = 10, height = 7)
 
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
-
-pcor <-
-  cor(Spp,
-      NMDS$points,
-      use = "complete.obs",
-      method = "pearson")
-write.csv(pcor, file = "pcor.csv")
-
-# Functional Groups
