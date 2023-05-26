@@ -27,7 +27,8 @@ library(tidyverse)
 library(vegan)
 
 ##########################     Read in Data       ##############################
-GRIN = read.csv("Data/GRIN.csv")
+
+GRIN = read.csv("Data/GRIN - 2022.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
 str(GRIN)
