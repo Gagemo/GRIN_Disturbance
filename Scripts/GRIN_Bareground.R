@@ -1,8 +1,8 @@
 #########################   GRIN - Disturbance    ##############################
-#########################    Functional Groups    ##############################
+#########################       Bareground        ##############################
 #########################  University of Florida  ##############################
 #########################       Gage LaPierre     ##############################
-#########################          2022           ##############################
+#########################          2021 - 2022    ##############################
 ################################################################################
 ################################################################################
 ################################################################################
@@ -27,7 +27,8 @@ library(tidyverse)
 library(vegan)
 library(agricolae)
 
-##########################     Read in Data       ##############################
+##########################     Read in 2022 Data       ##############################
+
 GRIN = read.csv("Data/GRIN - 2022.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
@@ -49,18 +50,61 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-## Coverage by Functional Group per Plot Boxplot ##
-Fun_Box = 
-  ggplot(GRIN, aes(x = Treatment, y = Coverage, fill = Group)) +
+bare = filter(GRIN, Group == "Bare")
+  
+## Bareground Coverage ##
+box = 
+  ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
   geom_boxplot() +
+  geom_jitter(color="black", alpha=0.7, width = 0.25) +
+  scale_fill_manual(values=c("#FF3399", "#66FF33", "#FFFF33", "#3366FF"))+
   theme_classic() 
-Fun_Box
+box
+
+ggsave("Figures/2022_Bareground.png", width = 10, height = 7)
 
 # Test for Significance #
-Fun_anova = aov(Coverage ~ Treatment + Group, data = GRIN)
-summary(Fun_anova)
-tukey.one.way<-TukeyHSD(Fun_anova)
+anova = aov(Coverage ~ Treatment, data = GRIN)
+summary(anova)
+tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
-HSD.stat = HSD.test(Fun_anova,trt = c("Treatment", "Group")) #HSD Tukey 
-HSD.stat
 
+##########################     Read in 2021 Data       #########################
+GRIN = read.csv("Data/GRIN - 2021.csv")
+GRIN$Coverage = as.numeric(GRIN$Coverage)
+GRIN$Plot = as.character(GRIN$Plot)
+
+str(GRIN)
+summary(GRIN)
+
+# Reclasifys coverage data (CV) from 1-10 scale to percent scale #
+GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(1, Coverage) ~ 0.1,
+  grepl(2, Coverage) ~ 0.5,
+  grepl(3, Coverage) ~ 1.5,
+  grepl(4, Coverage) ~ 3.5,
+  grepl(5, Coverage) ~ 7.5,
+  grepl(6, Coverage) ~ 17.5,
+  grepl(7, Coverage) ~ 37.5,
+  grepl(8, Coverage) ~ 62.5,
+  grepl(9, Coverage) ~ 85,
+  grepl(10, Coverage) ~ 97.5
+))
+
+bare = filter(GRIN, Group == "Bare")
+
+## Bareground Coverage ##
+
+box = 
+  ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
+  geom_boxplot() +
+  geom_jitter(color="black", alpha=0.7, width = 0.25) +
+  scale_fill_manual(values=c("#FF3399", "#66FF33", "#FFFF33", "#3366FF"))+
+  theme_classic() 
+box
+
+# Test for Significance #
+anova = aov(Coverage ~ Treatment, data = GRIN)
+summary(anova)
+tukey.one.way<-TukeyHSD(anova)
+tukey.one.way

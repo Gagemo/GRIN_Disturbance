@@ -28,8 +28,8 @@ library(vegan)
 library(labdsv)
 library(reshape)
 
-##########################     Read in Data       ##############################
-data = read.csv("Data/GRIN - 2021.csv")
+##########################     Read in 2022 Data       ##############################
+data = read.csv("Data/GRIN - 2022.csv")
 data$Coverage = as.numeric(data$Coverage)
 
 str(data)
@@ -57,6 +57,48 @@ SR_Box =
   ggplot(SR_treat, aes(x = Treatment, y = SR, color  = Treatment)) +
   geom_boxplot() +
   geom_jitter(color="black", alpha=0.7, width = 0.25) +
+  labs(x="", y = "Species Richness") +
+  theme_classic() +
+  theme(legend.position = "none")
+SR_Box
+ggsave("Figures/SR_Box_2022.png")
+
+
+SR_anova = aov(SR ~ Treatment, data = SR_treat)
+summary(SR_anova)
+tukey.one.way<-TukeyHSD(SR_anova)
+tukey.one.way
+
+##########################     Read in 2021 Data       ##############################
+data = read.csv("Data/GRIN - 2021.csv")
+data$Coverage = as.numeric(data$Coverage)
+
+str(data)
+summary(data)
+
+### Remove NA and empty Values ###
+data = filter(data, Coverage != "NA") %>%
+  filter(Coverage != "")
+
+# Create Species Pivot Table #
+Spp = dplyr::select(data, ID, Species, Coverage) %>% matrify() 
+Spp[] <- lapply(Spp, as.numeric)
+
+# Create Grouped Treatment/ Environment Table and Summaries to fit Species Table #
+Treat <- select(data, Treatment, ID)%>% group_by(ID, Treatment) %>% summarise()
+
+SR = specnumber(Spp)
+SR = as.data.frame(SR)
+
+## Merge species richness with habitat/plot data for ggplot ##
+SR_treat = cbind(Treat, SR) 
+
+## Species Richness Boxplot ##
+SR_Box = 
+  ggplot(SR_treat, aes(x = Treatment, y = SR, fill  = Treatment)) +
+  geom_boxplot() +
+  geom_jitter(color="black", alpha=0.7, width = 0.25)  +
+  scale_fill_manual(values=c("#FF3399", "#66FF33", "#FFFF33", "#3366FF"))+
   labs(x="", y = "Species Richness") +
   theme_classic() +
   theme(legend.position = "none")

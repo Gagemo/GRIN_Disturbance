@@ -28,7 +28,7 @@ library(vegan)
 library(agricolae)
 
 ##########################     Read in Data       ##############################
-GRIN = read.csv("Data/GRIN - 2021.csv")
+GRIN = read.csv("Data/GRIN - 2022.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
 
@@ -48,11 +48,6 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(9, Coverage) ~ 85,
   grepl(10, Coverage) ~ 97.5
 ))
-## Average Coverage by Functional Group ##
-
-boxplot(Coverage ~ Treatment*Group, data = GRIN)
-
-
 
 ## Coverage by Functional Group per Plot Boxplot ##
 Fun_Box = 
@@ -62,7 +57,7 @@ Fun_Box =
 Fun_Box
 
 # Test for Significance #
-Fun_anova = aov(Coverage ~ Treatment + Group, data = Fun)
+Fun_anova = aov(Coverage ~ Treatment + Group, data = GRIN)
 summary(Fun_anova)
 tukey.one.way<-TukeyHSD(Fun_anova)
 tukey.one.way
