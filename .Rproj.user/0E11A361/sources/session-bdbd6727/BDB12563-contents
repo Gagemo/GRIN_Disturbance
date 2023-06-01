@@ -54,9 +54,10 @@ SR_treat = cbind(Treat, SR)
 
 ## Species Richness Boxplot ##
 SR_Box = 
-  ggplot(SR_treat, aes(x = Treatment, y = SR, color  = Treatment)) +
+  ggplot(SR_treat, aes(x = Treatment, y = SR, fill  = Treatment)) +
   geom_boxplot() +
   geom_jitter(color="black", alpha=0.7, width = 0.25) +
+  scale_fill_manual(values=c("#FF3399", "#66FF33", "#FFFF33", "#3366FF"))+
   labs(x="", y = "Species Richness") +
   theme_classic() +
   theme(legend.position = "none")

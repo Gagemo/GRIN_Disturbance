@@ -32,6 +32,8 @@ library(labdsv)
 GRIN = read.csv("Data/GRIN - 2022.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
+GRIN = filter(GRIN, Coverage != 0)
+
 str(GRIN)
 summary(GRIN)
 
@@ -40,9 +42,6 @@ Spp = dplyr::select(GRIN, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
 Treat = group_by(GRIN, ID, Treatment) %>% summarise()
-
-# Run Bray-Curtis dissimilarity #
-#vegdist_ = vegdist(Spp, method = "bray")
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -61,8 +60,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot three dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=3, 
-              trace = F, autotransform = FALSE, wascores = TRUE)
+MDS = metaMDS(Spp, distance = "bray", k=3)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
@@ -88,12 +86,13 @@ NMDS = data.frame(MDS = MDS$points, Treat = Treat$Treatment,
 NMDS_plot = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat)) +
-  geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2,  type = Treat, color = Treat), 
+  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat), 
                linetype = "dashed", show.legend = T) +
   theme_bw() +
-  labs(x="MDS1", y="MDS2", title = "") +
-  theme(plot.title = element_text(hjust = 0.5)) 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2021 Community Data")
+  
 NMDS_plot
 
 ggsave("Figures/2022_NMDS.png", width = 10, height = 7)
@@ -167,22 +166,17 @@ NMDS = data.frame(MDS = MDS$points, Treat = Treat$Treatment,
 NMDS_plot = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat)) +
-  geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2,  
-                                type = Treat, color = Treat), 
+  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat), 
                linetype = "dashed", show.legend = T) +
   theme_bw() +
-  labs(x="MDS1", y="MDS2", title = "") +
-  theme(plot.title = element_text(hjust = 0.5)) 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2021 Community Data")
 NMDS_plot
 
 ggsave("Figures/2021_NMDS.png", width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
-# Pre-Treatment Data
-
-# Post-Treatment Data
-
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
 

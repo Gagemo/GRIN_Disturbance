@@ -103,6 +103,8 @@ box =
   theme_classic() 
 box
 
+ggsave("Figures/2021_Bareground.png", width = 10, height = 7)
+
 # Test for Significance #
 anova = aov(Coverage ~ Treatment, data = GRIN)
 summary(anova)
