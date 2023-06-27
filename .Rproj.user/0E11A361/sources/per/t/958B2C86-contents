@@ -42,7 +42,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 GRIN = filter(GRIN, Group != 'Bare')
 
 # Remove NA Values #
-na.omit(GRIN$Coverage)
+GRIN$Coverage = na.omit(GRIN$Coverage)
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(

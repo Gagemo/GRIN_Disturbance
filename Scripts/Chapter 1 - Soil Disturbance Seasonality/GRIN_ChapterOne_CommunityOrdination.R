@@ -37,6 +37,9 @@ GRIN = filter(GRIN, Coverage != 0)
 str(GRIN)
 summary(GRIN)
 
+# Remove Seeding Treatment # 
+GRIN = filter(GRIN, Treatment != 'S')
+
 # Create species pivot table #
 Spp = dplyr::select(GRIN, ID, Species, Coverage) %>% matrify()
 
@@ -80,7 +83,7 @@ species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treat = Treat$Treatment, 
-                      Plot = Treat$ID)
+                  Plot = Treat$ID)
 
 # NMDS Graphs
 NMDS_plot = 
@@ -91,16 +94,12 @@ NMDS_plot =
                linetype = "dashed", show.legend = T) +
   theme_bw() +
   theme(plot.title = element_text(hjust = 0.5)) +
-  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2021 Community Data")
-  
+  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2022 Community Data")
 NMDS_plot
 
-ggsave("Figures/2022_NMDS.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png", width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
-# Pre-Treatment Data
-
-# Post-Treatment Data
 
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
@@ -112,6 +111,9 @@ GRIN$Coverage = as.numeric(GRIN$Coverage)
 
 str(GRIN)
 summary(GRIN)
+
+# Remove Seeding Treatment # 
+GRIN = filter(GRIN, Treatment != 'S')
 
 # Create species pivot table #
 Spp = dplyr::select(GRIN, ID, Species, Coverage) %>% matrify()
@@ -174,7 +176,7 @@ NMDS_plot =
   labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2021 Community Data")
 NMDS_plot
 
-ggsave("Figures/2021_NMDS.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png", width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
