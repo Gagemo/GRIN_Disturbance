@@ -38,6 +38,12 @@ summary(GRIN)
 # Remove Seeding Treatment # 
 GRIN = filter(GRIN, Treatment != 'S')
 
+# Remove Bareground #
+GRIN = filter(GRIN, Group != 'Bare')
+
+# Remove NA Values #
+na.omit(GRIN$Coverage)
+
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(1, Coverage) ~ 0.1,
