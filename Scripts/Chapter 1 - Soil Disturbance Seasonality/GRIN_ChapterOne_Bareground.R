@@ -73,15 +73,18 @@ tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
 
 ##########################     Read in 2021 Data       #########################
-data = read.csv("Data/GRIN - 2021.csv")
-data$Coverage = as.numeric(data$Coverage)
-data$Plot = as.character(data$Plot)
+GRIN = read.csv("Data/GRIN - 2021.csv")
+GRIN$Coverage = as.numeric(GRIN$Coverage)
+GRIN$Plot = as.character(GRIN$Plot)
 
-str(data)
-summary(data)
+str(GRIN)
+summary(GRIN)
+
+# Remove Seeding Treatment # 
+GRIN = filter(GRIN, Treatment != 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
-data <- mutate(data, Coverage = case_when(
+GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,
@@ -102,11 +105,10 @@ box =
   ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
   geom_boxplot() +
   geom_jitter(color="black", alpha=0.7, width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#66FF33", "#FFFF33", "#3366FF"))+
+  scale_fill_manual(values=c("#FF3399", "#FFFF33", "#3366FF"))+
   theme_classic() 
 box
-
-ggsave("Figures/2021_Bareground.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_Bareground.png", width = 10, height = 7)
 
 # Test for Significance #
 anova = aov(Coverage ~ Treatment, data = GRIN)
