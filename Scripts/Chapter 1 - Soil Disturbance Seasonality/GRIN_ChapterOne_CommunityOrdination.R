@@ -1,8 +1,8 @@
 #########################   GRIN - Disturbance    ##############################
 #########################    NMDS - Community     ##############################
-#########################  University of Florida  ##############################
-#########################       Gage LaPierre     ##############################
-#########################       2021 - 2022       ##############################
+######################### University of Florida   ##############################
+#########################    Gage LaPierre        ##############################
+#########################     2021 - 2022         ##############################
 ################################################################################
 ################################################################################
 ################################################################################
@@ -82,19 +82,21 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Treat = Treat$Treatment, 
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
                   Plot = Treat$ID)
 
 # NMDS Graphs
 NMDS_plot = 
   ggplot() +
-  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat)) +
+  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
   #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat), 
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
                linetype = "dashed", show.legend = T) +
+  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2022 Community Data")
+  theme(plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16,  family="Roboto Mono")) +
+  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion - 2022 Community Data")
 NMDS_plot
 
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png", width = 10, height = 7)
@@ -161,19 +163,21 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Treat = Treat$Treatment, 
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
                   Plot = Treat$ID)
 
 # NMDS Graphs
 NMDS_plot = 
   ggplot() +
-  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat)) +
+  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
   #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treat), 
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
                linetype = "dashed", show.legend = T) +
+  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion from 2021 Community Data")
+  theme(plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16,  family="Roboto Mono")) +
+  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion - 2021 Community Data")
 NMDS_plot
 
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png", width = 10, height = 7)

@@ -2,7 +2,7 @@
 #########################    Functional Groups    ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
-#########################       2022 - 2023       ##############################
+#########################      2022 - 2023        ##############################
 ################################################################################
 ################################################################################
 ################################################################################
@@ -10,25 +10,25 @@
 ################################################################################
 
 ######################### Clears Environment & History  ########################
-
 rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-
-list.of.packages <- c("tidyverse", "vegan", "agricolae")
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 ##########################     Loads Packages     ##############################
-
 library(tidyverse)
 library(vegan)
 library(agricolae)
+library(extrafont)
+#font_import()
+#loadfonts(device = "win")
 
-##########################     Read in Data       ##############################
-GRIN = read.csv("Data/GRIN - 2022.csv")
+##########################     Read in 2022 Data       #########################
+GRIN = read.csv("Data/GRIN_FUN-2022.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
 
@@ -42,7 +42,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 GRIN = filter(GRIN, Group != 'Bare')
 
 # Remove NA Values #
-GRIN$Coverage = na.omit(GRIN$Coverage)
+#GRIN$Coverage = na.omit(GRIN$Coverage)
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
@@ -58,11 +58,35 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
+df = group_by(GRIN, Treatment, Life, Species) %>% 
+  dplyr::summarize(Avg=mean(Coverage))
+df = filter(df, Avg > 1)
+
+Veg_Bar = 
+  ggplot(df, aes(x = Treatment, y = Avg, fill = Species)) +
+  geom_bar(position = "stack", stat = "identity", color = "black") +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16,  family="Roboto Mono"))+
+  labs(x = "Treatment", y = "Coverage")
+Veg_Bar
+
 ## Coverage by Functional Group per Plot Boxplot ##
 Fun_Box = 
-  ggplot(GRIN, aes(x = Treatment, y = Coverage, fill = Group)) +
-  geom_boxplot() +
-  theme_classic() 
+  ggplot(GRIN) +
+  geom_boxplot(aes(x = Treatment, y = Coverage, fill = Group)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16,  family="Roboto Mono"))+
+  labs(x = "Treatment", y = "Coverage")
 Fun_Box
 
 # Test for Significance #
@@ -73,3 +97,35 @@ tukey.one.way
 HSD.stat = HSD.test(Fun_anova,trt = c("Treatment", "Group")) #HSD Tukey 
 HSD.stat
 
+
+################### Annual vs Perennial ##########################
+## Coverage by Life Group per Plot Box Plot ##
+Life_Box = 
+  ggplot(GRIN, aes(x = Treatment, y = Coverage, fill = Life)) +
+  geom_boxplot() +
+  theme_classic() 
+Life_Box
+
+# Test for Significance #
+Life_anova = aov(Coverage ~ Treatment + Life, data = GRIN)
+summary(Life_anova)
+tukey.one.way<-TukeyHSD(Life_anova)
+tukey.one.way
+HSD.stat = HSD.test(Life_anova,trt = c("Treatment", "Life")) #HSD Tukey 
+HSD.stat
+
+################### Raunkiaer ##########################
+## Coverage by Life Group per Plot Box Plot ##
+Raunkiaer_Box = 
+  ggplot(GRIN, aes(x = Treatment, y = Coverage, fill = Raunkier)) +
+  geom_boxplot() +
+  theme_classic() 
+Raunkiaer_Box
+
+# Test for Significance #
+Raunkiaer_anova = aov(Coverage ~ Treatment + Raunkier, data = GRIN)
+summary(Raunkiaer_anova)
+tukey.one.way<-TukeyHSD(Raunkiaer_anova)
+tukey.one.way
+HSD.stat = HSD.test(Raunkiaer_anova,trt = c("Treatment", "Raunkier")) #HSD Tukey 
+HSD.stat
