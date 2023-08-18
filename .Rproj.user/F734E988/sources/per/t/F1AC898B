@@ -1,0 +1,28 @@
+{
+    "id": "F1AC898B",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1692316283782.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "c8b4c93c1e024e0b95c2c9927d3f56d7",
+        "name": "Fun_Box",
+        "title": "Fun_Box",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 3202157032768,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1692316283782,
+    "read_only": false,
+    "read_only_alternatives": []
+}
