@@ -77,6 +77,7 @@ GRIN <- GRIN %>% mutate(Life = case_when(
     grepl("Dalea pinnata", Species) ~ "Perennial",
     grepl("Raphanus raphanistrum", Species) ~ "Annual",
     grepl("Urtica dioica", Species) ~ "Perennial",
+    grepl("Verbena spp.", Species) ~ "Annual",
     TRUE ~ ""
   ))
 
@@ -125,6 +126,7 @@ GRIN <- GRIN %>%
     grepl("Dalea pinnata", Species) ~ "Asteraceae",
     grepl("Raphanus raphanistrum", Species) ~ "Brassicaceae",
     grepl("Urtica dioica", Species) ~ "Urticaceae",
+    grepl("Verbena spp.", Species) ~ "	Verbanaceae",
     TRUE ~ ""
   ))
 
@@ -173,10 +175,11 @@ GRIN <- GRIN %>%
     grepl("Dalea pinnata", Species) ~ "Hemicryptophyte",
     grepl("Raphanus raphanistrum", Species) ~ "Therophyte",
     grepl("Urtica dioica", Species) ~ "Hemicryptophyte",
+    grepl("Verbena spp.", Species) ~ "	Therophyte",
     TRUE ~ ""
   ))
 
-write.csv(GRIN, "Data/GRIN_FUN-2022.csv", row.names=FALSE)
+write.csv(GRIN, "Data/GRIN_FUN-2021.csv", row.names=FALSE)
 
 ##########################     Read in 2022 Data       #########################
 GRIN = read.csv("Data/GRIN - 2022.csv")
@@ -228,6 +231,7 @@ GRIN <- GRIN %>% mutate(Life = case_when(
   grepl("Dalea pinnata", Species) ~ "Perennial",
   grepl("Raphanus raphanistrum", Species) ~ "Annual",
   grepl("Urtica dioica", Species) ~ "Perennial",
+  grepl("Verbena spp.", Species) ~ "Annual",
   TRUE ~ ""
 ))
 
@@ -276,6 +280,7 @@ GRIN <- GRIN %>%
     grepl("Dalea pinnata", Species) ~ "Asteraceae",
     grepl("Raphanus raphanistrum", Species) ~ "Brassicaceae",
     grepl("Urtica dioica", Species) ~ "Urticaceae",
+    grepl("Verbena spp.", Species) ~ "	Verbanaceae",
     TRUE ~ ""
   ))
 
@@ -324,8 +329,10 @@ GRIN <- GRIN %>%
     grepl("Dalea pinnata", Species) ~ "Hemicryptophyte",
     grepl("Raphanus raphanistrum", Species) ~ "Therophyte",
     grepl("Urtica dioica", Species) ~ "Hemicryptophyte",
+    grepl("Verbena spp.", Species) ~ "	Therophyte",
     TRUE ~ ""
   ))
 
-write.csv(GRIN, "Data/GRIN_FUN-2021.csv", row.names=FALSE)
+
+write.csv(GRIN, "Data/GRIN_FUN-2022.csv", row.names=FALSE)
 

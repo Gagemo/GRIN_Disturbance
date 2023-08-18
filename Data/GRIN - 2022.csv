@@ -1421,7 +1421,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,5,3-5-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,3,5,3-5-C,C,Forb,Urtica dioica,0
 2022-10-16,3,5,3-5-C,C,Forb,Polypremum procumbens,0
-2022-10-16,3,5,3-5-C,C,Forb,UK - Blue Vervain,7
+2022-10-16,3,5,3-5-C,C,Forb,Verbena spp.,7
 2022-10-16,3,5,3-5-C,C,Bare,Bareground,4
 2022-10-16,3,6,3-6-Tw,Tw,Grass,Andropogon ternarius,0
 2022-10-16,3,6,3-6-Tw,Tw,Grass,Andropogon virginicus,0
@@ -1461,7 +1461,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,6,3-6-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,3,6,3-6-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,3,6,3-6-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,3,6,3-6-Tw,Tw,Forb,UK - Blue Vervain,4
+2022-10-16,3,6,3-6-Tw,Tw,Forb,Verbena spp.,4
 2022-10-16,3,6,3-6-Tw,Tw,Bare,Bareground,4
 2022-10-16,3,7,3-7-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,3,7,3-7-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -1501,7 +1501,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,7,3-7-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,3,7,3-7-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,3,7,3-7-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,3,7,3-7-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,3,7,3-7-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,3,7,3-7-Tsp,Tsp,Bare,Bareground,8
 2022-10-16,3,8,3-8-S,S,Grass,Andropogon ternarius,1
 2022-10-16,3,8,3-8-S,S,Grass,Andropogon virginicus,0
@@ -1541,7 +1541,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,8,3-8-S,S,Grass,Sorghastrum secundum,8
 2022-10-16,3,8,3-8-S,S,Forb,Urtica dioica,0
 2022-10-16,3,8,3-8-S,S,Forb,Polypremum procumbens,0
-2022-10-16,3,8,3-8-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,3,8,3-8-S,S,Forb,Verbena spp.,0
 2022-10-16,3,8,3-8-S,S,Bare,Bareground,2
 2022-10-16,3,9,3-9-S,S,Grass,Andropogon ternarius,0
 2022-10-16,3,9,3-9-S,S,Grass,Andropogon virginicus,0
@@ -1581,7 +1581,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,9,3-9-S,S,Grass,Sorghastrum secundum,8
 2022-10-16,3,9,3-9-S,S,Forb,Urtica dioica,0
 2022-10-16,3,9,3-9-S,S,Forb,Polypremum procumbens,0
-2022-10-16,3,9,3-9-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,3,9,3-9-S,S,Forb,Verbena spp.,0
 2022-10-16,3,9,3-9-S,S,Bare,Bareground,1
 2022-10-16,3,10,3-10-Tw,Tw,Grass,Andropogon ternarius,0
 2022-10-16,3,10,3-10-Tw,Tw,Grass,Andropogon virginicus,0
@@ -1621,7 +1621,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,10,3-10-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,3,10,3-10-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,3,10,3-10-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,3,10,3-10-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,3,10,3-10-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,3,10,3-10-Tw,Tw,Bare,Bareground,1
 2022-10-16,3,11,3-11-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,3,11,3-11-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -1661,7 +1661,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,11,3-11-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,3,11,3-11-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,3,11,3-11-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,3,11,3-11-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,3,11,3-11-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,3,11,3-11-Tsp,Tsp,Bare,Bareground,6
 2022-10-16,3,12,3-12-C,C,Grass,Andropogon ternarius,0
 2022-10-16,3,12,3-12-C,C,Grass,Andropogon virginicus,0
@@ -1701,7 +1701,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,12,3-12-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,3,12,3-12-C,C,Forb,Urtica dioica,0
 2022-10-16,3,12,3-12-C,C,Forb,Polypremum procumbens,0
-2022-10-16,3,12,3-12-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,3,12,3-12-C,C,Forb,Verbena spp.,0
 2022-10-16,3,12,3-12-C,C,Bare,Bareground,4
 2022-10-16,3,13,3-13-Tw,Tw,Grass,Andropogon ternarius,0
 2022-10-16,3,13,3-13-Tw,Tw,Grass,Andropogon virginicus,0
@@ -1741,7 +1741,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,13,3-13-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,3,13,3-13-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,3,13,3-13-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,3,13,3-13-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,3,13,3-13-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,3,13,3-13-Tw,Tw,Bare,Bareground,5
 2022-10-16,3,14,3-14-S,S,Grass,Andropogon ternarius,0
 2022-10-16,3,14,3-14-S,S,Grass,Andropogon virginicus,0
@@ -1781,7 +1781,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,14,3-14-S,S,Grass,Sorghastrum secundum,2
 2022-10-16,3,14,3-14-S,S,Forb,Urtica dioica,0
 2022-10-16,3,14,3-14-S,S,Forb,Polypremum procumbens,0
-2022-10-16,3,14,3-14-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,3,14,3-14-S,S,Forb,Verbena spp.,0
 2022-10-16,3,14,3-14-S,S,Forb,Dalea pinnata,2
 2022-10-16,3,14,3-14-S,S,Bare,Bareground,3
 2022-10-16,3,15,3-15-C,C,Grass,Andropogon ternarius,0
@@ -1822,7 +1822,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,15,3-15-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,3,15,3-15-C,C,Forb,Urtica dioica,0
 2022-10-16,3,15,3-15-C,C,Forb,Polypremum procumbens,0
-2022-10-16,3,15,3-15-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,3,15,3-15-C,C,Forb,Verbena spp.,0
 2022-10-16,3,15,3-15-C,C,Bare,Bareground,3
 2022-10-16,3,16,3-16-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,3,16,3-16-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -1862,7 +1862,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,3,16,3-16-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,3,16,3-16-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,3,16,3-16-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,3,16,3-16-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,3,16,3-16-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,3,16,3-16-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,4,1,4-1-S,S,Grass,Andropogon ternarius,1
 2022-10-16,4,1,4-1-S,S,Grass,Andropogon virginicus,0
@@ -1902,7 +1902,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,1,4-1-S,S,Grass,Sorghastrum secundum,6
 2022-10-16,4,1,4-1-S,S,Forb,Urtica dioica,0
 2022-10-16,4,1,4-1-S,S,Forb,Polypremum procumbens,0
-2022-10-16,4,1,4-1-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,4,1,4-1-S,S,Forb,Verbena spp.,0
 2022-10-16,4,1,4-1-S,S,Bare,Bareground,1
 2022-10-16,4,2,4-2-Tw,Tw,Grass,Andropogon ternarius,0
 2022-10-16,4,2,4-2-Tw,Tw,Grass,Andropogon virginicus,0
@@ -1942,7 +1942,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,2,4-2-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,4,2,4-2-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,4,2,4-2-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,4,2,4-2-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,4,2,4-2-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,4,2,4-2-Tw,Tw,Bare,Bareground,3
 2022-10-16,4,3,4-3-C,C,Grass,Andropogon ternarius,0
 2022-10-16,4,3,4-3-C,C,Grass,Andropogon virginicus,0
@@ -1982,7 +1982,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,3,4-3-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,4,3,4-3-C,C,Forb,Urtica dioica,0
 2022-10-16,4,3,4-3-C,C,Forb,Polypremum procumbens,0
-2022-10-16,4,3,4-3-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,4,3,4-3-C,C,Forb,Verbena spp.,0
 2022-10-16,4,3,4-3-C,C,Bare,Bareground,3
 2022-10-16,4,4,4-4-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,4,4,4-4-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -2022,7 +2022,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,4,4-4-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,4,4,4-4-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,4,4,4-4-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,4,4,4-4-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,4,4,4-4-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,4,4,4-4-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,4,5,4-5-C,C,Grass,Andropogon ternarius,0
 2022-10-16,4,5,4-5-C,C,Grass,Andropogon virginicus,0
@@ -2062,7 +2062,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,5,4-5-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,4,5,4-5-C,C,Forb,Urtica dioica,0
 2022-10-16,4,5,4-5-C,C,Forb,Polypremum procumbens,0
-2022-10-16,4,5,4-5-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,4,5,4-5-C,C,Forb,Verbena spp.,0
 2022-10-16,4,5,4-5-C,C,Bare,Bareground,2
 2022-10-16,4,6,4-6-S,S,Grass,Andropogon ternarius,1
 2022-10-16,4,6,4-6-S,S,Grass,Andropogon virginicus,0
@@ -2102,7 +2102,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,6,4-6-S,S,Grass,Sorghastrum secundum,2
 2022-10-16,4,6,4-6-S,S,Forb,Urtica dioica,0
 2022-10-16,4,6,4-6-S,S,Forb,Polypremum procumbens,0
-2022-10-16,4,6,4-6-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,4,6,4-6-S,S,Forb,Verbena spp.,0
 2022-10-16,4,6,4-6-S,S,Bare,Bareground,1
 2022-10-16,4,7,4-7-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,4,7,4-7-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -2142,7 +2142,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,7,4-7-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,4,7,4-7-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,4,7,4-7-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,4,7,4-7-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,4,7,4-7-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,4,7,4-7-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,4,8,4-8-Tw,Tw,Grass,Andropogon ternarius,0
 2022-10-16,4,8,4-8-Tw,Tw,Grass,Andropogon virginicus,0
@@ -2182,7 +2182,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,8,4-8-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,4,8,4-8-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,4,8,4-8-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,4,8,4-8-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,4,8,4-8-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,4,8,4-8-Tw,Tw,Bare,Bareground,2
 2022-10-16,4,9,4-9-Tw,Tw,Grass,Andropogon ternarius,0
 2022-10-16,4,9,4-9-Tw,Tw,Grass,Andropogon virginicus,0
@@ -2222,7 +2222,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,9,4-9-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,4,9,4-9-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,4,9,4-9-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,4,9,4-9-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,4,9,4-9-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,4,9,4-9-Tw,Tw,Bare,Bareground,2
 2022-10-16,4,10,4-10-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,4,10,4-10-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -2262,7 +2262,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,10,4-10-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,4,10,4-10-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,4,10,4-10-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,4,10,4-10-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,4,10,4-10-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,4,10,4-10-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,4,11,4-11-S,S,Grass,Andropogon ternarius,2
 2022-10-16,4,11,4-11-S,S,Grass,Andropogon virginicus,0
@@ -2302,7 +2302,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,11,4-11-S,S,Grass,Sorghastrum secundum,6
 2022-10-16,4,11,4-11-S,S,Forb,Urtica dioica,0
 2022-10-16,4,11,4-11-S,S,Forb,Polypremum procumbens,0
-2022-10-16,4,11,4-11-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,4,11,4-11-S,S,Forb,Verbena spp.,0
 2022-10-16,4,11,4-11-S,S,Bare,Bareground,1
 2022-10-16,4,12,4-12-C,C,Grass,Andropogon ternarius,0
 2022-10-16,4,12,4-12-C,C,Grass,Andropogon virginicus,0
@@ -2342,7 +2342,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,12,4-12-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,4,12,4-12-C,C,Forb,Urtica dioica,0
 2022-10-16,4,12,4-12-C,C,Forb,Polypremum procumbens,0
-2022-10-16,4,12,4-12-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,4,12,4-12-C,C,Forb,Verbena spp.,0
 2022-10-16,4,12,4-12-C,C,Bare,Bareground,3
 2022-10-16,4,13,4-13-Tsp,Tsp,Grass,Andropogon ternarius,0
 2022-10-16,4,13,4-13-Tsp,Tsp,Grass,Andropogon virginicus,0
@@ -2382,7 +2382,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,13,4-13-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,4,13,4-13-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,4,13,4-13-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,4,13,4-13-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,4,13,4-13-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,4,13,4-13-Tsp,Tsp,Forb,Raphanus raphanistrum,4
 2022-10-16,4,13,4-13-Tsp,Tsp,Bare,Bareground,6
 2022-10-16,4,14,4-14-C,C,Grass,Andropogon ternarius,0
@@ -2423,7 +2423,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,14,4-14-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,4,14,4-14-C,C,Forb,Urtica dioica,0
 2022-10-16,4,14,4-14-C,C,Forb,Polypremum procumbens,0
-2022-10-16,4,14,4-14-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,4,14,4-14-C,C,Forb,Verbena spp.,0
 2022-10-16,4,14,4-14-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,4,14,4-14-C,C,Bare,Bareground,2
 2022-10-16,4,15,4-15-Tw,Tw,Grass,Andropogon ternarius,0
@@ -2464,7 +2464,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,15,4-15-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,4,15,4-15-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,4,15,4-15-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,4,15,4-15-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,4,15,4-15-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,4,15,4-15-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,4,15,4-15-Tw,Tw,Bare,Bareground,3
 2022-10-16,4,16,4-16-S,S,Grass,Andropogon ternarius,0
@@ -2505,7 +2505,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,4,16,4-16-S,S,Grass,Sorghastrum secundum,6
 2022-10-16,4,16,4-16-S,S,Forb,Urtica dioica,0
 2022-10-16,4,16,4-16-S,S,Forb,Polypremum procumbens,0
-2022-10-16,4,16,4-16-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,4,16,4-16-S,S,Forb,Verbena spp.,0
 2022-10-16,4,16,4-16-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,4,16,4-16-S,S,Bare,Bareground,1
 2022-10-16,5,1,5-1-C,C,Grass,Andropogon ternarius,0
@@ -2546,7 +2546,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,1,5-1-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,5,1,5-1-C,C,Forb,Urtica dioica,0
 2022-10-16,5,1,5-1-C,C,Forb,Polypremum procumbens,0
-2022-10-16,5,1,5-1-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,5,1,5-1-C,C,Forb,Verbena spp.,0
 2022-10-16,5,1,5-1-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,5,1,5-1-C,C,Bare,Bareground,3
 2022-10-16,5,2,5-2-Tw,Tw,Grass,Andropogon ternarius,0
@@ -2587,7 +2587,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,2,5-2-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,5,2,5-2-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,5,2,5-2-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,5,2,5-2-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,5,2,5-2-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,5,2,5-2-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,5,2,5-2-Tw,Tw,Bare,Bareground,3
 2022-10-16,5,3,5-3-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -2628,7 +2628,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,3,5-3-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,5,3,5-3-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,5,3,5-3-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,5,3,5-3-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,5,3,5-3-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,5,3,5-3-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,5,3,5-3-Tsp,Tsp,Bare,Bareground,2
 2022-10-16,5,4,5-4-S,S,Grass,Andropogon ternarius,1
@@ -2669,7 +2669,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,4,5-4-S,S,Grass,Sorghastrum secundum,8
 2022-10-16,5,4,5-4-S,S,Forb,Urtica dioica,0
 2022-10-16,5,4,5-4-S,S,Forb,Polypremum procumbens,0
-2022-10-16,5,4,5-4-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,5,4,5-4-S,S,Forb,Verbena spp.,0
 2022-10-16,5,4,5-4-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,5,4,5-4-S,S,Bare,Bareground,1
 2022-10-16,5,5,5-5-S,S,Grass,Andropogon ternarius,0
@@ -2710,7 +2710,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,5,5-5-S,S,Grass,Sorghastrum secundum,8
 2022-10-16,5,5,5-5-S,S,Forb,Urtica dioica,0
 2022-10-16,5,5,5-5-S,S,Forb,Polypremum procumbens,0
-2022-10-16,5,5,5-5-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,5,5,5-5-S,S,Forb,Verbena spp.,0
 2022-10-16,5,5,5-5-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,5,5,5-5-S,S,Bare,Bareground,1
 2022-10-16,5,6,5-6-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -2751,7 +2751,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,6,5-6-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,5,6,5-6-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,5,6,5-6-Tsp,Tsp,Forb,Polypremum procumbens,4
-2022-10-16,5,6,5-6-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,5,6,5-6-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,5,6,5-6-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,5,6,5-6-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,5,7,5-7-Tw,Tw,Grass,Andropogon ternarius,0
@@ -2792,7 +2792,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,7,5-7-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,5,7,5-7-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,5,7,5-7-Tw,Tw,Forb,Polypremum procumbens,1
-2022-10-16,5,7,5-7-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,5,7,5-7-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,5,7,5-7-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,5,7,5-7-Tw,Tw,Bare,Bareground,4
 2022-10-16,5,8,5-8-C,C,Grass,Andropogon ternarius,6
@@ -2833,7 +2833,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,8,5-8-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,5,8,5-8-C,C,Forb,Urtica dioica,0
 2022-10-16,5,8,5-8-C,C,Forb,Polypremum procumbens,2
-2022-10-16,5,8,5-8-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,5,8,5-8-C,C,Forb,Verbena spp.,0
 2022-10-16,5,8,5-8-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,5,8,5-8-C,C,Bare,Bareground,4
 2022-10-16,5,9,5-9-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -2874,7 +2874,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,9,5-9-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,5,9,5-9-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,5,9,5-9-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,5,9,5-9-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,5,9,5-9-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,5,9,5-9-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,5,9,5-9-Tsp,Tsp,Bare,Bareground,8
 2022-10-16,5,10,5-10-S,S,Grass,Andropogon ternarius,1
@@ -2915,7 +2915,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,10,5-10-S,S,Grass,Sorghastrum secundum,7
 2022-10-16,5,10,5-10-S,S,Forb,Urtica dioica,0
 2022-10-16,5,10,5-10-S,S,Forb,Polypremum procumbens,0
-2022-10-16,5,10,5-10-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,5,10,5-10-S,S,Forb,Verbena spp.,0
 2022-10-16,5,10,5-10-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,5,10,5-10-S,S,Bare,Bareground,3
 2022-10-16,5,11,5-11-C,C,Grass,Andropogon ternarius,0
@@ -2956,7 +2956,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,11,5-11-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,5,11,5-11-C,C,Forb,Urtica dioica,0
 2022-10-16,5,11,5-11-C,C,Forb,Polypremum procumbens,0
-2022-10-16,5,11,5-11-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,5,11,5-11-C,C,Forb,Verbena spp.,0
 2022-10-16,5,11,5-11-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,5,11,5-11-C,C,Bare,Bareground,6
 2022-10-16,5,12,5-12-Tw,Tw,Grass,Andropogon ternarius,0
@@ -2997,7 +2997,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,12,5-12-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,5,12,5-12-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,5,12,5-12-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,5,12,5-12-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,5,12,5-12-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,5,12,5-12-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,5,12,5-12-Tw,Tw,Bare,Bareground,4
 2022-10-16,5,13,5-13-Tw,Tw,Grass,Andropogon ternarius,0
@@ -3038,7 +3038,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,13,5-13-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,5,13,5-13-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,5,13,5-13-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,5,13,5-13-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,5,13,5-13-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,5,13,5-13-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,5,13,5-13-Tw,Tw,Bare,Bareground,1
 2022-10-16,5,14,5-14-C,C,Grass,Andropogon ternarius,0
@@ -3079,7 +3079,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,14,5-14-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,5,14,5-14-C,C,Forb,Urtica dioica,0
 2022-10-16,5,14,5-14-C,C,Forb,Polypremum procumbens,0
-2022-10-16,5,14,5-14-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,5,14,5-14-C,C,Forb,Verbena spp.,0
 2022-10-16,5,14,5-14-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,5,14,5-14-C,C,Bare,Bareground,2
 2022-10-16,5,15,5-15-S,S,Grass,Andropogon ternarius,1
@@ -3120,7 +3120,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,15,5-15-S,S,Grass,Sorghastrum secundum,7
 2022-10-16,5,15,5-15-S,S,Forb,Urtica dioica,0
 2022-10-16,5,15,5-15-S,S,Forb,Polypremum procumbens,0
-2022-10-16,5,15,5-15-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,5,15,5-15-S,S,Forb,Verbena spp.,0
 2022-10-16,5,15,5-15-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,5,15,5-15-S,S,Bare,Bareground,1
 2022-10-16,5,16,5-16-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -3161,7 +3161,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,5,16,5-16-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,5,16,5-16-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,5,16,5-16-Tsp,Tsp,Forb,Polypremum procumbens,4
-2022-10-16,5,16,5-16-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,5,16,5-16-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,5,16,5-16-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,5,16,5-16-Tsp,Tsp,Bare,Bareground,8
 2022-10-16,6,1,6-1-S,S,Grass,Andropogon ternarius,1
@@ -3202,7 +3202,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,1,6-1-S,S,Grass,Sorghastrum secundum,6
 2022-10-16,6,1,6-1-S,S,Forb,Urtica dioica,0
 2022-10-16,6,1,6-1-S,S,Forb,Polypremum procumbens,0
-2022-10-16,6,1,6-1-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,6,1,6-1-S,S,Forb,Verbena spp.,0
 2022-10-16,6,1,6-1-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,6,1,6-1-S,S,Bare,Bareground,1
 2022-10-16,6,2,6-2-Tw,Tw,Grass,Andropogon ternarius,0
@@ -3243,7 +3243,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,2,6-2-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,6,2,6-2-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,6,2,6-2-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,6,2,6-2-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,6,2,6-2-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,6,2,6-2-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,6,2,6-2-Tw,Tw,Bare,Bareground,2
 2022-10-16,6,3,6-3-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -3284,7 +3284,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,3,6-3-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,6,3,6-3-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,6,3,6-3-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,6,3,6-3-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,6,3,6-3-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,6,3,6-3-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,6,3,6-3-Tsp,Tsp,Bare,Bareground,5
 2022-10-16,6,4,6-4-C,C,Grass,Andropogon ternarius,0
@@ -3325,7 +3325,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,4,6-4-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,6,4,6-4-C,C,Forb,Urtica dioica,0
 2022-10-16,6,4,6-4-C,C,Forb,Polypremum procumbens,0
-2022-10-16,6,4,6-4-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,6,4,6-4-C,C,Forb,Verbena spp.,0
 2022-10-16,6,4,6-4-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,6,4,6-4-C,C,Bare,Bareground,2
 2022-10-16,6,5,6-5-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -3366,7 +3366,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,5,6-5-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,6,5,6-5-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,6,5,6-5-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,6,5,6-5-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,6,5,6-5-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,6,5,6-5-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,6,5,6-5-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,6,6,6-6-C,C,Grass,Andropogon ternarius,0
@@ -3407,7 +3407,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,6,6-6-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,6,6,6-6-C,C,Forb,Urtica dioica,0
 2022-10-16,6,6,6-6-C,C,Forb,Polypremum procumbens,0
-2022-10-16,6,6,6-6-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,6,6,6-6-C,C,Forb,Verbena spp.,0
 2022-10-16,6,6,6-6-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,6,6,6-6-C,C,Bare,Bareground,2
 2022-10-16,6,7,6-7-S,S,Grass,Andropogon ternarius,1
@@ -3448,7 +3448,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,7,6-7-S,S,Grass,Sorghastrum secundum,6
 2022-10-16,6,7,6-7-S,S,Forb,Urtica dioica,0
 2022-10-16,6,7,6-7-S,S,Forb,Polypremum procumbens,0
-2022-10-16,6,7,6-7-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,6,7,6-7-S,S,Forb,Verbena spp.,0
 2022-10-16,6,7,6-7-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,6,7,6-7-S,S,Bare,Bareground,1
 2022-10-16,6,8,6-8-Tw,Tw,Grass,Andropogon ternarius,0
@@ -3489,7 +3489,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,8,6-8-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,6,8,6-8-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,6,8,6-8-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,6,8,6-8-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,6,8,6-8-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,6,8,6-8-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,6,8,6-8-Tw,Tw,Bare,Bareground,7
 2022-10-16,6,9,6-9-Tw,Tw,Grass,Andropogon ternarius,0
@@ -3530,7 +3530,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,9,6-9-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,6,9,6-9-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,6,9,6-9-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,6,9,6-9-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,6,9,6-9-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,6,9,6-9-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,6,9,6-9-Tw,Tw,Bare,Bareground,1
 2022-10-16,6,10,6-10-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -3571,7 +3571,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,10,6-10-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,6,10,6-10-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,6,10,6-10-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,6,10,6-10-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,6,10,6-10-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,6,10,6-10-Tsp,Tsp,Forb,Raphanus raphanistrum,0
 2022-10-16,6,10,6-10-Tsp,Tsp,Bare,Bareground,7
 2022-10-16,6,11,6-11-C,C,Grass,Andropogon ternarius,0
@@ -3612,7 +3612,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,11,6-11-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,6,11,6-11-C,C,Forb,Urtica dioica,0
 2022-10-16,6,11,6-11-C,C,Forb,Polypremum procumbens,0
-2022-10-16,6,11,6-11-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,6,11,6-11-C,C,Forb,Verbena spp.,0
 2022-10-16,6,11,6-11-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,6,11,6-11-C,C,Bare,Bareground,3
 2022-10-16,6,12,6-12-S,S,Grass,Andropogon ternarius,1
@@ -3653,7 +3653,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,12,6-12-S,S,Grass,Sorghastrum secundum,5
 2022-10-16,6,12,6-12-S,S,Forb,Urtica dioica,0
 2022-10-16,6,12,6-12-S,S,Forb,Polypremum procumbens,0
-2022-10-16,6,12,6-12-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,6,12,6-12-S,S,Forb,Verbena spp.,0
 2022-10-16,6,12,6-12-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,6,12,6-12-S,S,Bare,Bareground,1
 2022-10-16,6,13,6-13-C,C,Grass,Andropogon ternarius,0
@@ -3694,7 +3694,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,13,6-13-C,C,Grass,Sorghastrum secundum,0
 2022-10-16,6,13,6-13-C,C,Forb,Urtica dioica,0
 2022-10-16,6,13,6-13-C,C,Forb,Polypremum procumbens,0
-2022-10-16,6,13,6-13-C,C,Forb,UK - Blue Vervain,0
+2022-10-16,6,13,6-13-C,C,Forb,Verbena spp.,0
 2022-10-16,6,13,6-13-C,C,Forb,Raphanus raphanistrum,0
 2022-10-16,6,13,6-13-C,C,Bare,Bareground,5
 2022-10-16,6,14,6-14-S,S,Grass,Andropogon ternarius,1
@@ -3735,7 +3735,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,14,6-14-S,S,Grass,Sorghastrum secundum,8
 2022-10-16,6,14,6-14-S,S,Forb,Urtica dioica,0
 2022-10-16,6,14,6-14-S,S,Forb,Polypremum procumbens,0
-2022-10-16,6,14,6-14-S,S,Forb,UK - Blue Vervain,0
+2022-10-16,6,14,6-14-S,S,Forb,Verbena spp.,0
 2022-10-16,6,14,6-14-S,S,Forb,Raphanus raphanistrum,0
 2022-10-16,6,14,6-14-S,S,Bare,Bareground,1
 2022-10-16,6,15,6-15-Tw,Tw,Grass,Andropogon ternarius,0
@@ -3776,7 +3776,7 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,15,6-15-Tw,Tw,Grass,Sorghastrum secundum,0
 2022-10-16,6,15,6-15-Tw,Tw,Forb,Urtica dioica,0
 2022-10-16,6,15,6-15-Tw,Tw,Forb,Polypremum procumbens,0
-2022-10-16,6,15,6-15-Tw,Tw,Forb,UK - Blue Vervain,0
+2022-10-16,6,15,6-15-Tw,Tw,Forb,Verbena spp.,0
 2022-10-16,6,15,6-15-Tw,Tw,Forb,Raphanus raphanistrum,0
 2022-10-16,6,15,6-15-Tw,Tw,Bare,Bareground,2
 2022-10-16,6,16,6-16-Tsp,Tsp,Grass,Andropogon ternarius,0
@@ -3817,6 +3817,6 @@ Date,Plot,Sub_Plot,ID,Treatment,Group,Species,Coverage
 2022-10-16,6,16,6-16-Tsp,Tsp,Grass,Sorghastrum secundum,0
 2022-10-16,6,16,6-16-Tsp,Tsp,Forb,Urtica dioica,0
 2022-10-16,6,16,6-16-Tsp,Tsp,Forb,Polypremum procumbens,0
-2022-10-16,6,16,6-16-Tsp,Tsp,Forb,UK - Blue Vervain,0
+2022-10-16,6,16,6-16-Tsp,Tsp,Forb,Verbena spp.,0
 2022-10-16,6,16,6-16-Tsp,Tsp,Bare,Bareground,4
 2022-10-16,6,16,6-16-Tsp,Tsp,Forb,Raphanus raphanistrum,0

@@ -16,17 +16,17 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 
-list.of.packages <- c("tidyverse", "vegan", "labdsv", "reshape")
+list.of.packages <- c( "showtext", "tidyverse", "vegan", "labdsv", "reshape")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 ##########################     Loads Packages     ##############################
-
 library(tidyverse)
 library(vegan)
 library(labdsv)
 library(reshape)
+library(showtext)
 
 ##########################     Read in 2022 Data       ##############################
 data = read.csv("Data/GRIN - 2022.csv")
@@ -58,15 +58,16 @@ SR_treat = cbind(Treat, SR)
 ## Species Richness Boxplot ##
 SR_Box = 
   ggplot(SR_treat, aes(x = Treatment, y = SR, fill  = Treatment)) +
-  geom_boxplot() +
-  geom_jitter(color="black", alpha=0.7, width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#FFFF33", "#3366FF"))+
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(aes(color = Treatment), alpha=0.7, width = 0.25, size = 3) +
+  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   labs(x="", y = "Species Richness") +
   theme_classic() +
-  theme(legend.position = "none")
+  theme(legend.position = "none", 
+        text=element_text(size=16, family="sans"))
 SR_Box
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/SR_Box_2022.png")
-
 
 SR_anova = aov(SR ~ Treatment, data = SR_treat)
 summary(SR_anova)
@@ -102,13 +103,17 @@ SR_treat = cbind(Treat, SR)
 
 ## Species Richness Boxplot ##
 SR_Box = 
-  ggplot(SR_treat, aes(x = Treatment, y = SR, fill = Treatment)) +
-  geom_boxplot() +
-  geom_jitter(color="black", alpha=0.7, width = 0.25)  +
-  scale_fill_manual(values=c("#FF3399", "#FFFF33", "#3366FF")) +
+  ggplot(SR_treat, aes(x = Treatment, y = SR, fill  = Treatment)) +
+  geom_boxplot(alpha = 0.5) +
+  geom_jitter(aes(color = Treatment), alpha=0.7, width = 0.25, size = 3) +
+  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  geom_signif(y_position = c(15,15), xmin = c(0.7,2), xmax = c(1.9,3),
+              annotation=c("***", "***"), tip_length = 0.01) +
   labs(x="", y = "Species Richness") +
   theme_classic() +
-  theme(legend.position = "none")
+  theme(legend.position = "none", 
+        text=element_text(size=16, family="sans"))
 SR_Box
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/SR_Box_2021.png")
 

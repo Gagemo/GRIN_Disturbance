@@ -16,16 +16,21 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 
-list.of.packages <- c("tidyverse", "vegan", "labdsv")
+list.of.packages <- c("tidyverse", "vegan", "labdsv", 
+                      "pairwise.adonis", "devtools")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-##########################     Loads Packages     ##############################
 
+##########################     Loads Packages     ##############################
 library(tidyverse)
 library(vegan)
 library(labdsv)
+library(devtools)
+
+install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
+library(pairwiseAdonis)
 
 ##########################     Read in 2022 Data       #########################
 
@@ -105,6 +110,10 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png", width =
 
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
+TukeyHSD(adon.results)
+
+pairwise.adonis<-pairwise.adonis2(Spp ~ Treatment, data = NMDS)
+pairwise.adonis
 
 ##########################     Read in 2021 Data       #########################
 
@@ -185,4 +194,5 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png", width =
 # Perform adonis to test the significance of treatments#
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
-
+pairwise.adonis<-pairwise.adonis2(Spp ~ Treatment, data = NMDS)
+pairwise.adonis

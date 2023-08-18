@@ -1,8 +1,8 @@
 #########################   GRIN - Disturbance    ##############################
-#########################    Seed Bank            ##############################
+#########################      Seed Bank          ##############################
 #########################  University of Florida  ##############################
-#########################       Gage LaPierre     ##############################
-#########################       2021 - 2022       ##############################
+#########################     Gage LaPierre       ##############################
+#########################      2021 - 2022        ##############################
 ################################################################################
 ################################################################################
 ################################################################################
@@ -16,17 +16,16 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 
-list.of.packages <- c("tidyverse", "vegan", "labdsv", "extrafont")
+list.of.packages <- c("extrafont", "tidyverse", "vegan", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 ##########################     Loads Packages     ##############################
-
+library(extrafont)
 library(tidyverse)
 library(vegan)
 library(labdsv)
-library(extrafont)
 #font_import()
 #loadfonts(device = "win")
 
