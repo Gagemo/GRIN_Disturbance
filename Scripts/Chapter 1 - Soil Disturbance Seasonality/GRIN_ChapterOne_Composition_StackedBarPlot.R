@@ -70,7 +70,6 @@ Veg_Bar =
             family = "Roboto Mono") +
   scale_fill_manual(breaks=c('Bare', 'Forb', 'Grass', 'Sedge'),
                     values = c("#993300", "#660066", "#339966", "#E7B800"), 
-                    drop = FALSE, 
                     labels=c("Bare", "Forb", "Grass", "Sedge")) +
   geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),
               annotation=c("***", "***"), tip_length = 0.0001) +
@@ -129,7 +128,7 @@ Veg_Bar =
   ggplot(df, aes(x = Treatment, y = Avg, fill = Group)) +
   geom_bar(position = "fill", stat = "identity", color = "black", alpha = 0.5) +
   geom_text(aes(label = Species), stat = "identity", 
-            size = 4, position=position_fill(0.5), colour = "black",
+            size = 5, position=position_fill(0.5), colour = "black",
             family = "Roboto Mono") +
   scale_fill_manual(values = c("#993300", "#660066", "#339966", "#E7B800")) +
   geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),

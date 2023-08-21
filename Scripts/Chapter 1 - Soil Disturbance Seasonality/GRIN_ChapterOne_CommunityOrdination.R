@@ -60,7 +60,8 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
        xlim = c(1, 10),ylim = c(0, 0.30), xlab = "# of Dimensions", 
        ylab = "Stress", main = "NMDS Stress Plot")
   for (i in 1:10) {
-    points(rep(i + 1,10),replicate(10, metaMDS(x, autotransform = F, k = i + 1)$stress))
+    points(rep(i + 1,10),
+           replicate(10, metaMDS(x, autotransform = F, k = i + 1)$stress))
   }
 }
 
@@ -78,7 +79,8 @@ goodness(MDS)
 species_groups = group_by(GRIN, Species, Group) %>% summarise()
 
 # Extract  species scores & convert to a data.frame for NMDS graph #
-species.scores <- as.data.frame(vegan:::scores.metaMDS(MDS, display = c("species")))
+species.scores <- 
+  as.data.frame(vegan:::scores.metaMDS(MDS, display = c("species")))
 
 # create a column of species, from the row names of species.scores  #                                                            )  
 species.scores$species <- rownames(species.scores)
@@ -96,15 +98,16 @@ NMDS_plot =
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
   #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
-               linetype = "dashed", show.legend = T) +
+               linetype = "solid", show.legend = T) +
   scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
   theme(plot.title = element_text(hjust = 0.5),
         text=element_text(size=16,  family="Roboto Mono")) +
-  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion - 2022 Community Data")
+  labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png", 
+       width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
 
@@ -144,7 +147,8 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
        xlim = c(1, 10),ylim = c(0, 0.30), xlab = "# of Dimensions", 
        ylab = "Stress", main = "NMDS Stress Plot")
   for (i in 1:10) {
-    points(rep(i + 1,10),replicate(10, metaMDS(x, autotransform = F, k = i + 1)$stress))
+    points(rep(i + 1,10),
+           replicate(10, metaMDS(x, autotransform = F, k = i + 1)$stress))
   }
 }
 
@@ -163,7 +167,8 @@ goodness(MDS)
 species_groups = group_by(GRIN, Species, Group) %>% summarise()
 
 # Extract  species scores & convert to a data.frame for NMDS graph #
-species.scores <- as.data.frame(vegan:::scores.metaMDS(MDS, display = c("species")))
+species.scores <- 
+  as.data.frame(vegan:::scores.metaMDS(MDS, display = c("species")))
 
 # create a column of species, from the row names of species.scores  #                                                            )  
 species.scores$species <- rownames(species.scores)
@@ -179,17 +184,18 @@ NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,
 NMDS_plot = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
-  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
+  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species))+
   stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
-               linetype = "dashed", show.legend = T) +
+               linetype = "solid", show.legend = T) +
   scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
   theme(plot.title = element_text(hjust = 0.5),
         text=element_text(size=16,  family="Roboto Mono")) +
-  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion - 2021 Community Data")
+  labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png", 
+       width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)

@@ -3,9 +3,9 @@
     "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Composition_StackedBarPlot.R",
     "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Composition_StackedBarPlot.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "4095587659",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1692647437030.0,
     "source_on_save": false,
     "relative_order": 3,
@@ -17,11 +17,11 @@
         "scrollLine": "60"
     },
     "folds": "",
-    "lastKnownWriteTime": 1692631813,
+    "lastKnownWriteTime": 1692648239,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1692647590925,
+    "last_content_update": 1692648239817,
     "read_only": false,
     "read_only_alternatives": []
 }
