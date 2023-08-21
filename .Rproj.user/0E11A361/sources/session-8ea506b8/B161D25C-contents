@@ -175,7 +175,7 @@ GRIN <- GRIN %>%
     grepl("Dalea pinnata", Species) ~ "Hemicryptophyte",
     grepl("Raphanus raphanistrum", Species) ~ "Therophyte",
     grepl("Urtica dioica", Species) ~ "Hemicryptophyte",
-    grepl("Verbena spp.", Species) ~ "Therophyte",
+    grepl("Verbena spp.", Species) ~ "	Therophyte",
     TRUE ~ ""
   ))
 
@@ -329,7 +329,7 @@ GRIN <- GRIN %>%
     grepl("Dalea pinnata", Species) ~ "Hemicryptophyte",
     grepl("Raphanus raphanistrum", Species) ~ "Therophyte",
     grepl("Urtica dioica", Species) ~ "Hemicryptophyte",
-    grepl("Verbena spp.", Species) ~ "Therophyte",
+    grepl("Verbena spp.", Species) ~ "	Therophyte",
     TRUE ~ ""
   ))
 

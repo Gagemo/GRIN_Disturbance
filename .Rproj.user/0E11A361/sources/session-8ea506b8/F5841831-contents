@@ -1,8 +1,8 @@
 #########################   GRIN - Disturbance    ##############################
 #########################       Bareground        ##############################
 #########################  University of Florida  ##############################
-#########################       Gage LaPierre     ##############################
-#########################          2021 - 2022    ##############################
+#########################     Gage LaPierre       ##############################
+#########################      2021 - 2022        ##############################
 ################################################################################
 ################################################################################
 ################################################################################
@@ -58,9 +58,16 @@ bare = filter(data, Group == "Bare")
 ## Bareground Coverage ##
 box = 
   ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
-  geom_boxplot() +
-  geom_jitter(color="black", alpha=0.7, width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#FFFF33", "#3366FF"))+
+  geom_boxplot(alpha = 0.8) +
+  geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
+  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16,  family = "Roboto Mono"))+
   theme_classic() 
 box
 
