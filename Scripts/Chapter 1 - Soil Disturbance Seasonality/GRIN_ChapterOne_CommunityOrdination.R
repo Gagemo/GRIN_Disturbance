@@ -95,14 +95,25 @@ NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,
 # NMDS Graphs
 NMDS_plot = 
   ggplot() +
-  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
+  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
+             alpha = 0.7, size = 3, shape = 21) +
   #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
                linetype = "solid", show.legend = T) +
   scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
-  theme_bw() +
-  theme(plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family="Roboto Mono")) +
+  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        legend.text=element_text(face = "bold", color = "black")) +
   labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 
@@ -183,14 +194,25 @@ NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,
 # NMDS Graphs
 NMDS_plot = 
   ggplot() +
-  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
-  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species))+
+  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
+             alpha = 0.7, size = 3, shape = 21) +
+  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
                linetype = "solid", show.legend = T) +
   scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
-  theme_bw() +
-  theme(plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family="Roboto Mono")) +
+  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        legend.text=element_text(face = "bold", color = "black")) +
   labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 

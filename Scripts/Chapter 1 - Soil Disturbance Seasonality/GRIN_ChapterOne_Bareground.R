@@ -13,7 +13,7 @@
 
 rm(list=ls(all=TRUE))
 cat("\014") 
-
+#
 #########################     Installs Packages   ##############################
 
 list.of.packages <- c("tidyverse", "vegan", "agricolae")
@@ -27,7 +27,7 @@ library(tidyverse)
 library(vegan)
 library(agricolae)
 
-##########################     Read in 2022 Data       ##############################
+##########################     Read in 2022 Data  ##############################
 
 data = read.csv("Data/GRIN - 2022.csv")
 data$Coverage = as.numeric(data$Coverage)
@@ -71,7 +71,8 @@ box =
   theme_classic() 
 box
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_Bareground.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_Bareground.png", 
+       width = 10, height = 7)
 
 # Test for Significance #
 anova = aov(Coverage ~ Treatment, data = data)
@@ -112,10 +113,11 @@ box =
   ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
   geom_boxplot() +
   geom_jitter(color="black", alpha=0.7, width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#FFFF33", "#3366FF"))+
+  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_classic() 
 box
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_Bareground.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_Bareground.png", 
+       width = 10, height = 7)
 
 # Test for Significance #
 anova = aov(Coverage ~ Treatment, data = GRIN)

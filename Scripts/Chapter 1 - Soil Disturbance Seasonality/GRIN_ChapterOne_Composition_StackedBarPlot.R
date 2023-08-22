@@ -66,21 +66,25 @@ Veg_Bar =
   ggplot(df, aes(x = Treatment, y = Avg, fill = Group)) +
   geom_bar(position = "fill", stat = "identity", color = "black", alpha = 0.5) +
   geom_text(aes(label = Species), stat = "identity", 
-            size = 5, position=position_fill(0.5), colour = "black",
-            family = "Roboto Mono") +
+            size = 5.25, position=position_fill(0.5), colour = "black") +
   scale_fill_manual(breaks=c('Bare', 'Forb', 'Grass', 'Sedge'),
                     values = c("#993300", "#660066", "#339966", "#E7B800"), 
                     labels=c("Bare", "Forb", "Grass", "Sedge")) +
   geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("***", "***"), tip_length = 0.0001) +
+              annotation=c("***", "***"), 
+              size = 0.8, textsize = 5, tip_length = 0.0001) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family = "Roboto Mono"))+
-  labs(x = "Treatment", y = "Coverage")
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black"))+
+  labs(x = "Treatment", y = "Vegetation Coverage (%)")
 Veg_Bar
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_CompBar.png", 
        width = 10, height = 7)
@@ -128,19 +132,23 @@ Veg_Bar =
   ggplot(df, aes(x = Treatment, y = Avg, fill = Group)) +
   geom_bar(position = "fill", stat = "identity", color = "black", alpha = 0.5) +
   geom_text(aes(label = Species), stat = "identity", 
-            size = 5, position=position_fill(0.5), colour = "black",
-            family = "Roboto Mono") +
+            size = 5.25, position=position_fill(0.5), colour = "black") +
   scale_fill_manual(values = c("#993300", "#660066", "#339966", "#E7B800")) +
   geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("***", "***"), tip_length = 0.0001) +
+              annotation=c("***", "***"), size = 0.8,
+              textsize = 5, tip_length = 0.0001) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family = "Roboto Mono")) +
-  labs(x = "Treatment", y = "Coverage")
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black")) +
+  labs(x = "Treatment", y = "Vegetation Coverage (%)")
 Veg_Bar
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_CompBar.png", 
        width = 10, height = 7)
