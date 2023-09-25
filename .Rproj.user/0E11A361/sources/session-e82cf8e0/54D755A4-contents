@@ -54,11 +54,11 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-bare = filter(GRIN, Group == "Bare")
-
+PN = filter(GRIN, Species == "Paspalum notatum")
+summary(PN)
 ## Bareground Coverage ##
 box = 
-  ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
+  ggplot(PN, aes(x = Treatment, y = Coverage, fill = Treatment)) +
   geom_boxplot(alpha = 0.8) +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
   scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
@@ -72,11 +72,11 @@ box =
   theme_classic() 
 box
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_Bareground.png", 
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_BahaiaGrass.png", 
        width = 10, height = 7)
 
 # Test for Significance #
-anova = aov(Coverage ~ Treatment, data = GRIN)
+anova = aov(Coverage ~ Treatment, data = PN)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
@@ -107,12 +107,12 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-bare = filter(GRIN, Group == "Bare")
+PN = filter(GRIN, Species == "Paspalum notatum")
 
-## Bareground Coverage ##
+## Paspalum notatum Coverage ##
 
 box = 
-  ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
+  ggplot(PN, aes(x = Treatment, y = Coverage, fill = Treatment)) +
   geom_boxplot(alpha = 0.8) +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
   scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
@@ -125,11 +125,11 @@ box =
         text=element_text(size=16,  family = "Roboto Mono"))+
   theme_classic() 
 box
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_Bareground.png", 
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_BahaiaGrass.png", 
        width = 10, height = 7)
 
 # Test for Significance #
-anova = aov(Coverage ~ Treatment, data = GRIN)
+anova = aov(Coverage ~ Treatment, data = PN)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way

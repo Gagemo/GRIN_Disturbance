@@ -29,18 +29,19 @@ library(agricolae)
 
 ##########################     Read in 2022 Data  ##############################
 
-data = read.csv("Data/GRIN - 2022.csv")
-data$Coverage = as.numeric(data$Coverage)
-data$Plot = as.character(data$Plot)
+GRIN = read.csv("Data/GRIN - 2022.csv")
+GRIN$Coverage = as.numeric(GRIN$Coverage)
+GRIN$Plot = as.character(GRIN$Plot)
 
-str(data)
-summary(data)
+str(GRIN)
+summary(GRIN)
 
 # Remove Seeding Treatment # 
-data = filter(data, Treatment != 'S')
+GRIN = filter(GRIN, Treatment != 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
-data <- mutate(data, Coverage = case_when(
+GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(0, Coverage) ~ 0,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,
@@ -53,7 +54,7 @@ data <- mutate(data, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-bare = filter(data, Group == "Bare")
+bare = filter(GRIN, Group == "Bare")
 
 ## Bareground Coverage ##
 box = 
@@ -75,7 +76,7 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_Bareground.png",
        width = 10, height = 7)
 
 # Test for Significance #
-anova = aov(Coverage ~ Treatment, data = data)
+anova = aov(Coverage ~ Treatment, data = GRIN)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
@@ -93,6 +94,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(0, Coverage) ~ 0,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,
@@ -111,9 +113,16 @@ bare = filter(GRIN, Group == "Bare")
 
 box = 
   ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
-  geom_boxplot() +
-  geom_jitter(color="black", alpha=0.7, width = 0.25) +
-  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  geom_boxplot(alpha = 0.8) +
+  geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
+  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text=element_text(size=16,  family = "Roboto Mono"))+
   theme_classic() 
 box
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_Bareground.png", 
