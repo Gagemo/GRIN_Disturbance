@@ -42,6 +42,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(0, Coverage) ~ 0,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,
@@ -111,6 +112,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(0, Coverage) ~ 0,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,

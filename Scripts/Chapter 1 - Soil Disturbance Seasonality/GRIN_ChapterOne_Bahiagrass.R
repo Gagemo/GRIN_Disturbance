@@ -59,8 +59,11 @@ summary(PN)
 ## Bareground Coverage ##
 box = 
   ggplot(PN, aes(x = Treatment, y = Coverage, fill = Treatment)) +
-  geom_boxplot(alpha = 0.8) +
+  geom_boxplot(alpha = 0.8, outlier.shape = NA) +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
+  geom_signif(y_position = c(100, 100), xmin = c(0.7,2), xmax = c(1.9,3),
+              annotation=c("***", "***"), size = 0.8,
+              textsize = 5, tip_length = 0.01) +
   scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
@@ -113,8 +116,11 @@ PN = filter(GRIN, Species == "Paspalum notatum")
 
 box = 
   ggplot(PN, aes(x = Treatment, y = Coverage, fill = Treatment)) +
-  geom_boxplot(alpha = 0.8) +
+  geom_boxplot(alpha = 0.8, outlier.shape = NA) +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
+  geom_signif(y_position = c(100, 100), xmin = c(0.7,2), xmax = c(1.9,3),
+              annotation=c("*", "***"), size = 0.8,
+              textsize = 5, tip_length = 0.01) +
   scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
@@ -133,3 +139,4 @@ anova = aov(Coverage ~ Treatment, data = PN)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
+

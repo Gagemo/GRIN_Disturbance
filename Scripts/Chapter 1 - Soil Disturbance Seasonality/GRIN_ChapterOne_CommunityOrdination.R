@@ -37,8 +37,6 @@ library(pairwiseAdonis)
 GRIN = read.csv("Data/GRIN - 2022.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
-GRIN = filter(GRIN, Coverage != 0)
-
 str(GRIN)
 summary(GRIN)
 
@@ -224,3 +222,4 @@ adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
 pairwise.adonis<-pairwise.adonis2(Spp ~ Treatment, data = NMDS)
 pairwise.adonis
+
