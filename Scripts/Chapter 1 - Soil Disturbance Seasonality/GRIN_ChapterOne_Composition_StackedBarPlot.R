@@ -29,8 +29,8 @@ library(vegan)
 library(agricolae)
 library(ggsignif)
 
-##########################     Read in 2022 Data       #########################
-GRIN = read.csv("Data/GRIN_FUN-2022.csv")
+##########################     Read in 2021-2023 Data       #########################
+GRIN = read.csv("Data/GRIN_FUN-2021-2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
 
