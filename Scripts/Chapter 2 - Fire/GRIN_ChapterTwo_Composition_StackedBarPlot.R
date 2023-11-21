@@ -1,4 +1,4 @@
-#########################   GRIN - Disturbance    ##############################
+#########################      GRIN - Fire        ##############################
 #########################    Functional Groups    ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
@@ -37,11 +37,9 @@ GRIN$Plot = as.character(GRIN$Plot)
 str(GRIN)
 summary(GRIN)
 
-# Remove Seeding Treatment # 
-GRIN = filter(GRIN, Treatment != 'S')
-
-# Remove Year 3 - Introduction of Fire # 
-GRIN = filter(GRIN, Year != 3)
+# Remove Disturbance Treatments # 
+GRIN = filter(GRIN, Treatment != 'Tw')
+GRIN = filter(GRIN, Treatment != 'Tsp')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
@@ -61,21 +59,20 @@ GRIN <- mutate(GRIN, Coverage = case_when(
 # Replace NA Values with Zeros#
 GRIN$Coverage[is.na(GRIN$Coverage)] <- 0
 
-# Filter out years 2021 - 2023 #
-
 # Composition of Treatments using mean coverage per species. 
-df = group_by(GRIN, Year, Treatment, Group, Species) %>% 
+df = filter(GRIN, Year == 3)
+df = group_by(df, Year, Treatment, T.F, Fire, Group, Species) %>% 
   dplyr::summarize(sum = sum(Coverage))
 df = filter(df, sum > 50) # Species <5% Coverage not included. 
 
 Veg_Bar = 
-  ggplot(df, aes(x = Treatment, y = sum, fill = Group)) +
+  ggplot(df, aes(x = Fire, y = sum, fill = Group)) +
   geom_col(position = "fill", color = "black", alpha = 0.5) +
-  facet_wrap(vars(Year)) +
   geom_text(aes(label = Species), stat = "identity", 
             size = 5.25, position=position_fill(0.5), colour = "black") +
+  facet_wrap(vars(Treatment)) +
   scale_fill_manual(breaks=c('Bare', 'Forb', 'Grass', 'Sedge', 'Woody'),
-                    values = c("tan", "#660066", "#339966", "#E7B800", "brown"), 
+                    values = c("tan", "#660066", "#339966", "#E7B800", "#663300"), 
                     labels=c("Bare", "Forb", "Grass", "Sedge", 'Woody')) +
   geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),
               annotation=c("***", "***"), 
@@ -93,5 +90,5 @@ Veg_Bar =
         axis.text.y=element_text(size=15, face = "bold", color = "black"))+
   labs(x = "Treatment", y = "Vegetation Coverage (%)")
 Veg_Bar
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2022_CompBar.png", 
+ggsave("Figures/Chapter 2 - Fire/2021-2022_CompBar.png", 
        width = 10, height = 7)

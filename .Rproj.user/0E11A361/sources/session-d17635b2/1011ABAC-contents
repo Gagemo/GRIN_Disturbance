@@ -51,17 +51,19 @@ str(GRIN)
 summary(GRIN)
 
 # Remove Seeding Treatment # 
-GRIN = filter(GRIN, Treatment != 'S')
+GRIN = filter(GRIN, Treatment != 'Tw')
+GRIN = filter(GRIN, Treatment != 'Tsp')
 
 GRIN$YID <- paste(GRIN$Year,GRIN$ID)
 
 # Seperate Pre & Post-Treatment Data #
-GRIN_21 = filter(GRIN, Year == "1")
 GRIN_22 = filter(GRIN, Year == "2")
+GRIN_23 = filter(GRIN, Year == "3")
 
 # Orders years and treatments so that they display in same sequence in graphs #
-GRIN$Year = factor(GRIN$Year, levels=c('1','2'))
-GRIN$Fire = factor(GRIN$Treatment, levels=c('C','Tsp','Tw'))
+GRIN$Year = factor(GRIN$Year, levels=c('2','3'))
+GRIN$Fire = factor(GRIN$Fire, levels=c('C','Sp','W'))
+GRIN$Treatment = factor(GRIN$Treatment, levels=c('C', 'S'))
 
 # Create Species Pivot Table with Rae's revisions to analyses #
 # All treatments #
@@ -69,37 +71,37 @@ Spp <- dplyr::select(GRIN, YID, Species, Coverage) %>%
   matrify()
 
 # Select 2021 Data matrix #
-Spp_21 <- dplyr::select(GRIN_21, YID, Species, Coverage) %>% 
-  matrify()
-
-# Select 2022 Treatment Data matrix #
 Spp_22 <- dplyr::select(GRIN_22, YID, Species, Coverage) %>% 
   matrify()
 
-#################### Species abundances ########################################
-# Creates and joins  data year 21 & 22 to make long data format #
-One_Abundance <- GRIN[which(GRIN$Year == "1"),]
-Three_Abundance <- GRIN[which(GRIN$Year == "2"),]
+# Select 2022 Treatment Data matrix #
+Spp_23 <- dplyr::select(GRIN_23, YID, Species, Coverage) %>% 
+  matrify()
 
-Abundance_w <- full_join(One_Abundance, Three_Abundance, 
-                         by = c('ID', 'Treatment', 'Species'))
+#################### Species abundances ########################################
+# Creates and joins  data year 22 & 23 to make long data format #
+Two_Abundance <- GRIN[which(GRIN$Year == "2"),]
+Three_Abundance <- GRIN[which(GRIN$Year == "3"),]
+
+Abundance_w <- full_join(Two_Abundance, Three_Abundance, 
+                         by = c('ID', 'Treatment', "Fire", 'Species'))
 
 # Turns NA values into zeros #
 Abundance_w$Coverage.x <- ifelse(is.na(Abundance_w$Coverage.x), 0, 
-                                    Abundance_w$Coverage.x)
+                                 Abundance_w$Coverage.x)
 Abundance_w$Coverage.y <- ifelse(is.na(Abundance_w$Coverage.y), 0, 
-                                    Abundance_w$Coverage.y)
+                                 Abundance_w$Coverage.y)
 
-# Change abundace to reflect percentage change from pretreatment (Year 1) to Post Treatment (Year 3)  #
+# Change abundace to reflect percentage change from pretreatment (Year 2) to Post Treatment (Year 3)  #
 Change_Abundance <- Abundance_w %>% 
-  dplyr::select(ID, Treatment, Species, 
+  dplyr::select(ID, Treatment, Fire, Species, 
                 Coverage.x, Coverage.y) %>%
-  group_by(ID, Treatment, Species) %>% 
+  group_by(ID, Treatment, Fire, Species) %>% 
   mutate(Change_abundance = Coverage.y - Coverage.x)
 
 Treat = ungroup(Change_Abundance) %>% 
-  dplyr::select(ID, Treatment) %>%
-  group_by(ID, Treatment) %>%
+  dplyr::select(ID, Treatment, Fire) %>%
+  group_by(ID, Treatment, Fire) %>%
   summarise() %>%
   remove_rownames() %>%
   column_to_rownames(var = 'ID')
@@ -112,14 +114,15 @@ GRIN_change <- ungroup(Change_Abundance) %>%
 GRIN_change = as.matrix(GRIN_change[, -1])
 
 ann_colors = list(
-  Treatment = c("C" = "#FF3399", "Tsp" = "#117733", "Tw" = "#3366FF"))
+  Fire = c("C" = "#FF3399", "Sp" = "#117733", "W" = "#3366FF"),
+  Treatment = c("C"  = "grey", "S" = "yellow"))
 
 speciesHEAT = pheatmap(GRIN_change, show_rownames=F, cluster_cols=F, 
                        cluster_rows=F, annotation_row = Treat, cex = 1, 
                        annotation_colors = ann_colors, fontsize = 12,
-                       )
+)
 speciesHEAT
-png(file = "Figures/Chapter 1 - Soil Disturbance Seasonality/Heat.png", 
+png(file = "Figures/Chapter 2 - Fire/Heat.png", 
     units="cm", width=40, height=22, res=999)
 speciesHEAT
 dev.off()
