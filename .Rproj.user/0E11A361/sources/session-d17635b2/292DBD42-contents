@@ -90,5 +90,5 @@ Veg_Bar =
         axis.text.y=element_text(size=15, face = "bold", color = "black"))+
   labs(x = "Treatment", y = "Vegetation Coverage (%)")
 Veg_Bar
-ggsave("Figures/Chapter 2 - Fire/2021-2022_CompBar.png", 
+ggsave("Figures/Chapter 2 - Fire/2023_CompBar.png", 
        width = 10, height = 7)

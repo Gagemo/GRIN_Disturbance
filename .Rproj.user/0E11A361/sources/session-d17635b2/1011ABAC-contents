@@ -92,7 +92,7 @@ Abundance_w$Coverage.x <- ifelse(is.na(Abundance_w$Coverage.x), 0,
 Abundance_w$Coverage.y <- ifelse(is.na(Abundance_w$Coverage.y), 0, 
                                  Abundance_w$Coverage.y)
 
-# Change abundace to reflect percentage change from pretreatment (Year 2) to Post Treatment (Year 3)  #
+# Change abundace to reflect percentage change from (Year 2) to (Year 3)  #
 Change_Abundance <- Abundance_w %>% 
   dplyr::select(ID, Treatment, Fire, Species, 
                 Coverage.x, Coverage.y) %>%

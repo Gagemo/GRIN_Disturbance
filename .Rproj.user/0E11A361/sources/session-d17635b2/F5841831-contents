@@ -1,8 +1,8 @@
 #########################   GRIN - Disturbance    ##############################
-#########################       Bareground        ##############################
+#########################       Bare Ground        #############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
-#########################      2021 - 2023       ###############################
+#########################      2021 - 2022       ###############################
 ################################################################################
 ################################################################################
 ################################################################################
@@ -39,6 +39,9 @@ summary(GRIN)
 # Remove Seeding Treatment # 
 GRIN = filter(GRIN, Treatment != 'S')
 
+# Remove Year Three #
+GRIN = filter(GRIN, Year != 3)
+
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(0, Coverage) ~ 0,
@@ -60,7 +63,6 @@ bare = filter(GRIN, Group == "Bare")
 # Creates data sets by year #
 bare_21 = filter(bare, Year == 1)
 bare_22 = filter(bare, Year == 2)
-bare_23 = filter(bare, Year == 3)
 
 ## Bareground Coverage ##
 box = 
@@ -79,7 +81,8 @@ box =
   theme_classic() 
 box
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2023_Bareground.png", 
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/
+       2021-2022_Bareground.png", 
        width = 10, height = 7)
 
 # Test for Significance across years#
@@ -93,7 +96,3 @@ summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
 
-anova = aov(Coverage ~ Treatment, data = bare_23)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
