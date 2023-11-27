@@ -3,7 +3,7 @@
     "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_Composition_StackedBarPlot.R",
     "project_path": "Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_Composition_StackedBarPlot.R",
     "type": "r_source",
-    "hash": "63494643",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1700162246126.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "84,47",
-        "scrollLine": "68"
+        "cursorPosition": "43,0",
+        "scrollLine": "28"
     },
     "folds": "",
-    "lastKnownWriteTime": 1700592538,
+    "lastKnownWriteTime": 1701111186,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1700592538195,
+    "last_content_update": 1701111186156,
     "read_only": false,
     "read_only_alternatives": []
 }

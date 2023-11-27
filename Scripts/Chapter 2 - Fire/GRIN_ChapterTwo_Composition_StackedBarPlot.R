@@ -1,3 +1,5 @@
+################################################################################
+################################################################################
 #########################      GRIN - Fire        ##############################
 #########################    Functional Groups    ##############################
 #########################  University of Florida  ##############################
@@ -5,9 +7,7 @@
 #########################      2021 - 2023        ##############################
 ################################################################################
 ################################################################################
-################################################################################
-################################################################################
-################################################################################
+
 
 ######################### Clears Environment & History  ########################
 rm(list=ls(all=TRUE))
@@ -40,6 +40,7 @@ summary(GRIN)
 # Remove Disturbance Treatments # 
 GRIN = filter(GRIN, Treatment != 'Tw')
 GRIN = filter(GRIN, Treatment != 'Tsp')
+GRIN = filter(GRIN, Treatment != 'C')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
@@ -70,7 +71,6 @@ Veg_Bar =
   geom_col(position = "fill", color = "black", alpha = 0.5) +
   geom_text(aes(label = Species), stat = "identity", 
             size = 5.25, position=position_fill(0.5), colour = "black") +
-  facet_wrap(vars(Treatment)) +
   scale_fill_manual(breaks=c('Bare', 'Forb', 'Grass', 'Sedge', 'Woody'),
                     values = c("tan", "#660066", "#339966", "#E7B800", "#663300"), 
                     labels=c("Bare", "Forb", "Grass", "Sedge", 'Woody')) +
@@ -92,3 +92,4 @@ Veg_Bar =
 Veg_Bar
 ggsave("Figures/Chapter 2 - Fire/2023_CompBar.png", 
        width = 10, height = 7)
+
