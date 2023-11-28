@@ -29,7 +29,7 @@ library(vegan)
 library(agricolae)
 library(ggsignif)
 
-##########################     Read in 2021-2023 Data       #########################
+################### Read in 2021-2023 Data       ###############################
 GRIN = read.csv("Data/GRIN_FUN-2021-2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
@@ -41,6 +41,9 @@ summary(GRIN)
 GRIN = filter(GRIN, Treatment != 'Tw')
 GRIN = filter(GRIN, Treatment != 'Tsp')
 GRIN = filter(GRIN, Treatment != 'C')
+
+
+########################### 2023 Data ##########################################
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
@@ -60,23 +63,29 @@ GRIN <- mutate(GRIN, Coverage = case_when(
 # Replace NA Values with Zeros#
 GRIN$Coverage[is.na(GRIN$Coverage)] <- 0
 
-# Composition of Treatments using mean coverage per species. 
-df = filter(GRIN, Year == 3)
-df = group_by(df, Year, Treatment, T.F, Fire, Group, Species) %>% 
-  dplyr::summarize(sum = sum(Coverage))
-df = filter(df, sum > 50) # Species <5% Coverage not included. 
+# Remove Year 1 #
+GRIN = filter(GRIN, Year != 1)
 
+# Composition of Treatments using mean coverage per species. 
+GRIN = group_by(GRIN, Year, Fire, Group, Species) %>% 
+  dplyr::summarize(sum = sum(Coverage))
+GRIN = filter(GRIN, sum > 25) # Species <5% Coverage not included. 
+
+# Label Years for ggplot #
+year_names <- as_labeller(
+  c(`2` = "2022", `3` = "2023"))
+
+# Creates comparison coverage plots by year #
 Veg_Bar = 
-  ggplot(df, aes(x = Fire, y = sum, fill = Group)) +
+  ggplot(GRIN, aes(x = Fire, y = sum, fill = Group)) +
   geom_col(position = "fill", color = "black", alpha = 0.5) +
+  facet_wrap(.~Year, labeller = year_names) +
   geom_text(aes(label = Species), stat = "identity", 
             size = 5.25, position=position_fill(0.5), colour = "black") +
   scale_fill_manual(breaks=c('Bare', 'Forb', 'Grass', 'Sedge', 'Woody'),
-                    values = c("tan", "#660066", "#339966", "#E7B800", "#663300"), 
+                    values = c("tan", "#660066", 
+                               "#339966", "#E7B800", "#663300"), 
                     labels=c("Bare", "Forb", "Grass", "Sedge", 'Woody')) +
-  geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("***", "***"), 
-              size = 0.8, textsize = 5, tip_length = 0.00001) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -87,7 +96,10 @@ Veg_Bar =
         axis.title.x = element_text(size=15, face="bold", colour = "black"),    
         axis.title.y = element_text(size=15, face="bold", colour = "black"),   
         axis.text.x=element_text(size=15, face = "bold", color = "black"),
-        axis.text.y=element_text(size=15, face = "bold", color = "black"))+
+        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        strip.background=element_rect(colour="white",fill="white"),
+        strip.text.x = element_text(size = 12, colour = "black", 
+                                    face = "bold"))+
   labs(x = "Treatment", y = "Vegetation Coverage (%)")
 Veg_Bar
 ggsave("Figures/Chapter 2 - Fire/2023_CompBar.png", 

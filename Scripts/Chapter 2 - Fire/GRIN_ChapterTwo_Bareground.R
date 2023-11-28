@@ -1,10 +1,10 @@
 ################################################################################
 ################################################################################
-#########################   GRIN - Disturbance    ##############################
+#########################       GRIN - Fire        #############################
 #########################       Bare Ground        #############################
-#########################  University of Florida  ##############################
-#########################     Gage LaPierre       ##############################
-#########################      2021 - 2022       ###############################
+#########################  University of Florida   #############################
+#########################     Gage LaPierre        #############################
+#########################      2021 - 2022         #############################
 ################################################################################
 ################################################################################
 
@@ -36,11 +36,13 @@ GRIN$Plot = as.character(GRIN$Plot)
 str(GRIN)
 summary(GRIN)
 
-# Remove Seeding Treatment # 
-GRIN = filter(GRIN, Treatment != 'S')
+# Remove Disturbance Treatments # 
+GRIN = filter(GRIN, Treatment != 'C')
+GRIN = filter(GRIN, Treatment != 'Tw')
+GRIN = filter(GRIN, Treatment != 'Tsp')
 
-# Remove Year Three #
-GRIN = filter(GRIN, Year != 3)
+# Remove Year One #
+#GRIN = filter(GRIN, Year != 3)
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
@@ -63,12 +65,21 @@ bare = filter(GRIN, Group == "Bare")
 # Creates data sets by year #
 bare_21 = filter(bare, Year == 1)
 bare_22 = filter(bare, Year == 2)
+bare_23 = filter(bare, Year == 3)
+
+# Remove Year 1 #
+bare = filter(bare, Year != 1)
+
+# Label Years for ggplot #
+year_names <- as_labeller(
+  c(`2` = "2022", `3` = "2023"))
 
 ## Bareground Coverage ##
 box = 
-  ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
+  ggplot(bare, aes(x = Fire, y = Coverage, fill = Fire)) +
   geom_boxplot(alpha = 0.8) +
-  facet_wrap(vars(Year)) +
+  facet_wrap(.~Year, labeller = year_names) +
+  geom_point() +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
   scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
   theme_bw() +
@@ -86,13 +97,17 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/
        width = 10, height = 7)
 
 # Test for Significance across years#
-anova = aov(Coverage ~ Treatment, data = bare_21)
+anova = aov(Coverage ~ Fire, data = bare_21)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
 
-anova = aov(Coverage ~ Treatment, data = bare_22)
+anova = aov(Coverage ~ Fire, data = bare_22)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
 
+anova = aov(Coverage ~ Fire, data = bare_23)
+summary(anova)
+tukey.one.way<-TukeyHSD(anova)
+tukey.one.way
