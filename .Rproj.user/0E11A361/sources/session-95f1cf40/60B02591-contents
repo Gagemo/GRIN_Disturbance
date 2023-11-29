@@ -106,9 +106,9 @@ NMDS_plot =
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
-  scale_fill_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#FF3399", "#117733", "#3366FF")) +
-  scale_color_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#FF3399", "#117733", "#3366FF")) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
@@ -194,9 +194,9 @@ NMDS_plot =
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
-  scale_fill_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#FF3399", "#117733", "#3366FF")) +
-  scale_color_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#FF3399", "#117733", "#3366FF")) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
