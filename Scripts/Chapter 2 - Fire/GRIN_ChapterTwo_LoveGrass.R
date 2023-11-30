@@ -1,7 +1,7 @@
 ################################################################################
 ################################################################################
 #########################      GRIN - Fire        ##############################
-#########################       Bahaiagrass       ##############################
+#########################       Lovegrass         ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
 #########################      2021 - 2023        ##############################
@@ -55,21 +55,28 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-PN = filter(GRIN, Species == "Paspalum notatum")
-summary(PN)
+GRIN = filter(GRIN, Species == "Eragrostis spectabilis")
+summary(GRIN)
+
+#Renames values in fire treatments for heat map later #
+GRIN$Fire <- recode(GRIN$Fire, Sp="Late-Spring", W = "Winter", C = "No Burn")
 
 # Creates data sets by year #
-PN_21 = filter(PN, Year == 1)
-PN_22 = filter(PN, Year == 2)
-PN_23 = filter(PN, Year == 3)
+GRIN_21 = filter(GRIN, Year == 1)
+GRIN_22 = filter(GRIN, Year == 2)
+GRIN_23 = filter(GRIN, Year == 3)
+
+# Label Years for ggplot #
+year_names <- as_labeller(
+  c(`1` = "2021", `2` = "2022", `3` = "2023"))
 
 ## Bareground Coverage ##
 box = 
-  ggplot(PN, aes(x = Fire, y = Coverage, fill = Fire)) +
+  ggplot(GRIN, aes(x = Fire, y = Coverage, fill = Fire)) +
   geom_boxplot(alpha = 0.8) +
-  facet_wrap(vars(Year)) +
+  facet_wrap(.~Year, labeller = year_names) +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  scale_fill_manual(values=c("#333333", "#FF9900", "#3366FF")) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -80,21 +87,21 @@ box =
   theme_classic() 
 box
 
-ggsave("Figures/Chapter 2 - Fire/2021-2023_BahaiaGrass.png", 
+ggsave("Figures/Chapter 2 - Fire/2021-2023_Lovegrass.png", 
        width = 10, height = 7)
 
 # Test for Significance across years #
-anova = aov(Coverage ~ Fire, data = PN_21)
+anova = aov(Coverage ~ Fire, data = GRIN_21)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
 
-anova = aov(Coverage ~ Treatment, data = PN_22)
+anova = aov(Coverage ~ Fire, data = GRIN_22)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way
 
-anova = aov(Coverage ~ Treatment, data = PN_23)
+anova = aov(Coverage ~ Fire, data = GRIN_23)
 summary(anova)
 tukey.one.way<-TukeyHSD(anova)
 tukey.one.way

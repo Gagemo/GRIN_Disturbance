@@ -2,6 +2,7 @@
 ################################################################################
 #########################     GRIN - Fire         ##############################
 #########################    NMDS - Community     ##############################
+#########################    with Tw Control      ##############################
 ######################### University of Florida   ##############################
 #########################    Gage LaPierre        ##############################
 #########################     2021 - 2023         ##############################
@@ -39,7 +40,6 @@ str(GRIN)
 summary(GRIN)
 
 # Remove Tilling Treatment # 
-GRIN = filter(GRIN, Treatment != 'Tw')
 GRIN = filter(GRIN, Treatment != 'Tsp')
 GRIN = filter(GRIN, Treatment != 'C')
 
@@ -102,14 +102,14 @@ NMDS_plot =
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F),
              alpha = 0.7, size = 3, shape = 21) +
-# geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
+  # geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#FF3399", "#117733", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#FF3399", "#117733", "#3366FF")) +
+  #scale_fill_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  #                  values=c("#FF3399", "#117733", "#3366FF")) +
+  #scale_color_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  #                  values=c("#FF3399", "#117733", "#3366FF")) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -126,7 +126,7 @@ NMDS_plot =
        fill = "Fire Treatment")
 NMDS_plot
 
-ggsave("Figures/Chapter 2 - Fire/2023_NMDS.png", 
+ggsave("Figures/Chapter 2 - Fire/2023_NMDS_Tw.png", 
        width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
@@ -142,7 +142,7 @@ pairwise.adonis
 Spp = dplyr::select(GRIN_22, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN_22, ID, Fire, T.F) %>% summarise()
+Treat = group_by(GRIN_22, ID, Treatment, Fire, T.F) %>% summarise()
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -183,8 +183,8 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Fire = Treat$Fire, 
-                  T.F = Treat$T.F, Plot = Treat$ID)
+NMDS = data.frame(MDS = MDS$points, Fire = Treat$Fire, T.F = Treat$T.F, 
+                  Treatment = Treat$Treatment, Plot = Treat$ID)
 
 # NMDS Graphs
 NMDS_plot = 
@@ -194,10 +194,10 @@ NMDS_plot =
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#FF3399", "#117733", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#FF3399", "#117733", "#3366FF")) +
+  #scale_fill_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  #                  values=c("#FF3399", "#117733", "#3366FF")) +
+  #scale_color_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  #                   values=c("#FF3399", "#117733", "#3366FF")) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -214,7 +214,7 @@ NMDS_plot =
        fill = "Fire Treatment")
 NMDS_plot
 
-ggsave("Figures/Chapter 2 - Fire/2022_NMDS.png", 
+ggsave("Figures/Chapter 2 - Fire/2022_NMDS_Tw.png", 
        width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
@@ -229,7 +229,7 @@ pairwise.adonis
 Spp = dplyr::select(GRIN_21, ID, Species, Coverage) %>% matrify()
 
 #Create grouped treatment/environment table and summaries to fit species table #
-Treat = group_by(GRIN_21, ID, Fire, T.F) %>% summarise()
+Treat = group_by(GRIN_21, ID, treatment, Fire, T.F) %>% summarise()
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -270,8 +270,8 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Fire = Treat$Fire, 
-                  T.F = Treat$T.F, Plot = Treat$ID)
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
+                  Fire = Treat$Fire, T.F = Treat$T.F, Plot = Treat$ID)
 
 # NMDS Graphs
 NMDS_plot = 
@@ -282,10 +282,10 @@ NMDS_plot =
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
-  scale_fill_manual(labels=c('Control', 'Late-Spring', 'Winter'),
-                    values=c("#FF3399", "#117733", "#3366FF")) +
-  scale_color_manual(labels=c('Control', 'Late-Spring', 'Winter'),
-                     values=c("#FF3399", "#117733", "#3366FF")) +
+  #scale_fill_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  #                  values=c("#FF3399", "#117733", "#3366FF")) +
+  #scale_color_manual(labels=c('Control', 'Late-Spring', 'Winter'),
+  #                   values=c("#FF3399", "#117733", "#3366FF")) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -302,7 +302,7 @@ NMDS_plot =
        fill = "Fire Treatment")
 NMDS_plot
 
-ggsave("Figures/Chapter 2 - Fire/2021_NMDS.png", 
+ggsave("Figures/Chapter 2 - Fire/2021_NMDS_Tw.png", 
        width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#

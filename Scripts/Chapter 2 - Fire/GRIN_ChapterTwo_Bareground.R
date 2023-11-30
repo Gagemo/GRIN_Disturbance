@@ -91,8 +91,7 @@ box =
   theme_classic() 
 box
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/
-       2021-2022_Bareground.png", 
+ggsave("Figures/Chapter 2 - Fire/bareground.png", 
        width = 10, height = 7)
 
 # Test for Significance across years#

@@ -1,11 +1,10 @@
+################################################################################
+################################################################################
 #########################   GRIN - Disturbance    ##############################
 #########################    NMDS - Community     ##############################
 ######################### University of Florida   ##############################
 #########################    Gage LaPierre        ##############################
-#########################     2021 - 2022         ##############################
-################################################################################
-################################################################################
-################################################################################
+#########################     2020 - 2023         ##############################
 ################################################################################
 ################################################################################
 
@@ -87,8 +86,7 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
-                  Plot = Treat$ID)
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,Plot = Treat$ID)
 
 # NMDS Graphs
 NMDS_plot = 
@@ -119,7 +117,6 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png",
        width = 10, height = 7)
 
 # Perform adonis to test the significance of treatments#
-
 adon.results <- adonis2(Spp ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
 TukeyHSD(adon.results)
@@ -128,7 +125,6 @@ pairwise.adonis<-pairwise.adonis2(Spp ~ Treatment, data = NMDS)
 pairwise.adonis
 
 ##########################     Read in 2021 Data       #########################
-
 GRIN = read.csv("Data/GRIN - 2021.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 

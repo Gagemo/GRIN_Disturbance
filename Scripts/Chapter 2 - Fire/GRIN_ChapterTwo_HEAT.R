@@ -62,6 +62,9 @@ GRIN_23 = filter(GRIN, Year == "3")
 GRIN$Year = factor(GRIN$Year, levels=c('2','3'))
 GRIN$Fire = factor(GRIN$Fire, levels=c('C','Sp','W'))
 
+#Renames values in fire treatments for heat map later #
+GRIN$Fire <- recode(GRIN$Fire, Sp="Late-Spring", W = "Winter", C = "No Burn")
+
 # Create Species Pivot Table with Rae's revisions to analyses #
 # All treatments #
 Spp <- dplyr::select(GRIN, YID, Species, Coverage) %>% 
@@ -94,7 +97,13 @@ Change_Abundance <- Abundance_w %>%
   dplyr::select(ID, Fire, Species, 
                 Coverage.x, Coverage.y) %>%
   group_by(ID, Fire, Species) %>% 
-  mutate(Change_abundance = Coverage.y - Coverage.x)
+  mutate(Change_abundance = Coverage.y - Coverage.x) %>%
+  filter(Change_abundance != 0)
+
+Change_Abundance_H = filter(Change_Abundance, Change_abundance >= 5)
+Change_Abundance_L = filter(Change_Abundance, Change_abundance <= -5)
+
+Change_Abundance = full_join(Change_Abundance_H, Change_Abundance_L)
 
 Treat = ungroup(Change_Abundance) %>% 
   dplyr::select(ID, Fire) %>%
@@ -112,11 +121,13 @@ GRIN_change <- ungroup(Change_Abundance) %>%
 GRIN_change = as.matrix(GRIN_change[, -1])
 
 ann_colors = list(
-  Fire = c("C" = "#FF3399", "Sp" = "#117733", "W" = "#3366FF"))
+  Fire = c("No Burn" = "#333333", "Late-Spring" = "#FF9900", 
+           "Winter" = "#3366FF"))
 
 speciesHEAT = pheatmap(GRIN_change, show_rownames=F, cluster_cols=F, 
                        cluster_rows=F, annotation_row = Treat, cex = 1, 
-                       annotation_colors = ann_colors, fontsize = 12)
+                       annotation_colors = ann_colors, fontsize = 20,
+                       border_color = "black", display_numbers = FALSE)
 speciesHEAT
 
 png(file = "Figures/Chapter 2 - Fire/Heat.png", 
