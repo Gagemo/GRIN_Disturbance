@@ -65,7 +65,7 @@ GRIN$Fire = factor(GRIN$Fire, levels=c('C','Sp','W'))
 #Renames values in fire treatments for heat map later #
 GRIN$Fire <- recode(GRIN$Fire, Sp="Late-Spring", W = "Winter", C = "No Burn")
 
-# Create Species Pivot Table with Rae's revisions to analyses #
+# Create Species Pivot Table with revisions to analyses #
 # All treatments #
 Spp <- dplyr::select(GRIN, YID, Species, Coverage) %>% 
   matrify()

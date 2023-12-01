@@ -64,13 +64,18 @@ bare = filter(GRIN, Group == "Bare")
 bare_21 = filter(bare, Year == 1)
 bare_22 = filter(bare, Year == 2)
 
+# Label Years for ggplot #
+year_names <- as_labeller(
+  c(`1` = "2021", `2` = "2022"))
+
 ## Bareground Coverage ##
 box = 
-  ggplot(bare, aes(x = Treatment, y = Coverage, fill = Treatment)) +
+  ggplot(bare, aes(x = Fire, y = Coverage, fill = Fire)) +
   geom_boxplot(alpha = 0.8) +
-  facet_wrap(vars(Year)) +
+  facet_wrap(.~Year, labeller = year_names) +
+  geom_point() +
   geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
+  scale_fill_manual(values=c("#FF3399", "#FFFF00", "#3366FF")) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
