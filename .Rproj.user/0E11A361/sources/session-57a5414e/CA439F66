@@ -3,9 +3,9 @@
     "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Bareground.R",
     "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Bareground.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2116420900",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1701448703264.0,
     "source_on_save": false,
     "relative_order": 2,
@@ -17,11 +17,11 @@
         "scrollLine": "125"
     },
     "folds": "",
-    "lastKnownWriteTime": 1701726190,
+    "lastKnownWriteTime": 1701727036,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1701726308696,
+    "last_content_update": 1701727036415,
     "read_only": false,
     "read_only_alternatives": []
 }
