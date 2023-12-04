@@ -115,12 +115,6 @@ bar =
                 position=position_dodge(.9)) +
   facet_wrap(.~Year, labeller = year_names) +
   scale_fill_manual(values=c("#FF3399", "#FFFF00", "#3366FF")) +
-  geom_signif(y_position = c(10,1), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("a", "b"), 
-              size = 0.8, textsize = 5, tip_length = .01) +
-  geom_signif(y_position = c(50,45), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("a", "b"), 
-              size = 0.8, textsize = 5, tip_length = .01) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),

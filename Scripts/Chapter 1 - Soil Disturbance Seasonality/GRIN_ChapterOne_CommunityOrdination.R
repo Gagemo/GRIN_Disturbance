@@ -52,7 +52,7 @@ GRIN_22 = filter(GRIN, Year == 2)
 Spp = dplyr::select(GRIN_22, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN, ID, Treatment) %>% summarise()
+Treat = group_by(GRIN, ID, Treatment) %>% dplyr::summarize()
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -79,7 +79,7 @@ goodness(MDS)
 # --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
 # Create a frame for functional groups alongside species for NMDS graph #
-species_groups = group_by(GRIN_22, Species, Group) %>% summarise()
+species_groups = group_by(GRIN_22, Species, Group) %>% dplyr::summarize()
 
 # Extract  species scores & convert to a data.frame for NMDS graph #
 species.scores <- 
@@ -148,7 +148,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 Spp = dplyr::select(GRIN_21, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN, ID, Treatment) %>% summarise()
+Treat = group_by(GRIN, ID, Treatment) %>% dplyr::summarize()
 
 # Run Bray-Curtis dissimilarity #
 #vegdist_ = vegdist(Spp, method = "bray")
@@ -179,7 +179,7 @@ goodness(MDS)
 # --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
 # Create a frame for functional groups alongside species for NMDS graph #
-species_groups = group_by(GRIN_21, Species, Group) %>% summarise()
+species_groups = group_by(GRIN_21, Species, Group) %>% dplyr::summarize()
 
 # Extract  species scores & convert to a data.frame for NMDS graph #
 species.scores <- 

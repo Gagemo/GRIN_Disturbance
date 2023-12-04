@@ -64,9 +64,9 @@ GRIN$Coverage[is.na(GRIN$Coverage)] <- 0
 # Filter out years 2021 - 2023 #
 
 # Composition of Treatments using mean coverage per species. 
-df = group_by(GRIN, Year, Treatment, Group, Species) %>% 
+df = group_by(GRIN, Year, Treatment, Group) %>% 
   dplyr::summarize(sum = sum(Coverage))
-df = filter(df, sum > 50) # Species <5% Coverage not included. 
+df = filter(df, sum > 1) # Species <5% Coverage not included. 
 
 # Label Years for ggplot #
 year_names <- as_labeller(
@@ -76,29 +76,29 @@ Veg_Bar =
   ggplot(df, aes(x = Treatment, y = sum, fill = Group)) +
   geom_col(position = "fill", color = "black", alpha = 0.5) +
   facet_wrap(vars(Year), labeller = year_names) +
-  geom_text(aes(label = Species), stat = "identity", 
-            size = 5.25, position=position_fill(0.5), colour = "black") +
+  #geom_text(aes(label = Species), stat = "identity", 
+  #          size = 5.25, position=position_fill(0.5), colour = "black") +
   scale_fill_manual(breaks=c('Bare', 'Forb', 'Grass', 'Sedge', 'Woody'),
                     values = c("tan", "#660066", "#339966", "#E7B800", "brown"), 
                     labels=c("Bare", "Forb", "Grass", "Sedge", 'Woody')) +
   geom_signif(y_position = c(1.01,1.01), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("***", "***"),  
-              size = 0.8, textsize = 5, tip_length = 0.00001) +
+              annotation=c("***", "***"), size = 0.8, textsize = 15, 
+              tip_length = 0.00001) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
-        plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16),
-        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
-        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
-        axis.text.x=element_text(size=15, face = "bold", color = "black"),
-        axis.text.y=element_text(size=15, face = "bold", color = "black"),
-        strip.text.x = 
-          element_text(size = 15, colour = "black", face = "bold")) +
-  guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "Treatment", y = "Vegetation Coverage (%)")
+        plot.title = element_text(hjust = 1),
+        text=element_text(size=25),
+        axis.title.x = element_text(size=25, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=25, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=25, face = "bold", color = "black"),
+        axis.text.y=element_text(size=25, face = "bold", color = "black"),
+        strip.text.x=element_text(size = 25,colour = "black",face = "bold"),
+        legend.position = "bottom") +
+  guides(fill = guide_legend(label.position = "bottom")) +   
+  labs(x = "Treatment", y = "Total Proportional Coverage")
 Veg_Bar
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2022_CompBar.png", 
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2022_CompBar2.png", 
        width = 10, height = 7)
