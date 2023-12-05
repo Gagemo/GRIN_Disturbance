@@ -1,19 +1,21 @@
 ################################################################################
 ################################################################################
-#########################   GRIN - Disturbance    ##############################
-#########################       Bare Ground        #############################
-#########################  University of Florida  ##############################
-#########################     Gage LaPierre       ##############################
-#########################      2021 - 2022       ###############################
+######################  GRIN - Soil Disturbance Seasonality ####################
+######################        Species Richness              ####################
+######################      University of Florida           ####################
+######################          Gage LaPierre               ####################
+######################           2020 - 2022                ####################
 ################################################################################
 ################################################################################
 
 ######################### Clears Environment & History  ########################
+
 rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "agricolae")
+
+list.of.packages <- c( "showtext", "tidyverse", "vegan", "labdsv", "reshape")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -21,103 +23,114 @@ if(length(new.packages)) install.packages(new.packages)
 ##########################     Loads Packages     ##############################
 library(tidyverse)
 library(vegan)
-library(agricolae)
+library(labdsv)
+library(reshape)
+library(showtext)
 
-##########################     Read in 2022 Data  ##############################
-GRIN = read.csv("Data/GRIN - 2021-2023.csv")
-GRIN$Coverage = as.numeric(GRIN$Coverage)
-GRIN$Plot = as.character(GRIN$Plot)
+##########################     Read in Data       ##############################
+data = read.csv("Data/GRIN - 2021-2023.csv")
+data$Coverage = as.numeric(data$Coverage)
 
-str(GRIN)
-summary(GRIN)
+str(data)
+summary(data)
 
 # Remove Seeding Treatment # 
-GRIN = filter(GRIN, Treatment != 'S')
+data = filter(data, Treatment != 'S')
 
-# Remove Year Three #
-GRIN = filter(GRIN, Year != 3)
-
-# Reclasifys coverage data (CV) from 1-10 scale to percent scale #
-GRIN <- mutate(GRIN, Coverage = case_when(
-  grepl(0, Coverage) ~ 0,
-  grepl(1, Coverage) ~ 0.1,
-  grepl(2, Coverage) ~ 0.5,
-  grepl(3, Coverage) ~ 1.5,
-  grepl(4, Coverage) ~ 3.5,
-  grepl(5, Coverage) ~ 7.5,
-  grepl(6, Coverage) ~ 17.5,
-  grepl(7, Coverage) ~ 37.5,
-  grepl(8, Coverage) ~ 62.5,
-  grepl(9, Coverage) ~ 85,
-  grepl(10, Coverage) ~ 97.5
-))
-
-# Filters data for just bare ground #
-bare = filter(GRIN, Group == "Bare")
+### Remove NA and empty Values ###
+data = filter(data, Coverage != "NA") %>%
+  filter(Coverage != "")
 
 # Creates data sets by year #
-bare_21 = filter(bare, Year == 1)
-bare_22 = filter(bare, Year == 2)
+data_21 = filter(data, Year == 1)
+data_22 = filter(data, Year == 2)
+
+# Create Species Pivot Table by Year #
+Spp_21 = dplyr::select(data_21, ID, Species, Coverage) %>% matrify() 
+Spp_21[] <- lapply(Spp_21, as.numeric)
+
+Spp_22 = dplyr::select(data_22, ID, Species, Coverage) %>% matrify() 
+Spp_22[] <- lapply(Spp_22, as.numeric)
+
+# Calculates species richness by year #
+SR_21 = specnumber(Spp_21)
+SR_21 = as.data.frame(SR_21)
+
+SR_22 = specnumber(Spp_22)
+SR_22 = as.data.frame(SR_22)
+
+# Create Grouped Treatment Table and Summaries to fit Species Table #
+Treat_21 <- select(data_21, Treatment, ID) %>% 
+  group_by(ID, Treatment) %>% 
+  dplyr::summarise()
+
+Treat_22 <- select(data_22, Treatment, ID) %>% 
+  group_by(ID, Treatment) %>% 
+  dplyr::summarise()
+
+## Merge species richness with habitat/plot data for ggplot ##
+SR_treat_21 = cbind(Treat_21, SR_21)
+colnames(SR_treat_21)[3] <- "SR"
+as.numeric(SR_treat_21$SR)
+SR_treat_21$SR = as.numeric(SR_treat_21$SR)
+SR_treat_21 = as.data.frame(SR_treat_21)
+
+SR_treat_22 = cbind(Treat_22, SR_22)
+colnames(SR_treat_22)[3] <- "SR"
+SR_treat_22$SR = as.numeric(SR_treat_22$SR)
+SR_treat_22 = as.data.frame(SR_treat_22)
 
 ################################################################################
 ################ Test for Significance across years ############################
+################################################################################
+
 ############################### 2021 Data ######################################
 # Check Assumptions #
-model  <- lm(Coverage ~ Treatment, data = bare_21)
+model  <- lm(SR ~ Treatment, data = SR_treat_21)
 # Create a QQ plot of residuals
 ggqqplot(residuals(model))
 # Compute Shapiro-Wilk test of normality
 shapiro_test(residuals(model))
 plot(model, 1)
 # Compute Levene's Test
-bare_21$Treatment = as.factor(bare_21$Treatment)
-bare_21 %>% levene_test(Coverage ~ Treatment)
+SR_treat_21$Treatment = as.factor(SR_treat_21$Treatment)
+SR_treat_21 %>% levene_test(SR_treat_21$SR ~ SR_treat_21$Treatment)
 
 # Test for Significance #
-anova_bare21 = bare_21 %>% kruskal_test(Coverage ~ Treatment) %>% 
+anova_21 = SR_treat_21 %>% anova_test(SR ~ Treatment) %>% 
   add_significance()
-summary(anova_bare21)
+summary(anova_21)
 
-tukey_bare21 <- bare_21 %>% 
-  dunn_test(Coverage ~ Treatment) %>% 
+tukey_21 <- SR_treat_21 %>% 
+  tukey_hsd(SR ~ Treatment) %>% 
   add_significance() %>% 
   add_xy_position()
-tukey_bare21
+tukey_21
 
-############################### 2022 Data ######################################
-# Check Assumptions #
-model  <- lm(Coverage ~ Treatment, data = bare_22)
-# Create a QQ plot of residuals
-ggqqplot(residuals(model))
-# Compute Shapiro-Wilk test of normality
-shapiro_test(residuals(model))
-plot(model, 1)
-# Compute Levene's Test
-bare_22$Treatment = as.factor(bare_22$Treatment)
-bare_22 %>% levene_test(Coverage ~ Treatment)
-
-# Test for Significance #
-anova_bare22 = bare_22 %>% kruskal_test(Coverage ~ Treatment) %>% 
+anova_22 = SR_treat_22 %>% anova_test(SR ~ Treatment) %>% 
   add_significance()
-summary(anova_bare22)
+summary(anova_22)
 
-tukey_bare22 <- bare_22 %>% 
-  dunn_test(Coverage ~ Treatment) %>% 
+tukey_22 <- SR_treat_22 %>% 
+  tukey_hsd(SR ~ Treatment) %>% 
   add_significance() %>% 
   add_xy_position()
-tukey_bare22
+tukey_22
 
-## Bare Ground Coverage 2021 ##
-BareBox21 = 
-  ggplot(bare_21, aes(x = Treatment, y = Coverage), colour = Treatment) +
+################################################################################
+################ Create SR Boxplots for each year ##############################
+################################################################################
+
+SR_Box_21 = 
+  ggplot(SR_treat_21, aes(x = Treatment, y = SR), colour = Treatment) +
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  stat_pvalue_manual(tukey_bare21,
+  stat_pvalue_manual(tukey_21,
                      hide.ns = T)+
-  labs(subtitle = get_test_label(anova_bare21,
+  labs(subtitle = get_test_label(anova_21,
                                  detailed = TRUE),
-       caption = get_pwc_label(tukey_bare21)) +
+       caption = get_pwc_label(tukey_21)) +
   scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
                     values=c("#FF3399", "#FFFF00", "#3366FF")) +
   scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
@@ -136,23 +149,20 @@ BareBox21 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "Treatment", y = "Bare Ground % Coverage", title = "2021")
-BareBox21
+  labs(x = "", y = "Species Richness", title = "2021")
+SR_Box_21
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/SR_Box_2021.png")
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Bareground_box21.png", 
-       width = 10, height = 7)
-
-## Bare Ground Coverage 2022 ##
-BareBox22 = 
-  ggplot(bare_22, aes(x = Treatment, y = Coverage), colour = Treatment) +
+SR_Box_22 = 
+  ggplot(SR_treat_22, aes(x = Treatment, y = SR), colour = Treatment) +
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  stat_pvalue_manual(tukey_bare22,
+  stat_pvalue_manual(tukey_22,
                      hide.ns = T)+
-  labs(subtitle = get_test_label(anova_bare22,
+  labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
-       caption = get_pwc_label(tukey_bare22)) +
+       caption = get_pwc_label(tukey_22)) +
   scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
                     values=c("#FF3399", "#FFFF00", "#3366FF")) +
   scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
@@ -173,13 +183,11 @@ BareBox22 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "Treatment", y = "", title = "2022")
-BareBox22
-
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Bareground_box22.png", 
-       width = 10, height = 7)
+  labs(x = "", y = "", title = "2022")
+SR_Box_22
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/SR_Box_2022.png")
 
 ################## Save Figures Above using ggarrange ##########################
-ggarrange(BareBox21, BareBox22, ncol = 2, nrow = 1)
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2022_Bare.png", 
+ggarrange(SR_Box_21, SR_Box_22, ncol = 2, nrow = 1)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2022_SR.png", 
        width = 12, height = 7)
