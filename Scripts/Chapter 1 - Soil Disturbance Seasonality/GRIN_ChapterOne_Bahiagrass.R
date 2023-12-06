@@ -1,3 +1,5 @@
+################################################################################
+################################################################################
 #########################   GRIN - Disturbance    ##############################
 #########################       Bahaiagrass       ##############################
 #########################  University of Florida  ##############################
@@ -5,30 +7,34 @@
 #########################      2021 - 2023        ##############################
 ################################################################################
 ################################################################################
-################################################################################
-################################################################################
-################################################################################
 
 ######################### Clears Environment & History  ########################
-
 rm(list=ls(all=TRUE))
 cat("\014") 
-#
-#########################     Installs Packages   ##############################
 
-list.of.packages <- c("tidyverse", "vegan", "agricolae")
+#########################     Installs Packages   ##############################
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
+                      "ggsignif", "multcompView", "ggpubr", "rstatix",
+                      "vegan", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 ##########################     Loads Packages     ##############################
-
+library(extrafont)
+#font_import()
+loadfonts(device = "win")
 library(tidyverse)
 library(vegan)
 library(agricolae)
+library(ggsignif)
+library(multcompView)
+library(ggpubr)
+library(rstatix)
+library(vegan)
+library(labdsv)
 
-##########################Read in 2021 - 2023 Data  ############################
-
+####################### Read in 2021 - 2023 Data  ##############################
 GRIN = read.csv("Data/GRIN - 2021-2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
@@ -62,57 +68,133 @@ PN_21 = filter(PN, Year == 1)
 PN_22 = filter(PN, Year == 2)
 PN_23 = filter(PN, Year == 3)
 
-## Bareground Coverage ##
-box = 
-  ggplot(PN, aes(x = Treatment, y = Coverage, fill = Treatment)) +
-  geom_boxplot(alpha = 0.8) +
-  facet_wrap(vars(Year)) +
-  geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
-  theme_bw() +
+################################################################################
+################ Test for Significance across years ############################
+################################################################################
+
+############################### 2021 Data ######################################
+# Check Assumptions #
+model  <- lm(Coverage ~ Treatment, data = PN_21)
+# Create a QQ plot of residuals
+ggqqplot(residuals(model))
+# Compute Shapiro-Wilk test of normality
+shapiro_test(residuals(model))
+plot(model, 1)
+# Compute Levene's Test
+PN_21$Treatment = as.factor(PN_21$Treatment)
+PN_21 %>% levene_test(Coverage ~ Treatment)
+
+# Test for Significance #
+anova_21 = PN_21 %>% kruskal_test(Coverage ~ Treatment) %>% 
+  add_significance()
+summary(anova_bare21)
+
+tukey_21 <- PN_21 %>% 
+  dunn_test(Coverage ~ Treatment) %>% 
+  add_significance() %>% 
+  add_xy_position()
+tukey_21
+
+############################### 2022 Data ######################################
+# Check Assumptions #
+model  <- lm(Coverage ~ Treatment, data = PN_22)
+# Create a QQ plot of residuals
+ggqqplot(residuals(model))
+# Compute Shapiro-Wilk test of normality
+shapiro_test(residuals(model))
+plot(model, 1)
+# Compute Levene's Test
+PN_22$Treatment = as.factor(PN_22$Treatment)
+PN_22 %>% levene_test(Coverage ~ Treatment)
+
+# Test for Significance #
+anova_22 = PN_22 %>% kruskal_test(Coverage ~ Treatment) %>% 
+  add_significance()
+summary(anova_22)
+
+tukey_22 <- PN_22 %>% 
+  dunn_test(Coverage ~ Treatment) %>% 
+  add_significance() %>% 
+  add_xy_position()
+tukey_22
+
+################################################################################
+################ Create Box Plot for Bahia Across Years ########################
+################################################################################
+
+## Bahia Coverage 2021 Box plot ##
+BahiaBox21 = 
+  ggplot(PN_21, aes(x = Treatment, y = Coverage), colour = Treatment) +
+  geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Treatment), 
+             position = position_jitterdodge(), size = 2, alpha = 0.5) +
+  stat_pvalue_manual(tukey_21,
+                     hide.ns = T)+
+  labs(subtitle = get_test_label(anova_21,
+                                 detailed = TRUE),
+       caption = get_pwc_label(tukey_21)) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
-        plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family = "Roboto Mono"))+
-  theme_classic() 
-box
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        strip.text.x = 
+          element_text(size = 15, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "Treatment", y = "Bare Ground % Coverage", title = "2021")
+BahiaBox21
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021-2023_BahaiaGrass.png", 
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Bahia_box21.png", 
        width = 10, height = 7)
 
-# Test for Significance across years #
-anova = aov(Coverage ~ Treatment, data = PN_21)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
-
-anova = aov(Coverage ~ Treatment, data = PN_22)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
-
-anova = aov(Coverage ~ Treatment, data = PN_23)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
-
-## Bareground Coverage ##
-box = 
-  ggplot(PN, aes(x = Treatment, y = Coverage, fill = Treatment)) +
-  geom_boxplot(alpha = 0.8, outlier.shape = NA) +
-  geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
-  geom_signif(y_position = c(100, 100), xmin = c(0.7,2), xmax = c(1.9,3),
-              annotation=c("***", "***"), size = 0.8,
-              textsize = 5, tip_length = 0.01) +
-  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
-  theme_bw() +
+## Bahia Coverage 2022 Boxplot ##
+BahiaBox22 = 
+  ggplot(PN_22, aes(x = Treatment, y = Coverage), colour = Treatment) +
+  geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Treatment), 
+             position = position_jitterdodge(), size = 2, alpha = 0.5) +
+  stat_pvalue_manual(tukey_22,
+                     hide.ns = T)+
+  labs(subtitle = get_test_label(anova_22,
+                                 detailed = TRUE),
+       caption = get_pwc_label(tukey_22)) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
-        plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family = "Roboto Mono"))+
-  theme_classic() 
-box
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = ,   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"), 
+        axis.ticks.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.line.y = element_blank(),
+        strip.text.x = 
+          element_text(size = 15, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "Treatment", y = "", title = "2022")
+BahiaBox22
+
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Bahia_box22.png", 
+       width = 10, height = 7)
+
+################## Save Figures Above using ggarrange ##########################
+ggarrange(BahiaBox21, BahiaBox22, ncol = 2, nrow = 1)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/21-22_BahiaBox.png", 
+       width = 12, height = 10)
