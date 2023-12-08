@@ -3,9 +3,9 @@
     "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_SeedbankOrdination.R",
     "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_SeedbankOrdination.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "1414157306",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1702066959450.0,
     "source_on_save": false,
     "relative_order": 9,
@@ -17,11 +17,11 @@
         "scrollLine": "83"
     },
     "folds": "",
-    "lastKnownWriteTime": 1695325330,
+    "lastKnownWriteTime": 1702068050,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1702067435202,
+    "last_content_update": 1702068050745,
     "read_only": false,
     "read_only_alternatives": []
 }
