@@ -136,7 +136,7 @@ BareBox22 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Bare Ground Coverage", title = "2022")
+  labs(x = "", y = "Bare Ground % Coverage", title = "2022")
 BareBox22
 
 ggsave("Figures/Chapter 2 - Fire/Bareground_box22.png", 

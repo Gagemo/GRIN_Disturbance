@@ -15,7 +15,7 @@ cat("\014")
 #########################     Installs Packages   ##############################
 list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
                       "ggsignif", "multcompView", "ggpubr", "rstatix",
-                      "vegan", "labdsv")
+                      "vegan", "labdsv", "pairwiseAdonis", "devtools")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -33,6 +33,10 @@ library(ggpubr)
 library(rstatix)
 library(vegan)
 library(labdsv)
+library(devtools)
+
+install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
+library(pairwiseAdonis)
 
 ##########################     Read in 2021-2023 Data       ####################
 
@@ -105,7 +109,7 @@ NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,
 NMDS_23 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F),
-             alpha = 0.7, size = 3, shape = 21) +
+             alpha = 0.7, size = 5, shape = 21) +
 # geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
@@ -197,7 +201,8 @@ NMDS = data.frame(MDS = MDS$points, Fire = Treat$Fire,
 NMDS_22 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F),
-             alpha = 0.7, size = 3, shape = 21) +
+             alpha = 0.7, size = 5, shape = 21) +
+#geom_text(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, label = Plot)) +
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
@@ -260,7 +265,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot two dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=4, 
+MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=3, 
               trace = F, autotransform = FALSE, wascores = TRUE)
 MDS$stress
 stressplot(MDS) 
@@ -288,7 +293,7 @@ NMDS = data.frame(MDS = MDS$points, Fire = Treat$Fire,
 NMDS_21 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F),
-             alpha = 0.7, size = 3, shape = 21) +
+             alpha = 0.7, size = 5, shape = 21) +
 # geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
@@ -327,9 +332,10 @@ pairwise.adonis<-pairwise.adonis2(Spp ~ Fire, data = NMDS)
 pairwise.adonis
 
 ################## Save Figures Above using ggarrange ##########################
-NMDS_22_23 = 
-  ggarrange(NMDS_22, NMDS_23, ncol = 2, nrow = 1, 
+NMDS_22_21 = 
+  ggarrange(NMDS_21, NMDS_22, ncol = 2, nrow = 1, 
             common.legend = TRUE, legend="bottom")
 
 ggsave("Figures/Chapter 2 - Fire/22-23_NMDS.png", 
        width = 18, height = 10)
+
