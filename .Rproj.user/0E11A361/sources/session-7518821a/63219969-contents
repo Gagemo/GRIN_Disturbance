@@ -192,7 +192,7 @@ ESBox23 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "P. notatum % Coverage", title = "2023")
+  labs(x = "", y = "E. spectabilis % Coverage", title = "2023")
 ESBox23
 
 ggsave("Figures/Chapter 2 - Fire/ESbox23.png", 

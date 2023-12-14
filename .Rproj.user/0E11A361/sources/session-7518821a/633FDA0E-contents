@@ -1,7 +1,7 @@
 ################################################################################
 ################################################################################
 #########################      GRIN - Fire        ##############################
-#########################       Lovegrass         ##############################
+#########################       Sorghastum        ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
 #########################      2021 - 2023        ##############################
@@ -60,7 +60,7 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-ES = filter(GRIN, Species == "Eragrostis spectabilis")
+ES = filter(GRIN, Species == "Sorghastrum secundum")
 summary(ES)
 
 # Creates data sets by year #
@@ -85,12 +85,12 @@ ES_22$Fire = as.factor(ES_22$Fire)
 ES_22 %>% levene_test(Coverage ~ Fire)
 
 # Test for Significance #
-anova_22 = ES_22 %>% kruskal_test(Coverage ~ Fire) %>% 
+anova_22 = ES_22 %>% anova_test(Coverage ~ Fire) %>% 
   add_significance()
 summary(anova_22)
 
 tukey_22 <- ES_22 %>% 
-  dunn_test(Coverage ~ Fire) %>% 
+  tukey_hsd(Coverage ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
 tukey_22
@@ -108,12 +108,12 @@ ES_23$Fire = as.factor(ES_23$Fire)
 ES_23 %>% levene_test(Coverage ~ Fire)
 
 # Test for Significance #
-anova_23 = ES_23 %>% kruskal_test(Coverage ~ Fire) %>% 
+anova_23 = ES_23 %>% anova_test(Coverage ~ Fire) %>% 
   add_significance()
 summary(anova_23)
 
 tukey_23 <- ES_23 %>% 
-  dunn_test(Coverage ~ Fire) %>% 
+  tukey_hsd(Coverage ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
 tukey_23
@@ -153,10 +153,10 @@ ESBox22 =
           element_text(size = 20, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "E. spectabilis % Coverage", title = "2022")
+  labs(x = "", y = "S. secundum % Coverage", title = "2022")
 ESBox22
 
-ggsave("Figures/Chapter 2 - Fire/ES_box22.png", 
+ggsave("Figures/Chapter 2 - Fire/SS_box22.png", 
        width = 12, height = 8)
 
 ## Lovegrass Coverage 2023 Boxplot ##
@@ -192,14 +192,14 @@ ESBox23 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "E. spectabilis % Coverage", title = "2023")
+  labs(x = "", y = "S. secundum % Coverage", title = "2023")
 ESBox23
 
-ggsave("Figures/Chapter 2 - Fire/ESbox23.png", 
+ggsave("Figures/Chapter 2 - Fire/SSbox23.png", 
        width = 12, height = 8)
 
 ################## Save Figures Above using ggarrange ##########################
 ggarrange(ESBox22, ESBox23, ncol = 2, nrow = 1)
-ggsave("Figures/Chapter 2 - Fire/22-23_ESBox.png", 
+ggsave("Figures/Chapter 2 - Fire/22-23_SSBox.png", 
        width = 12, height = 10)
 
