@@ -548,6 +548,7 @@ Sedge_Box =
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
   scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  ylim(0, 17) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -583,6 +584,7 @@ Woody_Box =
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
   scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  ylim(0,90) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -610,3 +612,4 @@ annotate_figure(CombinedFun_2023, top = text_grob("2023", color = "black",
                                                   face = "bold", size = 25))
 ggsave("Figures/Chapter 2 - Fire/2023_Fun.png", 
        width = 12, height = 8)
+

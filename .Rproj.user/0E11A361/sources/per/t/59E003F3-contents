@@ -13,11 +13,12 @@ rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "labdsv", "pheatmap")
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
+                      "ggsignif", "multcompView", "ggpubr", "rstatix",
+                      "vegan", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
-
 
 ##########################     Loads Packages     ##############################
 library(tidyverse)
@@ -301,6 +302,7 @@ Rubus_change_Box =
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
   scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  ylim(0, 90) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -355,6 +357,7 @@ Liatris_change_Box =
   stat_pvalue_manual(tukey_Liatris,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_Liatris, detailed = TRUE),
        caption = get_pwc_label(tukey_Liatris)) +
+  ylim(0, 50) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
