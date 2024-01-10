@@ -14,8 +14,7 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
-                      "ggsignif", "multcompView", "ggpubr", "rstatix",
-                      "vegan", "labdsv")
+                      "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -24,7 +23,12 @@ if(length(new.packages)) install.packages(new.packages)
 library(tidyverse)
 library(vegan)
 library(labdsv)
-library(pheatmap)
+library(agricolae)
+library(extrafont)
+library(ggsignif)
+library(multcompView)
+library(ggpubr)
+library(rstatix)
 
 ##########################     Read in  Data       #############################
 GRIN = read.csv("Data/GRIN - 2021-2023.csv")
@@ -117,6 +121,7 @@ love_change_Box =
   stat_pvalue_manual(tukey_ES,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_ES, detailed = TRUE),
        caption = get_pwc_label(tukey_ES)) +
+  ylim(-60,50) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
