@@ -9,25 +9,32 @@
 ################################################################################
 
 ######################### Clears Environment & History  ########################
-
 rm(list=ls(all=TRUE))
 cat("\014") 
-#
-#########################     Installs Packages   ##############################
 
-list.of.packages <- c("tidyverse", "vegan", "agricolae")
+#########################     Installs Packages   ##############################
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
+                      "ggsignif", "multcompView", "ggpubr", "rstatix",
+                      "vegan", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 ##########################     Loads Packages     ##############################
-
+library(extrafont)
+#font_import()
+loadfonts(device = "win")
 library(tidyverse)
 library(vegan)
 library(agricolae)
+library(ggsignif)
+library(multcompView)
+library(ggpubr)
+library(rstatix)
+library(vegan)
+library(labdsv)
 
-##########################Read in 2021 - 2023 Data  ############################
-
+####################### Read in 2021 - 2023 Data  ##############################
 GRIN = read.csv("Data/GRIN - 2021-2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
@@ -35,10 +42,8 @@ GRIN$Plot = as.character(GRIN$Plot)
 str(GRIN)
 summary(GRIN)
 
-# Remove Seeding Treatment # 
-GRIN = filter(GRIN, Treatment != 'Tsp')
-GRIN = filter(GRIN, Treatment != 'Tw')
-GRIN = filter(GRIN, Treatment != 'C')
+# Select only Seeding Treatment # 
+GRIN = filter(GRIN, Treatment == 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
@@ -63,38 +68,139 @@ PN_21 = filter(PN, Year == 1)
 PN_22 = filter(PN, Year == 2)
 PN_23 = filter(PN, Year == 3)
 
-## Bareground Coverage ##
-box = 
-  ggplot(PN, aes(x = Fire, y = Coverage, fill = Fire)) +
-  geom_boxplot(alpha = 0.8) +
-  facet_wrap(vars(Year)) +
-  geom_jitter(size=3, alpha = 0.5, color="black", width = 0.25) +
-  scale_fill_manual(values=c("#FF3399", "#117733", "#3366FF")) +
-  theme_bw() +
+################################################################################
+################ Test for Significance across years ############################
+################################################################################
+
+############################### 2022 Data ######################################
+# Check Assumptions #
+model  <- lm(Coverage ~ Fire, data = PN_22)
+# Create a QQ plot of residuals
+ggqqplot(residuals(model))
+# Compute Shapiro-Wilk test of normality
+shapiro_test(residuals(model))
+plot(model, 1)
+# Compute Levene's Test
+PN_22$Fire = as.factor(PN_22$Fire)
+PN_22 %>% levene_test(Coverage ~ Fire)
+
+# Test for Significance #
+anova_22 = PN_22 %>% kruskal_test(Coverage ~ Fire) %>% 
+  add_significance()
+summary(anova_22)
+
+tukey_22 <- PN_22 %>% 
+  dunn_test(Coverage ~ Fire) %>% 
+  add_significance() %>% 
+  add_xy_position()
+tukey_22
+
+############################### 2023 Data ######################################
+# Check Assumptions #
+model  <- lm(Coverage ~ Fire, data = PN_23)
+# Create a QQ plot of residuals
+ggqqplot(residuals(model))
+# Compute Shapiro-Wilk test of normality
+shapiro_test(residuals(model))
+plot(model, 1)
+# Compute Levene's Test
+PN_23$Fire = as.factor(PN_23$Fire)
+PN_23 %>% levene_test(Coverage ~ Fire)
+
+# Test for Significance #
+anova_23 = PN_23 %>% kruskal_test(Coverage ~ Fire) %>% 
+  add_significance()
+summary(anova_23)
+
+tukey_23 <- PN_23 %>% 
+  dunn_test(Coverage ~ Fire) %>% 
+  add_significance() %>% 
+  add_xy_position()
+tukey_23
+
+################################################################################
+################ Create Box Plot for Bahia Across Years ########################
+################################################################################
+
+## Bahia Coverage 2022 Box plot ##
+BahiaBox22 = 
+  ggplot(PN_22, aes(x = Fire, y = Coverage), colour = Fire) +
+  geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Fire), 
+             position = position_jitterdodge(), size = 2, alpha = 0.5) +
+  stat_pvalue_manual(tukey_22,
+                     hide.ns = T)+
+  ylim(0, 10) +
+  labs(subtitle = get_test_label(anova_22,
+                                 detailed = TRUE),
+       caption = get_pwc_label(tukey_22)) +
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                    values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                     values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank(),
-        plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family = "Roboto Mono"))+
-  theme_classic() 
-box
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="italic", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        strip.text.x = 
+          element_text(size = 15, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "", y = "P. notatum % Coverage", title = "2022")
+BahiaBox22
 
-ggsave("Figures/Chapter 2 - Fire/2021-2023_BahaiaGrass.png", 
-       width = 10, height = 7)
+ggsave("Figures/Chapter 2 - Fire/Bahia_box22.png", 
+       width = 12, height = 8)
 
-# Test for Significance across years #
-anova = aov(Coverage ~ Fire, data = PN_21)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
+## Bahia Coverage 2023 Boxplot ##
+BahiaBox23 = 
+  ggplot(PN_23, aes(x = Fire, y = Coverage), colour = Fire) +
+  geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Fire), 
+             position = position_jitterdodge(), size = 2, alpha = 0.5) +
+  stat_pvalue_manual(tukey_23,
+                     hide.ns = T)+
+  ylim(0, 10) +
+  labs(subtitle = get_test_label(anova_23,
+                                 detailed = TRUE),
+       caption = get_pwc_label(tukey_23)) +
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                    values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                     values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_blank(),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks = element_blank(), 
+        strip.text.x = 
+          element_text(size = 15, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "", y = "P. notatum % Coverage", title = "2023")
+BahiaBox23
 
-anova = aov(Coverage ~ Treatment, data = PN_22)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
+ggsave("Figures/Chapter 2 - Fire/Bahia_box23.png", 
+       width = 12, height = 8)
 
-anova = aov(Coverage ~ Treatment, data = PN_23)
-summary(anova)
-tukey.one.way<-TukeyHSD(anova)
-tukey.one.way
+################## Save Figures Above using ggarrange ##########################
+ggarrange(BahiaBox22, BahiaBox23, ncol = 2, nrow = 1)
+ggsave("Figures/Chapter 2 - Fire/22-23_BahiaBox.png", 
+       width = 12, height = 10)

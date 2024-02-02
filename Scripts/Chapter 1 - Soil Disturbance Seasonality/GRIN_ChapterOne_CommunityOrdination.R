@@ -52,7 +52,7 @@ GRIN_22 = filter(GRIN, Year == 2)
 Spp = dplyr::select(GRIN_22, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN, ID, Treatment) %>% summarise()
+Treat = group_by(GRIN, ID, Treatment) %>% dplyr::summarize()
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -72,14 +72,14 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot three dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(Spp, distance = "bray", k=3)
+MDS = metaMDS(Spp, distance = "bray", k=4)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
 # --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
 # Create a frame for functional groups alongside species for NMDS graph #
-species_groups = group_by(GRIN_22, Species, Group) %>% summarise()
+species_groups = group_by(GRIN_22, Species, Group) %>% dplyr::summarize()
 
 # Extract  species scores & convert to a data.frame for NMDS graph #
 species.scores <- 
@@ -88,20 +88,26 @@ species.scores <-
 # create a column of species, from the row names of species.scores  #                                                            )  
 species.scores$species <- rownames(species.scores)
 
-# create a column for functional groups for NMDS graph #                                                       )  
+# create a column for functional groups for NMDS graph #                                                       
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,Plot = Treat$ID)
 
 # NMDS Graphs
-NMDS_plot = 
+NMDS_22 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
-             alpha = 0.7, size = 3, shape = 21) +
-  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment, fill = Treatment),
-               geom = "polygon", alpha = 0.15, linetype = "solid", show.legend = T) +
+             alpha = 0.7, size = 6, shape = 21) +
+  ylim(-1, 1) +
+  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species))+
+  annotate("text", x = -1, y = 0.8, 
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, 
+                                color = Treatment, fill = Treatment),
+               geom = "polygon", alpha = 0.15, linetype = "solid", 
+               show.legend = T) +
   scale_color_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
                      values=c("#FF3399", "#FFFF00", "#3366FF")) +
   scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
@@ -115,15 +121,17 @@ NMDS_plot =
         plot.title = element_text(hjust = 0.5, color="black", 
                                   size=25, face="bold"),
         axis.title.x = element_text(size=25, face="bold", colour = "black"),    
-        axis.title.y = element_text(size=25, face="bold", colour = "black"),   
+        axis.title.y = element_blank(),   
         axis.text.x=element_text(size=25, face = "bold", color = "black"),
-        axis.text.y=element_text(size=25, face = "bold", color = "black"),
+        axis.text.y=element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.line.y = element_blank(),
         legend.text=element_text(size=25, face = "bold", color = "black"),
         legend.title=element_text(size=25, face = "bold", color = "black"),
         legend.position="bottom") +
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "MDS1", y = "MDS2")
-NMDS_plot
+NMDS_22
 
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022_NMDS.png", 
        width = 10, height = 7)
@@ -148,7 +156,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 Spp = dplyr::select(GRIN_21, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN, ID, Treatment) %>% summarise()
+Treat = group_by(GRIN, ID, Treatment) %>% dplyr::summarize()
 
 # Run Bray-Curtis dissimilarity #
 #vegdist_ = vegdist(Spp, method = "bray")
@@ -171,7 +179,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot two dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=3, 
+MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=4, 
               trace = F, autotransform = FALSE, wascores = TRUE)
 MDS$stress
 stressplot(MDS) 
@@ -179,7 +187,7 @@ goodness(MDS)
 # --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
 # Create a frame for functional groups alongside species for NMDS graph #
-species_groups = group_by(GRIN_21, Species, Group) %>% summarise()
+species_groups = group_by(GRIN_21, Species, Group) %>% dplyr::summarize()
 
 # Extract  species scores & convert to a data.frame for NMDS graph #
 species.scores <- 
@@ -188,7 +196,7 @@ species.scores <-
 # create a column of species, from the row names of species.scores  #                                                            )  
 species.scores$species <- rownames(species.scores)
 
-# create a column for functional groups for NMDS graph #                                                       )  
+# create a column for functional groups for NMDS graph #                                                       
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
@@ -196,13 +204,18 @@ NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,
                   Plot = Treat$ID)
 
 # NMDS Graphs
-NMDS_plot = 
+NMDS_21 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
-             alpha = 0.7, size = 3, shape = 21) +
-  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment, fill = Treatment),
-               geom = "polygon", alpha = 0.15, linetype = "solid", show.legend = T) +
+             alpha = 0.7, size = 6, shape = 21) +
+  ylim(-1, 1) +
+# geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
+  annotate("text", x = -1, y = 0.8, 
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment, 
+                                fill = Treatment),geom = "polygon", 
+               alpha = 0.15, linetype = "solid", show.legend = T) +
   scale_color_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
                      values=c("#FF3399", "#FFFF00", "#3366FF")) +
   scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
@@ -224,7 +237,7 @@ NMDS_plot =
         legend.position="bottom") +
   guides(fill = guide_legend(label.position = "bottom")) +     
   labs(x = "MDS1", y = "MDS2")
-NMDS_plot
+NMDS_21
 
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png", 
        width = 10, height = 7)
@@ -235,3 +248,10 @@ adon.results
 pairwise.adonis<-pairwise.adonis2(Spp ~ Treatment, data = NMDS)
 pairwise.adonis
 
+################## Save Figures Above using ggarrange ##########################
+NMDS_22_23 = 
+  ggarrange(NMDS_21, NMDS_22, ncol = 2, nrow = 1, 
+            common.legend = TRUE, legend="bottom")
+
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/21-22_NMDS.png", 
+       width = 18, height = 10, dpi = 700)

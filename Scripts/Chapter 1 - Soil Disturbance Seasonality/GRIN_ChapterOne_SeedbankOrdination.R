@@ -1,11 +1,10 @@
+################################################################################
+################################################################################
 #########################   GRIN - Disturbance    ##############################
 #########################      Seed Bank          ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
 #########################      2021 - 2022        ##############################
-################################################################################
-################################################################################
-################################################################################
 ################################################################################
 ################################################################################
 
@@ -63,7 +62,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot three dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(GRIN, distance = "bray", k=3)
+MDS = metaMDS(GRIN, distance = "bray", k=4)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
@@ -76,18 +75,40 @@ NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,
 # NMDS Graphs
 NMDS_plot = 
   ggplot() +
-  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment)) +
-  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
-  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment), 
-               linetype = "dashed", show.legend = T) +
-  scale_color_manual(values=c("#FF3399", "#117733", "#3366FF")) +
-  theme_bw() +
-  theme(plot.title = element_text(hjust = 0.5),
-        text=element_text(size=16,  family="Roboto Mono")) +
-  labs(x = "MDS1", y = "MDS2", title = "NMDS Ordiantion - Seedbank Data")
+  geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
+             alpha = 0.7, size = 6, shape = 21) +
+  #geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species))+
+  annotate("text", x = -1, y = max(NMDS$MDS.MDS2), 
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
+  stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment, 
+                                fill = Treatment),geom = "polygon", 
+               alpha = 0.15, linetype = "solid", show.legend = T) +
+  scale_color_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                     values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  ggtitle("2020 Pre-Treatment") +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, color="black", 
+                                  size=25, face="bold"),
+        axis.title.x = element_text(size=25, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=25, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=25, face = "bold", color = "black"),
+        axis.text.y=element_text(size=25, face = "bold", color = "black"),
+        legend.text=element_text(size=25, face = "bold", color = "black"),
+        legend.title=element_text(size=25, face = "bold", color = "black"),
+        legend.position="bottom") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_Seedbank.png", width = 10, height = 7)
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_Seedbank.png", 
+       width = 12, height = 8)
 
 # Perform adonis to test the significance of treatments#
 

@@ -54,6 +54,8 @@ GRIN = filter(GRIN, Treatment != 'S')
 
 GRIN$YID <- paste(GRIN$Year,GRIN$ID)
 
+GRIN$ID_ <- paste(GRIN$Treatment, GRIN$ID)
+
 # Seperate Pre & Post-Treatment Data #
 GRIN_21 = filter(GRIN, Year == "1")
 GRIN_22 = filter(GRIN, Year == "2")
@@ -85,7 +87,7 @@ Two_Abundance <- GRIN[which(GRIN$Year == "1"),]
 Three_Abundance <- GRIN[which(GRIN$Year == "2"),]
 
 Abundance_w <- full_join(Two_Abundance, Three_Abundance, 
-                         by = c('ID', "Treatment", 'Species'))
+                         by = c('ID_', "Treatment", 'Species'))
 Abundance_w = arrange(Abundance_w, Treatment)
 
 # Turns NA values into zeros #
@@ -96,9 +98,9 @@ Abundance_w$Coverage.y <- ifelse(is.na(Abundance_w$Coverage.y), 0,
 
 # Change abundance to reflect percentage change from (Year 1) to (Year 2)  #
 Change_Abundance <- Abundance_w %>% 
-  dplyr::select(ID, Treatment, Species, 
+  dplyr::select(ID_, Treatment, Species, 
                 Coverage.x, Coverage.y) %>%
-  group_by(ID, Treatment, Species) %>% 
+  group_by(ID_, Treatment, Species) %>% 
   mutate(Change_abundance = Coverage.y - Coverage.x) %>%
   filter(Change_abundance != 0)
 
@@ -108,15 +110,15 @@ Change_Abundance_L = filter(Change_Abundance, Change_abundance <= -25)
 Change_Abundance = full_join(Change_Abundance_H, Change_Abundance_L)
 
 Treat = ungroup(Change_Abundance) %>% 
-  dplyr::select(ID, Treatment) %>%
-  group_by(Treatment, ID) %>%
+  dplyr::select(ID_, Treatment) %>%
+  group_by(Treatment, ID_) %>%
   summarise() %>%
   remove_rownames() %>%
-  column_to_rownames(var = 'ID')
+  column_to_rownames(var = 'ID_')
 
 
 GRIN_change <- ungroup(Change_Abundance) %>%
-  dplyr::select(ID, Species, Change_abundance) %>%
+  dplyr::select(ID_, Species, Change_abundance) %>%
   as.data.frame() %>%
   matrify()
 
@@ -135,7 +137,7 @@ speciesHEAT = pheatmap(GRIN_change, show_rownames=F, cluster_cols=F,
 speciesHEAT
 
 png(file = "Figures/Chapter 1 - Soil Disturbance Seasonality/Heat.png", 
-    units="cm", width=50, height=25, res=1500)
+    units="cm", width=20, height=30, res=1500)
 speciesHEAT
 dev.off()
 
