@@ -105,8 +105,9 @@ plot(model, 1)
 # Test for Significance #
 anova_ES = ES %>% anova_test(Change_abundance ~ Fire) %>% 
   add_significance()
-summary(anova_ES)
+anova_ES
 
+lm(formula = Change_Abundance ~ Fire, ES)
 tukey_ES <- ES %>% 
   tukey_hsd(Change_abundance ~ Fire) %>% 
   add_significance() %>% 
@@ -353,6 +354,7 @@ tukey_Liatris <- Liatris %>%
   add_significance() %>% 
   add_xy_position()
 tukey_Liatris
+summary(tukey_Liatris)
 
 Liatris_change_Box = 
   ggplot(Liatris, aes(x = Fire, y = Change_abundance), colour = Fire) +
@@ -396,3 +398,4 @@ annotate_figure(Change, top = text_grob("", color = "black",
                                                   face = "bold", size = 25))
 ggsave("Figures/Chapter 2 - Fire/Change.png", 
        width = 12, height = 8)
+

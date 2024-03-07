@@ -2,6 +2,7 @@
 ################################################################################
 #########################      GRIN - Fire        ##############################
 #########################    Change in Cover      ##############################
+#########################    Functional Groups    ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
 #########################      2021 - 2023        ##############################
@@ -72,7 +73,7 @@ Two_Abundance <- GRIN[which(GRIN$Year == "2"),]
 Three_Abundance <- GRIN[which(GRIN$Year == "3"),]
 
 Abundance_w <- full_join(Two_Abundance, Three_Abundance, 
-                         by = c('ID_', "Fire", 'Species'))
+                         by = c('ID_', "Fire", 'Group','Species'))
 Abundance_w = arrange(Abundance_w, Fire)
 
 # Turns NA values into zeros #
@@ -83,19 +84,23 @@ Abundance_w$Coverage.y <- ifelse(is.na(Abundance_w$Coverage.y), 0,
 
 # Change abundance to reflect percentage change from (Year 1) to (Year 2)  #
 Change_Abundance <- Abundance_w %>% 
-  dplyr::select(ID_, Fire, Species, 
+  dplyr::select(ID_, Fire, Species, Group, 
                 Coverage.x, Coverage.y) %>%
-  group_by(ID_, Fire, Species) %>% 
+  group_by(ID_, Fire, Species, Group) %>% 
   mutate(Change_abundance = Coverage.y - Coverage.x)
 
-##################################  COVER CAHNGES ##############################
-ES = 
-  Change_Abundance[which(Change_Abundance$Species == "Eragrostis spectabilis"),]
-ES<-as.data.frame(ES)
-ES$Fire<-factor(ES$Fire)
+Change_Abundance = Change_Abundance %>%
+  group_by(ID_, Fire, Group) %>%
+  summarise(total = sum(Change_abundance))
+
+############################# WOODY COVER CAHNGES ##############################
+woody = 
+  Change_Abundance[which(Change_Abundance$Group == "Woody"),]
+woody<-as.data.frame(woody)
+woody$Fire<-factor(woody$Fire)
 
 # Check Assumptions #
-model  <- lm(Change_abundance ~ Fire, data = ES)
+model  <- lm(total ~ Fire, data = woody)
 # Create a QQ plot of residuals
 ggqqplot(residuals(model))
 # Compute Shapiro-Wilk test of normality
@@ -103,26 +108,26 @@ shapiro_test(residuals(model))
 plot(model, 1)
 
 # Test for Significance #
-anova_ES = ES %>% anova_test(Change_abundance ~ Fire) %>% 
+anova_woody = woody %>% anova_test(total ~ Fire) %>% 
   add_significance()
-anova_ES
+anova_woody
 
-lm(formula = Change_Abundance ~ Fire, ES)
-tukey_ES <- ES %>% 
-  tukey_hsd(Change_abundance ~ Fire) %>% 
+lm(formula = total ~ Fire, woody)
+tukey_woody <- woody %>% 
+  tukey_hsd(total ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
-tukey_ES
+tukey_woody
 
-love_change_Box = 
-  ggplot(ES, aes(x = Fire, y = Change_abundance), colour = Fire) +
+woody_change_Box = 
+  ggplot(woody, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Fire), size = 3, 
              position = position_jitterdodge(), alpha = 0.7) +
-  stat_pvalue_manual(tukey_ES,size = 8, bracket.size = 1, hide.ns = T)+
-  labs(subtitle = get_test_label(anova_ES, detailed = TRUE),
-       caption = get_pwc_label(tukey_ES)) +
-  ylim(-60,50) +
+  stat_pvalue_manual(tukey_woody,size = 8, bracket.size = 1, hide.ns = T)+
+  labs(subtitle = get_test_label(anova_woody, detailed = TRUE),
+       caption = get_pwc_label(tukey_woody)) +
+  ylim(-30,80) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
@@ -143,21 +148,19 @@ love_change_Box =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Change in Coverage", title = "Eragrostis spectabilis")
-love_change_Box
-ggsave("Figures/Chapter 2 - Fire/change_love.png", 
+  labs(x = "", y = "Change in Coverage", title = "Woody Ruderals")
+woody_change_Box
+ggsave("Figures/Chapter 2 - Fire/change_woody.png", 
        width = 10, height = 7)
 
-################################################################################
-########################### Indiangrass ########################################
-################################################################################
-SS = 
-  Change_Abundance[which(Change_Abundance$Species == "Sorghastrum secundum"),]
-SS<-as.data.frame(SS)
-SS$Fire<-factor(SS$Fire)
+############################## FORB COVER CAHNGES ##############################
+forb = 
+  Change_Abundance[which(Change_Abundance$Group == "Forb"),]
+forb<-as.data.frame(forb)
+forb$Fire<-factor(forb$Fire)
 
 # Check Assumptions #
-model  <- lm(Change_abundance ~ Fire, data = SS)
+model  <- lm(total ~ Fire, data = forb)
 # Create a QQ plot of residuals
 ggqqplot(residuals(model))
 # Compute Shapiro-Wilk test of normality
@@ -165,24 +168,26 @@ shapiro_test(residuals(model))
 plot(model, 1)
 
 # Test for Significance #
-anova_SS = SS %>% anova_test(Change_abundance ~ Fire) %>% 
+anova_forb = forb %>% anova_test(total ~ Fire) %>% 
   add_significance()
-summary(anova_SS)
+anova_forb
 
-tukey_SS <- SS %>% 
-  tukey_hsd(Change_abundance ~ Fire) %>% 
+lm(formula = total ~ Fire, forb)
+tukey_forb <- forb %>% 
+  tukey_hsd(total ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
-tukey_SS
+tukey_forb
 
-SS_change_Box = 
-  ggplot(SS, aes(x = Fire, y = Change_abundance), colour = Fire) +
+forb_change_Box = 
+  ggplot(forb, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Fire), size = 3, 
              position = position_jitterdodge(), alpha = 0.7) +
-  stat_pvalue_manual(tukey_SS,size = 8, bracket.size = 1, hide.ns = T)+
-  labs(subtitle = get_test_label(anova_SS, detailed = TRUE),
-       caption = get_pwc_label(tukey_SS)) +
+  stat_pvalue_manual(tukey_forb,size = 8, bracket.size = 1, hide.ns = T)+
+  labs(subtitle = get_test_label(anova_forb, detailed = TRUE),
+       caption = get_pwc_label(tukey_forb)) +
+  ylim(-30,80) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
@@ -203,21 +208,18 @@ SS_change_Box =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Change in Coverage", title = "Sorghastrum secundum")
-SS_change_Box
-ggsave("Figures/Chapter 2 - Fire/change_indian.png", 
+  labs(x = "", y = "Change in Coverage", title = "Forbs")
+forb_change_Box
+ggsave("Figures/Chapter 2 - Fire/change_Forbs.png", 
        width = 10, height = 7)
-
-################################################################################
-########################### Pityopsis ##########################################
-################################################################################
-Pt = 
-  Change_Abundance[which(Change_Abundance$Species == "Pityopsis graminifolia"),]
-Pt<-as.data.frame(Pt)
-Pt$Fire<-factor(Pt$Fire)
+#################################  Grass COVER CAHNGES ##############################
+grass = 
+  Change_Abundance[which(Change_Abundance$Group == "Grass"),]
+grass<-as.data.frame(grass)
+grass$Fire<-factor(grass$Fire)
 
 # Check Assumptions #
-model  <- lm(Change_abundance ~ Fire, data = Pt)
+model  <- lm(total ~ Fire, data = grass)
 # Create a QQ plot of residuals
 ggqqplot(residuals(model))
 # Compute Shapiro-Wilk test of normality
@@ -225,24 +227,26 @@ shapiro_test(residuals(model))
 plot(model, 1)
 
 # Test for Significance #
-anova_Pt = Pt %>% anova_test(Change_abundance ~ Fire) %>% 
+anova_grass = grass %>% anova_test(total ~ Fire) %>% 
   add_significance()
-summary(anova_Pt)
+anova_grass
 
-tukey_Pt <- Pt %>% 
-  tukey_hsd(Change_abundance ~ Fire) %>% 
+lm(formula = total ~ Fire, grass)
+tukey_grass <- grass %>% 
+  tukey_hsd(total ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
-tukey_Pt
+tukey_grass
 
-Pt_change_Box = 
-  ggplot(Pt, aes(x = Fire, y = Change_abundance), colour = Fire) +
+grass_change_Box = 
+  ggplot(grass, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Fire), size = 3, 
              position = position_jitterdodge(), alpha = 0.7) +
-  stat_pvalue_manual(tukey_Pt,size = 8, bracket.size = 1, hide.ns = T)+
-  labs(subtitle = get_test_label(anova_Pt, detailed = TRUE),
-       caption = get_pwc_label(tukey_Pt)) +
+  stat_pvalue_manual(tukey_grass,size = 8, bracket.size = 1, hide.ns = T)+
+  labs(subtitle = get_test_label(anova_grass, detailed = TRUE),
+       caption = get_pwc_label(tukey_grass)) +
+  ylim(-50,90) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
@@ -263,21 +267,18 @@ Pt_change_Box =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Change in Coverage", title = "Pityopsis graminifolia")
-Pt_change_Box
-ggsave("Figures/Chapter 2 - Fire/change_Pityopsis.png", 
+  labs(x = "", y = "Change in Coverage", title = "Grasses")
+grass_change_Box
+ggsave("Figures/Chapter 2 - Fire/change_Grass.png", 
        width = 10, height = 7)
-
-################################################################################
-############################### Rubus ##########################################
-################################################################################
-Rubus = 
-  Change_Abundance[which(Change_Abundance$Species == "Rubus spp."),]
-Rubus<-as.data.frame(Rubus)
-Rubus$Fire<-factor(Rubus$Fire)
+#################################  Sedge COVER CAHNGES ##############################
+sedge = 
+  Change_Abundance[which(Change_Abundance$Group == "Sedge"),]
+sedge<-as.data.frame(sedge)
+sedge$Fire<-factor(sedge$Fire)
 
 # Check Assumptions #
-model  <- lm(Change_abundance ~ Fire, data = Rubus)
+model  <- lm(total ~ Fire, data = sedge)
 # Create a QQ plot of residuals
 ggqqplot(residuals(model))
 # Compute Shapiro-Wilk test of normality
@@ -285,86 +286,26 @@ shapiro_test(residuals(model))
 plot(model, 1)
 
 # Test for Significance #
-anova_Rubus = Rubus %>% kruskal_test(Change_abundance ~ Fire) %>% 
+anova_sedge = sedge %>% anova_test(total ~ Fire) %>% 
   add_significance()
-summary(anova_Rubus)
+anova_sedge
 
-tukey_Rubus <- Rubus %>% 
-  dunn_test(Change_abundance ~ Fire) %>% 
+lm(formula = total ~ Fire, sedge)
+tukey_sedge <- sedge %>% 
+  tukey_hsd(total ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
-tukey_Rubus
+tukey_sedge
 
-Rubus_change_Box = 
-  ggplot(Rubus, aes(x = Fire, y = Change_abundance), colour = Fire) +
+sedge_change_Box = 
+  ggplot(sedge, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Fire), size = 3, 
              position = position_jitterdodge(), alpha = 0.7) +
-  stat_pvalue_manual(tukey_Rubus,size = 8, bracket.size = 1, hide.ns = T)+
-  labs(subtitle = get_test_label(anova_Rubus, detailed = TRUE),
-       caption = get_pwc_label(tukey_Rubus)) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
-  ylim(0, 90) +
-  theme_classic() +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.border = element_blank(),
-        panel.background = element_blank(),
-        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
-        text=element_text(size=16),
-        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
-        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
-        axis.text.x=element_text(size=15, face = "bold", color = "black"),
-        axis.text.y=element_text(size=15, face = "bold", color = "black"),
-        strip.text.x = 
-          element_text(size = 15, colour = "black", face = "bold"),
-        legend.position = "none") +
-  guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Change in Coverage", title = "Rubus spp.")
-Rubus_change_Box
-ggsave("Figures/Chapter 2 - Fire/change_Rubus.png", 
-       width = 10, height = 7)
-################################################################################
-############################### Liatris ########################################
-################################################################################
-Liatris = 
-  Change_Abundance[which(Change_Abundance$Species == "Liatris gracilis"),]
-Liatris<-as.data.frame(Liatris)
-Liatris$Fire<-factor(Liatris$Fire)
-
-# Check Assumptions #
-model  <- lm(Change_abundance ~ Fire, data = Liatris)
-# Create a QQ plot of residuals
-ggqqplot(residuals(model))
-# Compute Shapiro-Wilk test of normality
-shapiro_test(residuals(model))
-plot(model, 1)
-
-# Test for Significance #
-anova_Liatris = Liatris %>% kruskal_test(Change_abundance ~ Fire) %>% 
-  add_significance()
-summary(anova_Liatris)
-
-tukey_Liatris <- Liatris %>% 
-  dunn_test(Change_abundance ~ Fire) %>% 
-  add_significance() %>% 
-  add_xy_position()
-tukey_Liatris
-summary(tukey_Liatris)
-
-Liatris_change_Box = 
-  ggplot(Liatris, aes(x = Fire, y = Change_abundance), colour = Fire) +
-  geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
-  geom_point(aes(fill=Fire), size = 3, 
-             position = position_jitterdodge(), alpha = 0.7) +
-  stat_pvalue_manual(tukey_Liatris,size = 8, bracket.size = 1, hide.ns = T)+
-  labs(subtitle = get_test_label(anova_Liatris, detailed = TRUE),
-       caption = get_pwc_label(tukey_Liatris)) +
-  ylim(0, 50) +
+  stat_pvalue_manual(tukey_sedge,size = 8, bracket.size = 1, hide.ns = T)+
+  labs(subtitle = get_test_label(anova_sedge, detailed = TRUE),
+       caption = get_pwc_label(tukey_sedge)) +
+  ylim(-10,30) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
@@ -385,17 +326,77 @@ Liatris_change_Box =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Change in Coverage", title = "Liatris gracilis")
-Liatris_change_Box
-ggsave("Figures/Chapter 2 - Fire/change_Liatris.png", 
+  labs(x = "", y = "Change in Coverage", title = "Sedges")
+sedge_change_Box
+ggsave("Figures/Chapter 2 - Fire/change_Sedge.png", 
        width = 10, height = 7)
 
 ################## Save Figures Above using ggarrange ##########################
 Change = 
-  ggarrange(love_change_Box, SS_change_Box, 
-            Pt_change_Box, Liatris_change_Box, ncol = 2, nrow = 2)
+  ggarrange(grass_change_Box, forb_change_Box, 
+            sedge_change_Box, woody_change_Box, ncol = 2, nrow = 2)
 annotate_figure(Change, top = text_grob("", color = "black", 
-                                                  face = "bold", size = 25))
-ggsave("Figures/Chapter 2 - Fire/Change.png", 
+                                        face = "bold", size = 25))
+ggsave("Figures/Chapter 2 - Fire/Changefun.png", 
        width = 12, height = 8)
 
+######################## BAREGROUND COVER CAHNGES ##############################
+
+bare = 
+  Change_Abundance[which(Change_Abundance$Group == "Bare"),]
+bare<-as.data.frame(bare)
+bare$Fire<-factor(bare$Fire)
+
+# Check Assumptions #
+model  <- lm(total ~ Fire, data = bare)
+# Create a QQ plot of residuals
+ggqqplot(residuals(model))
+# Compute Shapiro-Wilk test of normality
+shapiro_test(residuals(model))
+plot(model, 1)
+
+# Test for Significance #
+anova_bare = bare %>% kruskal_test(total ~ Fire) %>% 
+  add_significance()
+anova_bare
+
+lm(formula = total ~ Fire, bare)
+tukey_bare <- bare %>% 
+  tukey_hsd(total ~ Fire) %>% 
+  add_significance() %>% 
+  add_xy_position()
+tukey_bare
+
+bare_change_Box = 
+  ggplot(bare, aes(x = Fire, y = total), colour = Fire) +
+  geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Fire), size = 3, 
+             position = position_jitterdodge(), alpha = 0.7) +
+  stat_pvalue_manual(tukey_bare,size = 8, bracket.size = 1, hide.ns = T)+
+  labs(subtitle = get_test_label(anova_bare, detailed = TRUE),
+       caption = get_pwc_label(tukey_bare)) +
+  ylim(-10,100) +
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                    values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                     values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=16),
+        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        strip.text.x = 
+          element_text(size = 15, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "", y = "Change in Coverage", title = "Bare Ground")
+bare_change_Box
+ggsave("Figures/Chapter 2 - Fire/change_Bareground.png", 
+       width = 10, height = 7)
