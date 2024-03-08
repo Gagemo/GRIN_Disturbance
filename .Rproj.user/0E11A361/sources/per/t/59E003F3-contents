@@ -13,7 +13,7 @@ rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "tables",
                       "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
@@ -25,6 +25,7 @@ library(vegan)
 library(labdsv)
 library(agricolae)
 library(extrafont)
+library(tables)
 library(ggsignif)
 library(multcompView)
 library(ggpubr)
@@ -107,12 +108,15 @@ anova_ES = ES %>% anova_test(Change_abundance ~ Fire) %>%
   add_significance()
 anova_ES
 
-lm(formula = Change_Abundance ~ Fire, ES)
+lm(formula = Change_abundance ~ Fire, ES)
 tukey_ES <- ES %>% 
   tukey_hsd(Change_abundance ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
 tukey_ES
+
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=ES )
+tmp
 
 love_change_Box = 
   ggplot(ES, aes(x = Fire, y = Change_abundance), colour = Fire) +
@@ -122,7 +126,7 @@ love_change_Box =
   stat_pvalue_manual(tukey_ES,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_ES, detailed = TRUE),
        caption = get_pwc_label(tukey_ES)) +
-  ylim(-60,50) +
+  ylim(-70,50) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
@@ -174,6 +178,9 @@ tukey_SS <- SS %>%
   add_significance() %>% 
   add_xy_position()
 tukey_SS
+
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=SS )
+tmp
 
 SS_change_Box = 
   ggplot(SS, aes(x = Fire, y = Change_abundance), colour = Fire) +
@@ -235,6 +242,9 @@ tukey_Pt <- Pt %>%
   add_xy_position()
 tukey_Pt
 
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=Pt)
+tmp
+
 Pt_change_Box = 
   ggplot(Pt, aes(x = Fire, y = Change_abundance), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
@@ -294,6 +304,9 @@ tukey_Rubus <- Rubus %>%
   add_significance() %>% 
   add_xy_position()
 tukey_Rubus
+
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=Rubus)
+tmp
 
 Rubus_change_Box = 
   ggplot(Rubus, aes(x = Fire, y = Change_abundance), colour = Fire) +
@@ -356,6 +369,9 @@ tukey_Liatris <- Liatris %>%
 tukey_Liatris
 summary(tukey_Liatris)
 
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=Liatris)
+tmp
+
 Liatris_change_Box = 
   ggplot(Liatris, aes(x = Fire, y = Change_abundance), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
@@ -399,3 +415,5 @@ annotate_figure(Change, top = text_grob("", color = "black",
 ggsave("Figures/Chapter 2 - Fire/Change.png", 
        width = 12, height = 8)
 
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=Liatris )
+tmp

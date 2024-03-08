@@ -14,7 +14,7 @@ rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "plotrix", 
                       "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
@@ -29,6 +29,7 @@ library(extrafont)
 library(ggsignif)
 library(multcompView)
 library(ggpubr)
+library(plotrix)
 library(rstatix)
 
 ##########################     Read in  Data       #############################
@@ -119,6 +120,9 @@ tukey_woody <- woody %>%
   add_xy_position()
 tukey_woody
 
+tmp <- tabular(Fire ~ total* (mean+sd+se), data=woody)
+tmp
+
 woody_change_Box = 
   ggplot(woody, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
@@ -178,6 +182,9 @@ tukey_forb <- forb %>%
   add_significance() %>% 
   add_xy_position()
 tukey_forb
+
+tmp <- tabular(Fire ~ total* (mean+sd+se), data=bare)
+tmp
 
 forb_change_Box = 
   ggplot(forb, aes(x = Fire, y = total), colour = Fire) +
@@ -246,7 +253,7 @@ grass_change_Box =
   stat_pvalue_manual(tukey_grass,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_grass, detailed = TRUE),
        caption = get_pwc_label(tukey_grass)) +
-  ylim(-50,90) +
+  ylim(-120,90) +
   scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
@@ -362,17 +369,20 @@ anova_bare
 
 lm(formula = total ~ Fire, bare)
 tukey_bare <- bare %>% 
-  tukey_hsd(total ~ Fire) %>% 
+  dunn_test(total ~ Fire) %>% 
   add_significance() %>% 
   add_xy_position()
 tukey_bare
 
+tmp <- tabular(Fire ~ total* (mean+sd+se), data=bare)
+tmp
+
 bare_change_Box = 
   ggplot(bare, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
-  geom_point(aes(fill=Fire), size = 3, 
+  geom_point(aes(fill=Fire), size = 4, 
              position = position_jitterdodge(), alpha = 0.7) +
-  stat_pvalue_manual(tukey_bare,size = 8, bracket.size = 1, hide.ns = T)+
+  stat_pvalue_manual(tukey_bare,size = 12, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_bare, detailed = TRUE),
        caption = get_pwc_label(tukey_bare)) +
   ylim(-10,100) +
@@ -387,13 +397,13 @@ bare_change_Box =
         panel.border = element_blank(),
         panel.background = element_blank(),
         plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
-        text=element_text(size=16),
-        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
-        axis.title.y = element_text(size=15, face="bold", colour = "black"),   
-        axis.text.x=element_text(size=15, face = "bold", color = "black"),
-        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        text=element_text(size=20),
+        axis.title.x = element_text(size=20, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=20, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=20, face = "bold", color = "black"),
+        axis.text.y=element_text(size=20, face = "bold", color = "black"),
         strip.text.x = 
-          element_text(size = 15, colour = "black", face = "bold"),
+          element_text(size = 20, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "Change in Coverage", title = "Bare Ground")

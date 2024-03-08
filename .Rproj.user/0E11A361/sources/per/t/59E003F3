@@ -3,7 +3,7 @@
     "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_ChangeCover.R",
     "project_path": "Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_ChangeCover.R",
     "type": "r_source",
-    "hash": "3964861157",
+    "hash": "2718977554",
     "contents": "",
     "dirty": false,
     "created": 1702567542808.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "392,0",
-        "scrollLine": "373"
+        "cursorPosition": "374,0",
+        "scrollLine": "354"
     },
     "folds": "",
-    "lastKnownWriteTime": 1709845155,
+    "lastKnownWriteTime": 1709933919,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1709845155519,
+    "last_content_update": 1709933919935,
     "read_only": false,
     "read_only_alternatives": []
 }
