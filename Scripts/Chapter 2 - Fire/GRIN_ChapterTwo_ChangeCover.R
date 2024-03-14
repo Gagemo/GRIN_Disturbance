@@ -13,8 +13,9 @@ rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "tables",
-                      "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv")
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "plotrix", 
+                      "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv",
+                      "tables")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -25,11 +26,12 @@ library(vegan)
 library(labdsv)
 library(agricolae)
 library(extrafont)
-library(tables)
 library(ggsignif)
 library(multcompView)
 library(ggpubr)
+library(plotrix)
 library(rstatix)
+library(tables)
 
 ##########################     Read in  Data       #############################
 GRIN = read.csv("Data/GRIN - 2021-2023.csv")
@@ -115,7 +117,7 @@ tukey_ES <- ES %>%
   add_xy_position()
 tukey_ES
 
-tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=ES )
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd+std.error), data=ES)
 tmp
 
 love_change_Box = 
@@ -369,7 +371,7 @@ tukey_Liatris <- Liatris %>%
 tukey_Liatris
 summary(tukey_Liatris)
 
-tmp <- tabular(Fire ~ Change_abundance* (mean+sd), data=Liatris)
+tmp <- tabular(Fire ~ Change_abundance* (mean+sd+std.error), data=Liatris)
 tmp
 
 Liatris_change_Box = 

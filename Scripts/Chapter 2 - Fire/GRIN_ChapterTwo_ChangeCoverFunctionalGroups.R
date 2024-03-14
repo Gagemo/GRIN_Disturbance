@@ -15,7 +15,8 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "plotrix", 
-                      "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv")
+                      "ggsignif", "multcompView", "ggpubr", "rstatix", "labdsv",
+                      "tables")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -31,6 +32,7 @@ library(multcompView)
 library(ggpubr)
 library(plotrix)
 library(rstatix)
+library(tables)
 
 ##########################     Read in  Data       #############################
 GRIN = read.csv("Data/GRIN - 2021-2023.csv")
@@ -120,7 +122,7 @@ tukey_woody <- woody %>%
   add_xy_position()
 tukey_woody
 
-tmp <- tabular(Fire ~ total* (mean+sd+se), data=woody)
+tmp <- tabular(Fire ~ total* (mean+sd+std.error), data=woody)
 tmp
 
 woody_change_Box = 
@@ -183,7 +185,7 @@ tukey_forb <- forb %>%
   add_xy_position()
 tukey_forb
 
-tmp <- tabular(Fire ~ total* (mean+sd+se), data=bare)
+tmp <- tabular(Fire ~ total* (mean+sd+std.error), data=forb)
 tmp
 
 forb_change_Box = 
@@ -245,6 +247,9 @@ tukey_grass <- grass %>%
   add_xy_position()
 tukey_grass
 
+tmp <- tabular(Fire ~ total* (mean+sd+std.error), data=grass)
+tmp
+
 grass_change_Box = 
   ggplot(grass, aes(x = Fire, y = total), colour = Fire) +
   geom_boxplot(aes(fill=Fire), alpha = 0.5, outlier.shape = NA) +
@@ -303,6 +308,9 @@ tukey_sedge <- sedge %>%
   add_significance() %>% 
   add_xy_position()
 tukey_sedge
+
+tmp <- tabular(Fire ~ total* (mean+sd+std.error), data=sedge)
+tmp
 
 sedge_change_Box = 
   ggplot(sedge, aes(x = Fire, y = total), colour = Fire) +
@@ -374,7 +382,7 @@ tukey_bare <- bare %>%
   add_xy_position()
 tukey_bare
 
-tmp <- tabular(Fire ~ total* (mean+sd+se), data=bare)
+tmp <- tabular(Fire ~ total* (mean+sd+std.error), data=bare)
 tmp
 
 bare_change_Box = 
