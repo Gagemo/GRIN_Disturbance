@@ -40,7 +40,7 @@ library(pairwiseAdonis)
 
 ##########################     Read in 2021-2023 Data       ####################
 
-GRIN = read.csv("Data/GRIN - 2021-2023.csv")
+GRIN = read.csv("Data/GRIN - 2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
 str(GRIN)
@@ -60,7 +60,7 @@ GRIN_23 = filter(GRIN, Year == 3)
 Spp = dplyr::select(GRIN_23, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN_23, ID, Treatment, Fire, T.F) %>% summarise()
+Treat = group_by(GRIN_23, ID, Treatment, Fire, T.F, TSF) %>% summarise()
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -100,7 +100,7 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, TSF = Treat$TSF,
                   Fire = Treat$Fire, T.F = Treat$T.F, Plot = Treat$ID)
 
 # NMDS Graphs

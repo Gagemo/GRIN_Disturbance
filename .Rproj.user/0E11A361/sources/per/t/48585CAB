@@ -1,0 +1,27 @@
+{
+    "id": "48585CAB",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_Weather.R",
+    "project_path": "Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_Weather.R",
+    "type": "r_source",
+    "hash": "1499934269",
+    "contents": "",
+    "dirty": false,
+    "created": 1712255206468.0,
+    "source_on_save": false,
+    "relative_order": 11,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "194,0",
+        "scrollLine": "66"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1712262897,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1712262897912,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,27 @@
+{
+    "id": "01387A51",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Weather.R",
+    "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Weather.R",
+    "type": "r_source",
+    "hash": "1516819233",
+    "contents": "",
+    "dirty": false,
+    "created": 1712252298993.0,
+    "source_on_save": false,
+    "relative_order": 8,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "121,0",
+        "scrollLine": "27"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1712257825,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1712257825353,
+    "read_only": false,
+    "read_only_alternatives": []
+}
