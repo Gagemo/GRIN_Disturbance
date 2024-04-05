@@ -1,6 +1,6 @@
 ################################################################################
 ################################################################################
-#########################   GRIN - Disturbance    ##############################
+#########################       GRIN - Fire       ##############################
 #########################      Weather Data       ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
@@ -93,12 +93,12 @@ temp =
 temp
 
 ggsave("Figures/Chapter 2 - Fire/23_temp.png", 
-       width = 10, height = 7)
+       width = 14, height = 7)
 
 ################## Save Figures Above using ggarrange ##########################
 ggarrange(temp, rain, ncol = 1, nrow = 2)
 ggsave("Figures/Chapter 2 - Fire/23_rainTemp.png", 
-       width = 8, height = 12)
+       width = 14, height = 12)
 
 ##################### 2021 - 2022 Weather Data #################################
 data = read.csv("Data/GRIN - Weather Data.csv")
