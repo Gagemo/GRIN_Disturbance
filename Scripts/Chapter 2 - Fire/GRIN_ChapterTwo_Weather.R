@@ -65,9 +65,9 @@ ggsave("Figures/Chapter 2 - Fire/precip.png",
 
 temp = 
   ggplot(data, aes(x = Date)) +
-  geom_line(aes(y = Temp.Max*(5/9)), color = "red", size = 1.25) +
-  geom_line(aes(y = Temp.Ave*(5/9)), color = "black", size = 1.25) +
-  geom_line(aes(y = Temp.Min*(5/9)), color = "lightblue", size = 1.25) +
+  geom_line(aes(y = (Temp.Max-(32))*(5/9)), color = "red", size = 1.25) +
+  geom_line(aes(y = (Temp.Ave-(32))*(5/9)), color = "black", size = 1.25) +
+  geom_line(aes(y = (Temp.Min-(32))*(5/9)), color = "lightblue", size = 1.25) +
   scale_x_date(date_breaks = "months" , date_labels = "%b") +
   geom_vline(xintercept = as.Date(data$Date[36]), linetype="solid", 
              color = "blue", size=1.2) +
