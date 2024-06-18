@@ -504,6 +504,9 @@ Forb_Box
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022Forb.png", 
        width = 10, height = 7)
 
+tmp <- tabular(Treatment ~ Forb* (mean+sd+std.error), data=Forb)
+tmp
+
 # Grasses 2022 #
 Grass_Box = 
   ggplot(Grass, aes(x = Treatment, y = Grass), colour = Treatment) +

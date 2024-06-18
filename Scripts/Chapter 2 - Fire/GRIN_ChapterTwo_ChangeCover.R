@@ -34,7 +34,7 @@ library(rstatix)
 library(tables)
 
 ##########################     Read in  Data       #############################
-GRIN = read.csv("Data/GRIN - 2021-2023.csv")
+GRIN = read.csv("Data/GRIN - 2020-2023.csv")
 
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
