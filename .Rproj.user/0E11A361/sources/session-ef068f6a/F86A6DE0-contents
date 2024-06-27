@@ -15,7 +15,7 @@ cat("\014")
 #########################     Installs Packages   ##############################
 list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
                       "ggsignif", "multcompView", "ggpubr", "rstatix",
-                      "vegan", "labdsv")
+                      "vegan", "labdsv", "tables")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -33,6 +33,7 @@ library(ggpubr)
 library(rstatix)
 library(vegan)
 library(labdsv)
+library(tables)
 
 ##########################     Read in 2020 - 2023 Data       ##################
 GRIN = read.csv("Data/GRIN_FUN-2021-2023.csv")
@@ -58,6 +59,7 @@ GRIN$Coverage = as.numeric(GRIN$Coverage)
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(10, Coverage) ~ 97.5,
   grepl(0, Coverage) ~ 0,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
@@ -68,7 +70,7 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(7, Coverage) ~ 37.5,
   grepl(8, Coverage) ~ 62.5,
   grepl(9, Coverage) ~ 85,
-  grepl(10, Coverage) ~ 97.5
+  
 ))
 
 # Creates data sets by year #
@@ -503,9 +505,6 @@ Forb_Box =
 Forb_Box
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2022Forb.png", 
        width = 10, height = 7)
-
-tmp <- tabular(Treatment ~ Forb* (mean+sd+std.error), data=Forb)
-tmp
 
 # Grasses 2022 #
 Grass_Box = 
