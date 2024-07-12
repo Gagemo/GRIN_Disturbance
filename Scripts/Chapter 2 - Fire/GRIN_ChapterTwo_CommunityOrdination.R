@@ -34,13 +34,12 @@ library(rstatix)
 library(vegan)
 library(labdsv)
 library(devtools)
-
 install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
 library(pairwiseAdonis)
 
 ##########################     Read in 2021-2023 Data       ####################
 
-GRIN = read.csv("Data/GRIN - 2023.csv")
+GRIN = read.csv("Data/GRIN - 2020-2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
 str(GRIN)
@@ -48,6 +47,24 @@ summary(GRIN)
 
 # Remove Tilling Treatment # 
 GRIN = filter(GRIN, Treatment == 'S')
+
+GRIN$Treatment = factor(GRIN$Treatment, levels=c('C', 'Sp', 'W'))
+
+# Reclasifys coverage data (CV) from 1-10 scale to percent scale #
+GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(10, Coverage) ~ 97.5,
+  grepl(1, Coverage) ~ 0.1,
+  grepl(2, Coverage) ~ 0.5,
+  grepl(3, Coverage) ~ 1.5,
+  grepl(4, Coverage) ~ 3.5,
+  grepl(5, Coverage) ~ 7.5,
+  grepl(6, Coverage) ~ 17.5,
+  grepl(7, Coverage) ~ 37.5,
+  grepl(8, Coverage) ~ 62.5,
+  grepl(9, Coverage) ~ 85,
+  grepl(0, Coverage) ~ 0,
+))
+
 
 # Separate Years #
 GRIN_21 = filter(GRIN, Year == 1)
@@ -60,7 +77,7 @@ GRIN_23 = filter(GRIN, Year == 3)
 Spp = dplyr::select(GRIN_23, ID, Species, Coverage) %>% matrify()
 
 # Create grouped treatment/environment table and summaries to fit species table#
-Treat = group_by(GRIN_23, ID, Treatment, Fire, T.F, TSF, Plot) %>% summarise()
+Treat = group_by(GRIN_23, ID, Treatment, Fire, T.F, Plot) %>% summarise()
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -100,7 +117,7 @@ species.scores$species <- rownames(species.scores)
 species.scores$Group <- species_groups$Group
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(ID = Treat$ID, MDS = MDS$points, Treatment = Treat$Treatment, TSF = Treat$TSF,
+NMDS = data.frame(ID = Treat$ID, MDS = MDS$points, Treatment = Treat$Treatment,
                   Fire = Treat$Fire, T.F = Treat$T.F, Plot = Treat$Plot)
 
 # NMDS Graphs
