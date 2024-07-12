@@ -13,7 +13,7 @@ rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "agricolae", "lubridate")
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "lubridate", "ggpubr")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -23,6 +23,7 @@ library(tidyverse)
 library(vegan)
 library(agricolae)
 library(lubridate)
+library(ggpubr)
 
 ##########################     Read in  Data      ##############################
 data = read.csv("Data/GRIN - Weather Data.csv")
@@ -117,3 +118,4 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/temp.png",
 ggarrange(temp, rain, ncol = 1, nrow = 2)
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/21-22_rainTemp.png", 
        width = 8, height = 12)
+

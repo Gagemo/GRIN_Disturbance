@@ -28,12 +28,14 @@ library(labdsv)
 library(pheatmap)
 
 ##########################     Read in  Data       #########################
-GRIN = read.csv("Data/GRIN - 2021-2023.csv")
+GRIN = read.csv("Data/GRIN - 2020-2023.csv")
 
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
+  grepl(10, Coverage) ~ 97.5,
+  grepl(0, Coverage) ~ 0,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,
@@ -42,8 +44,7 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(6, Coverage) ~ 17.5,
   grepl(7, Coverage) ~ 37.5,
   grepl(8, Coverage) ~ 62.5,
-  grepl(9, Coverage) ~ 85,
-  grepl(10, Coverage) ~ 97.5
+  grepl(9, Coverage) ~ 85
 ))
 
 str(GRIN)

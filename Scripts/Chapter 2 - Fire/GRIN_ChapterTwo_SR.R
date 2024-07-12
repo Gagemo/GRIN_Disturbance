@@ -15,7 +15,8 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 
-list.of.packages <- c( "showtext", "tidyverse", "vegan", "labdsv", "reshape")
+list.of.packages <- c( "showtext", "tidyverse", "vegan", "labdsv", "reshape", 
+                       "ggpubr", "rstatix")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -26,6 +27,8 @@ library(vegan)
 library(labdsv)
 library(reshape)
 library(showtext)
+library(ggpubr)
+library(rstatix)
 
 ##########################     Read in Data       ##############################
 data = read.csv("Data/GRIN - 2021-2023.csv")
