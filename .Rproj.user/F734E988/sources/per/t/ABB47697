@@ -1,26 +1,46 @@
 {
+<<<<<<<< HEAD:.Rproj.user/F734E988/sources/per/t/ABB47697
     "id": "ABB47697",
     "path": "D:/UFL Dropbox/Gage LaPierre/PhD/GRIN/Data/GRIN/GRIN_Disturbance/Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_Functional Groups.R",
     "project_path": "Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_Functional Groups.R",
+========
+    "id": "5D0F00E8",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_BahiaGrass.R",
+    "project_path": "Scripts/Chapter 2 - Fire/GRIN_ChapterTwo_BahiaGrass.R",
+>>>>>>>> 5b7353d77f75d866ba6118a5293140abeb1fc260:.Rproj.user/0E11A361/sources/session-ef068f6a/5D0F00E8
     "type": "r_source",
-    "hash": "1651852518",
+    "hash": "0",
     "contents": "",
     "dirty": false,
+<<<<<<<< HEAD:.Rproj.user/F734E988/sources/per/t/ABB47697
     "created": 1720742820719.0,
     "source_on_save": false,
     "relative_order": 5,
+========
+    "created": 1719511693801.0,
+    "source_on_save": false,
+    "relative_order": 3,
+>>>>>>>> 5b7353d77f75d866ba6118a5293140abeb1fc260:.Rproj.user/0E11A361/sources/session-ef068f6a/5D0F00E8
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "615,0",
+        "cursorPosition": "206,0",
         "scrollLine": "0"
     },
     "folds": "",
+<<<<<<<< HEAD:.Rproj.user/F734E988/sources/per/t/ABB47697
     "lastKnownWriteTime": 1706851675,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
     "last_content_update": 1706851675,
+========
+    "lastKnownWriteTime": 1702319143,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1702319143,
+>>>>>>>> 5b7353d77f75d866ba6118a5293140abeb1fc260:.Rproj.user/0E11A361/sources/session-ef068f6a/5D0F00E8
     "read_only": false,
     "read_only_alternatives": []
 }
