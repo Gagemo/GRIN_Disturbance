@@ -13,9 +13,10 @@ rm(list=ls(all=TRUE))
 cat("\014") 
 
 #########################     Installs Packages   ##############################
-list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
-                      "ggsignif", "multcompView", "ggpubr", "rstatix",
-                      "vegan", "labdsv", "pairwiseAdonis", "devtools")
+list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "ggrepel",
+                      "ggsignif", "multcompView", "ggpubr", "rstatix",'rmarkdown',
+                      "vegan", "labdsv", "pairwiseAdonis", "devtools", "knitr",
+                      "tables", "openxlsx")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -27,16 +28,21 @@ loadfonts(device = "win")
 library(tidyverse)
 library(vegan)
 library(agricolae)
+library(rmarkdown)
 library(ggsignif)
 library(multcompView)
 library(ggpubr)
 library(rstatix)
+library(ggrepel)
 library(vegan)
 library(labdsv)
 library(devtools)
+library(knitr)
+library(tables)
+library(openxlsx)
+
 install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
 library(pairwiseAdonis)
-
 ##########################     Read in 2021-2023 Data       ####################
 
 GRIN = read.csv("Data/GRIN - 2020-2023.csv")
@@ -45,7 +51,7 @@ GRIN$Coverage = as.numeric(GRIN$Coverage)
 str(GRIN)
 summary(GRIN)
 
-# Remove Tilling Treatment # 
+# Remove Tilling Treatments # 
 GRIN = filter(GRIN, Treatment == 'S')
 
 GRIN$Treatment = factor(GRIN$Treatment, levels=c('C', 'Sp', 'W'))
@@ -121,12 +127,10 @@ NMDS = data.frame(ID = Treat$ID, MDS = MDS$points, Treatment = Treat$Treatment,
                   Fire = Treat$Fire, T.F = Treat$T.F, Plot = Treat$Plot)
 
 # NMDS Graphs
-NMDS_23 = 
+NMDS_graph_23 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F),
              alpha = 0.7, size = 5, shape = 21) +
-  ylim(-0.8,0.8) +
-# geom_text(data = species.scores, aes(x = NMDS1, y = NMDS2, label = species)) +
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
@@ -134,7 +138,35 @@ NMDS_23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  annotate("text", x = -1, y = 0.5, 
+  annotate("text", x = -1, y = 1, 
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
+  ggtitle("2023") +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, color="black",
+                                  size=25, face="bold"),
+        axis.title.x = element_text(size=25, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=25, face="bold", colour = "black"),   
+        axis.text.x=element_text(size=25, face = "bold", color = "black"),
+        axis.text.y=element_text(size=25, face = "bold", color = "black"),
+        legend.text=element_text(size=25, face = "bold", color = "black"),
+        legend.title=element_text(size=25, face = "bold", color = "black"),
+        legend.position="bottom") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "MDS1", y = "MDS2", color = "Fire Treatment", 
+       fill = "Fire Treatment")
+NMDS_graph_23
+
+NMDS_Spp_graph_23 = 
+  ggplot() +
+  geom_text_repel(data = species.scores, aes(x = NMDS1, y = NMDS2), 
+                  label = species.scores$species, colour = "black",
+                  size = 4, fontface = "bold") +
+  annotate("text", x = -1, y = 1,               
            label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
            hjust = 0, size = 8) +
   ggtitle("2023") +
@@ -146,27 +178,62 @@ NMDS_23 =
         plot.title = element_text(hjust = 0.5, color="black", 
                                   size=25, face="bold"),
         axis.title.x = element_text(size=25, face="bold", colour = "black"),    
-        axis.title.y = element_blank(),   
         axis.text.x=element_text(size=25, face = "bold", color = "black"),
-        axis.text.y=element_blank(),
+        axis.text.y=element_blank(), 
         axis.ticks.y=element_blank(),
         axis.line.y = element_blank(),
+        axis.title.y=element_blank(),
         legend.text=element_text(size=25, face = "bold", color = "black"),
         legend.title=element_text(size=25, face = "bold", color = "black"),
         legend.position="bottom") +
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "MDS1", y = "MDS2", color = "Fire Treatment", 
        fill = "Fire Treatment")
-NMDS_23
-
-ggsave("Figures/Chapter 2 - Fire/2023_NMDS.png", 
-       width = 10, height = 7)
+NMDS_Spp_graph_23
 
 # Perform adonis to test the significance of treatments#
 adon.results <- adonis2(Spp ~ Fire, data = NMDS, method="bray")
 print(adon.results)
 pairwise.adonis<-pairwise.adonis2(Spp ~ Fire, data = NMDS)
 pairwise.adonis
+
+#save tables
+# Create a new workbook
+
+wb <- createWorkbook()
+
+# Add a worksheet
+addWorksheet(wb, "All_Tables")
+
+# Initialize starting row
+start_row <- 1
+
+# Loop through the list of tables and add each to the same sheet
+for (name in names(pairwise.adonis)) {
+  # Add table name as a header
+  writeData(wb, sheet = "All_Tables", x = name, startRow = start_row, colNames = FALSE)
+  
+  # Increment the starting row to leave a gap between the header and the table
+  start_row <- start_row + 1
+  
+  # Check if the element is a data frame or a character string
+  if (is.data.frame(pairwise.adonis[[name]])) {
+    # Write the table
+    writeData(wb, sheet = "All_Tables", x = pairwise.adonis[[name]], startRow = start_row)
+    
+    # Increment the starting row for the next table, adding a few extra rows for spacing
+    start_row <- start_row + nrow(pairwise.adonis[[name]]) + 2
+  } else if (is.character(pairwise.adonis[[name]])) {
+    # Write the character string
+    writeData(wb, sheet = "All_Tables", x = pairwise.adonis[[name]], startRow = start_row, colNames = FALSE)
+    
+    # Increment the starting row for the next table, adding a few extra rows for spacing
+    start_row <- start_row + 2
+  }
+}
+
+# Save the workbook to an Excel file
+saveWorkbook(wb, "Figures/pairwise_adonis_23_same_sheet.xlsx", overwrite = TRUE)
 
 ##########################     2022 Data       #################################
 
@@ -194,7 +261,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot two dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=4, 
+MDS = metaMDS(Spp, distance = "bray", trymax = 500, maxit = 999, k=3, 
               trace = F, autotransform = FALSE, wascores = TRUE)
 MDS$stress
 stressplot(MDS) 
@@ -219,15 +286,10 @@ NMDS = data.frame(MDS = MDS$points, Fire = Treat$Fire,
                   T.F = Treat$T.F, Plot = Treat$ID)
 
 # NMDS Graphs
-NMDS_22 = 
+NMDS_graph_22 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F),
              alpha = 0.7, size = 5, shape = 21) +
-  ylim(-1,1) +
-# geom_text(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, label = Plot)) +
-  annotate("text", x = -1, y = 0.5, 
-           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
-           hjust = 0, size = 8) +
   stat_ellipse(geom = "polygon", data = NMDS, 
                aes(x = MDS.MDS1, y = MDS.MDS2, fill = T.F, color = T.F), 
                linetype = "solid", show.legend = T, alpha = 0.15) +
@@ -235,6 +297,9 @@ NMDS_22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
+  annotate("text", x = -1, y = 1, 
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
   ggtitle("2022") +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
@@ -253,16 +318,80 @@ NMDS_22 =
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "MDS1", y = "MDS2", color = "Fire Treatment", 
        fill = "Fire Treatment")
-NMDS_22
+NMDS_graph_22
 
-ggsave("Figures/Chapter 2 - Fire/2022_NMDS.png", 
-       width = 10, height = 7)
+NMDS_Spp_graph_22 = 
+  ggplot() +
+  geom_text_repel(data = species.scores, aes(x = NMDS1, y = NMDS2), 
+                  label = species.scores$species, colour = "black",
+                  size = 4, fontface = "bold") +
+  annotate("text", x = -1, y = 1,               
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
+  ggtitle("2022") +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, color="black", 
+                                  size=25, face="bold"),
+        axis.title.x = element_text(size=25, face="bold", colour = "black"),    
+        axis.text.x=element_text(size=25, face = "bold", color = "black"),
+        axis.text.y=element_blank(), 
+        axis.ticks.y=element_blank(),
+        axis.line.y = element_blank(),
+        axis.title.y=element_blank(),
+        legend.text=element_text(size=25, face = "bold", color = "black"),
+        legend.title=element_text(size=25, face = "bold", color = "black"),
+        legend.position="bottom") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "MDS1", y = "MDS2", color = "Fire Treatment", 
+       fill = "Fire Treatment")
+NMDS_Spp_graph_22
 
 # Perform adonis to test the significance of treatments#
 adon.results <- adonis2(Spp ~ NMDS$Fire, method="bray",perm=999)
 print(adon.results)
 pairwise.adonis<-pairwise.adonis2(Spp ~ Fire, data = NMDS)
 pairwise.adonis
+
+# Create a new workbook
+
+wb <- createWorkbook()
+
+# Add a worksheet
+addWorksheet(wb, "All_Tables")
+
+# Initialize starting row
+start_row <- 1
+
+# Loop through the list of tables and add each to the same sheet
+for (name in names(pairwise.adonis)) {
+  # Add table name as a header
+  writeData(wb, sheet = "All_Tables", x = name, startRow = start_row, colNames = FALSE)
+  
+  # Increment the starting row to leave a gap between the header and the table
+  start_row <- start_row + 1
+  
+  # Check if the element is a data frame or a character string
+  if (is.data.frame(pairwise.adonis[[name]])) {
+    # Write the table
+    writeData(wb, sheet = "All_Tables", x = pairwise.adonis[[name]], startRow = start_row)
+    
+    # Increment the starting row for the next table, adding a few extra rows for spacing
+    start_row <- start_row + nrow(pairwise.adonis[[name]]) + 2
+  } else if (is.character(pairwise.adonis[[name]])) {
+    # Write the character string
+    writeData(wb, sheet = "All_Tables", x = pairwise.adonis[[name]], startRow = start_row, colNames = FALSE)
+    
+    # Increment the starting row for the next table, adding a few extra rows for spacing
+    start_row <- start_row + 2
+  }
+}
+
+# Save the workbook to an Excel file
+saveWorkbook(wb, "Figures/pairwise_adonis_22_same_sheet.xlsx", overwrite = TRUE)
 
 ##########################     2021 Data       #################################
 
@@ -351,8 +480,35 @@ NMDS_21 =
        fill = "Fire Treatment")
 NMDS_21
 
-ggsave("Figures/Chapter 2 - Fire/2021_NMDS.png", 
-       width = 10, height = 7)
+NMDS_Spp_graph_21 = 
+  ggplot() +
+  geom_text_repel(data = species.scores, aes(x = NMDS1, y = NMDS2), 
+                  label = species.scores$species, colour = "black",
+                  size = 4, fontface = "bold") +
+  annotate("text", x = -1, y = 1,               
+           label = paste0("Stress: ", format(MDS$stress, digits = 2)), 
+           hjust = 0, size = 8) +
+  ggtitle("2022") +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, color="black", 
+                                  size=25, face="bold"),
+        axis.title.x = element_text(size=25, face="bold", colour = "black"),    
+        axis.text.x=element_text(size=25, face = "bold", color = "black"),
+        axis.text.y=element_blank(), 
+        axis.ticks.y=element_blank(),
+        axis.line.y = element_blank(),
+        axis.title.y=element_blank(),
+        legend.text=element_text(size=25, face = "bold", color = "black"),
+        legend.title=element_text(size=25, face = "bold", color = "black"),
+        legend.position="bottom") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "MDS1", y = "MDS2", color = "Fire Treatment", 
+       fill = "Fire Treatment")
+NMDS_Spp_graph_21
 
 # Perform adonis to test the significance of treatments #
 adon.results <- adonis2(Spp ~ NMDS$Fire, method="bray",perm=999)
@@ -360,16 +516,54 @@ print(adon.results)
 pairwise.adonis<-pairwise.adonis2(Spp ~ Fire, data = NMDS)
 pairwise.adonis
 
+# Create a new workbook
+
+wb <- createWorkbook()
+
+# Add a worksheet
+addWorksheet(wb, "All_Tables")
+
+# Initialize starting row
+start_row <- 1
+
+# Loop through the list of tables and add each to the same sheet
+for (name in names(pairwise.adonis)) {
+  # Add table name as a header
+  writeData(wb, sheet = "All_Tables", x = name, startRow = start_row, colNames = FALSE)
+  
+  # Increment the starting row to leave a gap between the header and the table
+  start_row <- start_row + 1
+  
+  # Check if the element is a data frame or a character string
+  if (is.data.frame(pairwise.adonis[[name]])) {
+    # Write the table
+    writeData(wb, sheet = "All_Tables", x = pairwise.adonis[[name]], startRow = start_row)
+    
+    # Increment the starting row for the next table, adding a few extra rows for spacing
+    start_row <- start_row + nrow(pairwise.adonis[[name]]) + 2
+  } else if (is.character(pairwise.adonis[[name]])) {
+    # Write the character string
+    writeData(wb, sheet = "All_Tables", x = pairwise.adonis[[name]], startRow = start_row, colNames = FALSE)
+    
+    # Increment the starting row for the next table, adding a few extra rows for spacing
+    start_row <- start_row + 2
+  }
+}
+
+# Save the workbook to an Excel file
+saveWorkbook(wb, "Figures/pairwise_adonis_21_same_sheet.xlsx", overwrite = TRUE)
+
 ################## Save Figures Above using ggarrange ##########################
 NMDS_22_23 = 
-  ggarrange(NMDS_22, NMDS_23, ncol = 2, nrow = 1, 
+  ggarrange(NMDS_graph_22, NMDS_Spp_graph_22,
+            NMDS_graph_23, NMDS_Spp_graph_23, ncol = 2, nrow = 2, 
             common.legend = TRUE, legend="bottom")
 
 ggsave("Figures/Chapter 2 - Fire/22-23_NMDS.png", 
-       width = 18, height = 10)
+       width = 14, height = 12)
 
 NMDS_21_22 = 
-  ggarrange(NMDS_21, NMDS_22, ncol = 2, nrow = 1, 
+  ggarrange(NMDS_21, NMDS_Spp_graph_21, ncol = 2, nrow = 1, 
             common.legend = TRUE, legend="bottom")
 
 ggsave("Figures/Chapter 2 - Fire/21-22_NMDS.png", 

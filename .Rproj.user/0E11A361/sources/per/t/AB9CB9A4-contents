@@ -1,10 +1,10 @@
 ################################################################################
 ################################################################################
-#########################   GRIN - Disturbance    ##############################
+######################### GRIN - Fire Seasonality ##############################
 #########################      Seed Bank          ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
-#########################      2021 - 2022        ##############################
+#########################      2021 - 2023        ##############################
 ################################################################################
 ################################################################################
 
@@ -34,11 +34,13 @@ GRIN = read.csv("Data/GRIN - SeedBank.csv")
 str(GRIN)
 summary(GRIN)
 
-# Remove Seeding Treatment # 
-GRIN = filter(GRIN, Treatment != 'S')
+# Remove Tilling Treatment # 
+GRIN = filter(GRIN, Treatment == 'S')
+
+GRIN$Fire = factor(GRIN$Fire, levels=c('C', 'Sp', 'W'))
 
 # Create grouped treatment/environment table and summaries to fit species table #
-Treat = group_by(GRIN, ID, Treatment) %>% dplyr::summarize()
+Treat = group_by(GRIN, ID, Fire) %>% dplyr::summarize()
 
 GRIN$Plot = NULL
 GRIN$Sub_Plot = NULL
@@ -74,7 +76,7 @@ goodness(MDS)
 # --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Fire, 
                   Plot = Treat$ID)
 
 # NMDS Graphs
@@ -89,11 +91,11 @@ NMDS_plot =
   stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment, 
                                 fill = Treatment),geom = "polygon", 
                alpha = 0.15, linetype = "solid", show.legend = T) +
-  scale_color_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
-                     values=c("#FF3399", "#FFFF00", "#3366FF")) +
-  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
-                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
-  ggtitle("2020 Pre-Treatment") +
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                    values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                     values=c("#333333", "#FF9900", "#3366FF")) +
+  ggtitle("2020 Pre-Treatment Seedbank") +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -117,6 +119,6 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_Seedbank.png",
 
 # Perform adonis to test the significance of treatments#
 
-adon.results <- adonis2(GRIN ~ NMDS$Treat, method="bray",perm=999)
+adon.results <- adonis2(GRIN ~ NMDS$Treatment, method="bray",perm=999)
 print(adon.results)
 

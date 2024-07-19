@@ -222,7 +222,7 @@ ggsave("Figures/Chapter 2 - Fire/change_indian.png",
 ########################### Pityopsis ##########################################
 ################################################################################
 Pt = 
-  Change_Abundance[which(Change_Abundance$Species == "Pityopsis graminifolia"),]
+  Change_Abundance[which(Change_Abundance$Species == "Pityopsis trayci"),]
 Pt<-as.data.frame(Pt)
 Pt$Fire<-factor(Pt$Fire)
 
@@ -276,7 +276,7 @@ Pt_change_Box =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "Change in Coverage", title = "Pityopsis graminifolia")
+  labs(x = "", y = "Change in Coverage", title = "Pityopsis trayci")
 Pt_change_Box
 ggsave("Figures/Chapter 2 - Fire/change_Pityopsis.png", 
        width = 10, height = 7)
