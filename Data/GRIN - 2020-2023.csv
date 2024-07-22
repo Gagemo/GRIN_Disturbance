@@ -828,7 +828,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-11,1,15,1-15-S,S,Sp,S-Sp,Forb,Rumex hastatulus,2
 1,2021-10-11,1,15,1-15-S,S,Sp,S-Sp,Grass,Sorghastrum secundum,2
 1,2021-10-11,1,15,1-15-S,S,Sp,S-Sp,Grass,Andropogon ternarius,1
-1,2021-10-11,1,15,1-15-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+1,2021-10-11,1,15,1-15-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 1,2021-10-11,1,15,1-15-S,S,Sp,S-Sp,Forb,Oenothera laciniata,1
 1,2021-10-11,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Dichondra spp.,9
 1,2021-10-11,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Cyperus esculentus,4
@@ -891,7 +891,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-11,2,6,2-6-S,S,W,S-W,Forb,Dichondra spp.,3
 1,2021-10-11,2,6,2-6-S,S,W,S-W,Grass,Paspalum setaceum,3
 1,2021-10-11,2,6,2-6-S,S,W,S-W,Bare,Bareground,2
-1,2021-10-11,2,6,2-6-S,S,W,S-W,Grass,Aristida stricta,1
+1,2021-10-11,2,6,2-6-S,S,W,S-W,Grass,Aristida beyrichiana,1
 1,2021-10-11,2,7,2-7-C,C,W,C-W,Forb,Oxalis corniculata,7
 1,2021-10-11,2,7,2-7-C,C,W,C-W,Bare,Bareground,5
 1,2021-10-11,2,7,2-7-C,C,W,C-W,Grass,Paspalum notatum,5
@@ -1020,7 +1020,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-11,3,3,3-3-S,S,C,S-C,Forb,Solanum viarum,2
 1,2021-10-11,3,3,3-3-S,S,C,S-C,Grass,Andropogon ternarius,1
 1,2021-10-11,3,3,3-3-S,S,C,S-C,Grass,Andropogon virginicus,1
-1,2021-10-11,3,3,3-3-S,S,C,S-C,Grass,Aristida stricta,1
+1,2021-10-11,3,3,3-3-S,S,C,S-C,Grass,Aristida beyrichiana,1
 1,2021-10-11,3,3,3-3-S,S,C,S-C,Forb,Gamochaeta spp.,1
 1,2021-10-11,3,3,3-3-S,S,C,S-C,Grass,Paspalum notatum,1
 1,2021-10-11,3,3,3-3-S,S,C,S-C,Grass,Sorghastrum secundum,1
@@ -1334,7 +1334,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-12,5,4,5-4-S,S,C,S-C,Sedge,Cyperus spp.,2
 1,2021-10-12,5,4,5-4-S,S,C,S-C,Woody,Eupatorium capilifolium,2
 1,2021-10-12,5,4,5-4-S,S,C,S-C,Forb,Oxalis corniculata,2
-1,2021-10-12,5,4,5-4-S,S,C,S-C,Grass,Aristida stricta,1
+1,2021-10-12,5,4,5-4-S,S,C,S-C,Grass,Aristida beyrichiana,1
 1,2021-10-12,5,4,5-4-S,S,C,S-C,Sedge,Bulbostylis spp.,1
 1,2021-10-12,5,4,5-4-S,S,C,S-C,Grass,Paspalum setaceum,1
 1,2021-10-12,5,5,5-5-S,S,C,S-C,Grass,Eragrostis spectabilis,9
@@ -1347,7 +1347,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-12,5,5,5-5-S,S,C,S-C,Sedge,Cyperus spp.,2
 1,2021-10-12,5,5,5-5-S,S,C,S-C,Grass,Paspalum notatum,2
 1,2021-10-12,5,5,5-5-S,S,C,S-C,Grass,Andropogon ternarius,1
-1,2021-10-12,5,5,5-5-S,S,C,S-C,Grass,Aristida stricta,1
+1,2021-10-12,5,5,5-5-S,S,C,S-C,Grass,Aristida beyrichiana,1
 1,2021-10-12,5,5,5-5-S,S,C,S-C,Forb,Liatris gracilis,1
 1,2021-10-12,5,5,5-5-S,S,C,S-C,Grass,Paspalum setaceum,1
 1,2021-10-12,5,6,5-6-Tsp,Tsp,C,Tsp-C,Forb,Dichondra spp.,9
@@ -1392,7 +1392,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-12,5,10,5-10-S,S,C,S-C,Forb,Oxalis corniculata,3
 1,2021-10-12,5,10,5-10-S,S,C,S-C,Bare,Bareground,2
 1,2021-10-12,5,10,5-10-S,S,C,S-C,Grass,Paspalum setaceum,2
-1,2021-10-12,5,10,5-10-S,S,C,S-C,Grass,Aristida stricta,1
+1,2021-10-12,5,10,5-10-S,S,C,S-C,Grass,Aristida beyrichiana,1
 1,2021-10-12,5,11,5-11-C,C,C,C-C,Forb,Indigofera hirsuta,8
 1,2021-10-12,5,11,5-11-C,C,C,C-C,Grass,Paspalum notatum,5
 1,2021-10-12,5,11,5-11-C,C,C,C-C,Grass,Cynodon dactylon,4
@@ -1459,7 +1459,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-12,6,1,6-1-S,S,Sp,S-Sp,Forb,Gamochaeta spp.,2
 1,2021-10-12,6,1,6-1-S,S,Sp,S-Sp,Forb,Liatris gracilis,2
 1,2021-10-12,6,1,6-1-S,S,Sp,S-Sp,Forb,Rumex hastatulus,2
-1,2021-10-12,6,1,6-1-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+1,2021-10-12,6,1,6-1-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 1,2021-10-12,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Forb,Dichondra spp.,8
 1,2021-10-12,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,7
 1,2021-10-12,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Sedge,Cyperus spp.,7
@@ -1556,7 +1556,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,4
 1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Sedge,Cyperus spp.,4
 1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Forb,Oxalis corniculata,4
-1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Bare,Bareground,2
 1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Grass,Cynodon dactylon,2
 1,2021-10-12,6,12,6-12-S,S,Sp,S-Sp,Forb,Liatris gracilis,2
@@ -1586,7 +1586,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,3
 1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Forb,Rumex hastatulus,3
 1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Grass,Sorghastrum secundum,3
-1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Bare,Bareground,2
 1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Forb,Dichondra spp.,2
 1,2021-10-12,6,14,6-14-S,S,Sp,S-Sp,Forb,Pityopsis trayci,2
@@ -1624,7 +1624,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Forb,Erigeron canadensis,1
 2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -1664,7 +1664,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Forb,Gamochaeta spp.,1
 2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,2,1-2-C,C,Sp,C-Sp,Forb,Crotalaria spectabilis,0
@@ -1707,7 +1707,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Forb,Lactuca canadensis,1
 2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,3,1-3-S,S,Sp,S-Sp,Forb,Crotalaria spectabilis,0
@@ -1739,7 +1739,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Forb,Lactuca canadensis,1
 2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -1765,7 +1765,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Grass,Eragrostis spectabilis,7
 2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Grass,Sorghastrum secundum,7
 2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Forb,Pityopsis trayci,6
-2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Grass,Aristida stricta,3
+2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,3
 2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Sedge,Cyperus spp.,3
 2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Forb,Liatris gracilis,3
 2,2022-10-15,1,5,1-5-S,S,Sp,S-Sp,Forb,Oxalis corniculata,3
@@ -1811,7 +1811,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Forb,Lactuca canadensis,1
 2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -1854,7 +1854,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Forb,Gamochaeta spp.,1
 2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -1891,7 +1891,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Grass,Dichanthelium spp.,1
 2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,8,1-8-C,C,Sp,C-Sp,Forb,Crotalaria rotundifolia,0
@@ -1928,7 +1928,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Forb,Indigofera hirsuta,1
 2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -1967,7 +1967,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Forb,Gamochaeta spp.,1
 2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -2008,7 +2008,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Grass,Dichanthelium spp.,1
 2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,11,1-11-C,C,Sp,C-Sp,Forb,Crotalaria rotundifolia,0
@@ -2033,7 +2033,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Forb,Pityopsis trayci,5
 2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Forb,Liatris gracilis,4
 2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Forb,Oxalis corniculata,3
-2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Forb,Dichondra spp.,2
 2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Forb,Indigofera hirsuta,2
 2,2022-10-15,1,12,1-12-S,S,Sp,S-Sp,Grass,Paspalum notatum,2
@@ -2084,7 +2084,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Forb,Solanum viarum,1
 2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,13,1-13-C,C,Sp,C-Sp,Forb,Crotalaria spectabilis,0
@@ -2115,7 +2115,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Paspalum setaceum,2
 2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,1
 2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
-2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -2146,7 +2146,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Grass,Sorghastrum secundum,7
 2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Forb,Pityopsis trayci,5
 2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Forb,Liatris gracilis,3
-2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Forb,Crotalaria rotundifolia,2
 2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Sedge,Cyperus spp.,2
 2,2022-10-15,1,15,1-15-S,S,Sp,S-Sp,Forb,Dichondra spp.,2
@@ -2196,7 +2196,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Rumex hastatulus,1
 2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-15,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -2236,7 +2236,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Sedge,Cyperus esculentus,1
 2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,1,2-1-Tw,Tw,W,Tw-W,Forb,Crotalaria rotundifolia,0
@@ -2271,7 +2271,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,2,2-2-C,C,W,C-W,Forb,Oxalis corniculata,1
 2,2022-10-15,2,2,2-2-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,2,2-2-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,2,2-2-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-15,2,2,2-2-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,2,2-2-C,C,W,C-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,2,2-2-C,C,W,C-W,Forb,Crotalaria spectabilis,0
 2,2022-10-15,2,2,2-2-C,C,W,C-W,Grass,Cynodon dactylon,0
@@ -2304,7 +2304,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,3,2-3-S,S,W,S-W,Forb,Erigeron canadensis,2
 2,2022-10-15,2,3,2-3-S,S,W,S-W,Forb,Oxalis corniculata,2
 2,2022-10-15,2,3,2-3-S,S,W,S-W,Grass,Paspalum notatum,2
-2,2022-10-15,2,3,2-3-S,S,W,S-W,Grass,Aristida stricta,1
+2,2022-10-15,2,3,2-3-S,S,W,S-W,Grass,Aristida beyrichiana,1
 2,2022-10-15,2,3,2-3-S,S,W,S-W,Bare,Bareground,1
 2,2022-10-15,2,3,2-3-S,S,W,S-W,Sedge,Bulbostylis spp.,1
 2,2022-10-15,2,3,2-3-S,S,W,S-W,Sedge,Cyperus esculentus,1
@@ -2350,7 +2350,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Paspalum notatum,1
 2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,4,2-4-Tsp,Tsp,W,Tsp-W,Forb,Crotalaria spectabilis,0
@@ -2388,7 +2388,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Forb,Rumex hastatulus,1
 2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,5,2-5-Tsp,Tsp,W,Tsp-W,Forb,Crotalaria rotundifolia,0
@@ -2418,7 +2418,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,6,2-6-S,S,W,S-W,Forb,Oxalis corniculata,2
 2,2022-10-15,2,6,2-6-S,S,W,S-W,Grass,Paspalum notatum,2
 2,2022-10-15,2,6,2-6-S,S,W,S-W,Grass,Paspalum setaceum,2
-2,2022-10-15,2,6,2-6-S,S,W,S-W,Grass,Aristida stricta,1
+2,2022-10-15,2,6,2-6-S,S,W,S-W,Grass,Aristida beyrichiana,1
 2,2022-10-15,2,6,2-6-S,S,W,S-W,Bare,Bareground,1
 2,2022-10-15,2,6,2-6-S,S,W,S-W,Sedge,Bulbostylis spp.,1
 2,2022-10-15,2,6,2-6-S,S,W,S-W,Forb,Crotalaria rotundifolia,1
@@ -2465,7 +2465,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,7,2-7-C,C,W,C-W,Forb,Indigofera hirsuta,1
 2,2022-10-15,2,7,2-7-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,7,2-7-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,7,2-7-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-15,2,7,2-7-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,7,2-7-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,7,2-7-C,C,W,C-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,7,2-7-C,C,W,C-W,Forb,Crotalaria rotundifolia,0
@@ -2504,7 +2504,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,8,2-8-S,S,W,S-W,Grass,Paspalum setaceum,2
 2,2022-10-15,2,8,2-8-S,S,W,S-W,Forb,Rumex hastatulus,2
 2,2022-10-15,2,8,2-8-S,S,W,S-W,Grass,Andropogon ternarius,1
-2,2022-10-15,2,8,2-8-S,S,W,S-W,Grass,Aristida stricta,1
+2,2022-10-15,2,8,2-8-S,S,W,S-W,Grass,Aristida beyrichiana,1
 2,2022-10-15,2,8,2-8-S,S,W,S-W,Sedge,Bulbostylis spp.,1
 2,2022-10-15,2,8,2-8-S,S,W,S-W,Grass,Eremochloa ophiuroides,1
 2,2022-10-15,2,8,2-8-S,S,W,S-W,Forb,Erigeron canadensis,1
@@ -2541,7 +2541,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Forb,Lactuca canadensis,1
 2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,9,2-9-Tsp,Tsp,W,Tsp-W,Forb,Crotalaria rotundifolia,0
@@ -2578,7 +2578,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,10,2-10-C,C,W,C-W,Forb,Erigeron canadensis,1
 2,2022-10-15,2,10,2-10-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,10,2-10-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,10,2-10-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-15,2,10,2-10-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,10,2-10-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,10,2-10-C,C,W,C-W,Sedge,Bulbostylis spp.,0
 2,2022-10-15,2,10,2-10-C,C,W,C-W,Forb,Cirsium spp.,0
@@ -2618,7 +2618,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Forb,Indigofera hirsuta,1
 2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
 2,2022-10-15,2,11,2-11-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
@@ -2658,7 +2658,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Forb,Gamochaeta spp.,1
 2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
 2,2022-10-15,2,12,2-12-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
@@ -2696,7 +2696,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,1
 2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,13,2-13-Tw,Tw,W,Tw-W,Forb,Crotalaria rotundifolia,0
@@ -2728,7 +2728,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,14,2-14-S,S,W,S-W,Forb,Liatris gracilis,3
 2,2022-10-15,2,14,2-14-S,S,W,S-W,Forb,Oxalis corniculata,3
 2,2022-10-15,2,14,2-14-S,S,W,S-W,Grass,Andropogon ternarius,2
-2,2022-10-15,2,14,2-14-S,S,W,S-W,Grass,Aristida stricta,2
+2,2022-10-15,2,14,2-14-S,S,W,S-W,Grass,Aristida beyrichiana,2
 2,2022-10-15,2,14,2-14-S,S,W,S-W,Bare,Bareground,2
 2,2022-10-15,2,14,2-14-S,S,W,S-W,Forb,Galactia spp.,2
 2,2022-10-15,2,14,2-14-S,S,W,S-W,Grass,Paspalum notatum,2
@@ -2776,7 +2776,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Forb,Gamochaeta spp.,1
 2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,15,2-15-Tw,Tw,W,Tw-W,Forb,Crotalaria rotundifolia,0
@@ -2812,7 +2812,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-15,2,16,2-16-C,C,W,C-W,Forb,Lactuca canadensis,1
 2,2022-10-15,2,16,2-16-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-15,2,16,2-16-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-15,2,16,2-16-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-15,2,16,2-16-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-15,2,16,2-16-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-15,2,16,2-16-C,C,W,C-W,Forb,Cirsium spp.,0
 2,2022-10-15,2,16,2-16-C,C,W,C-W,Forb,Crotalaria rotundifolia,0
@@ -2857,7 +2857,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Forb,Erigeron canadensis,1
 2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,1,3-1-Tw,Tw,C,Tw-C,Forb,Crotalaria rotundifolia,0
@@ -2895,7 +2895,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,2,3-2-C,C,C,C-C,Forb,Rumex hastatulus,1
 2,2022-10-16,3,2,3-2-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,2,3-2-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,2,3-2-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,3,2,3-2-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,2,3-2-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,2,3-2-C,C,C,C-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,2,3-2-C,C,C,C-C,Forb,Crotalaria rotundifolia,0
@@ -2922,7 +2922,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,3,3-3-S,S,C,S-C,Forb,Liatris gracilis,3
 2,2022-10-16,3,3,3-3-S,S,C,S-C,Forb,Oxalis corniculata,3
 2,2022-10-16,3,3,3-3-S,S,C,S-C,Grass,Andropogon ternarius,2
-2,2022-10-16,3,3,3-3-S,S,C,S-C,Grass,Aristida stricta,2
+2,2022-10-16,3,3,3-3-S,S,C,S-C,Grass,Aristida beyrichiana,2
 2,2022-10-16,3,3,3-3-S,S,C,S-C,Forb,Crotalaria rotundifolia,2
 2,2022-10-16,3,3,3-3-S,S,C,S-C,Sedge,Cyperus spp.,2
 2,2022-10-16,3,3,3-3-S,S,C,S-C,Forb,Dichondra spp.,2
@@ -2973,7 +2973,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Forb,Rumex hastatulus,1
 2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,4,3-4-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -3018,7 +3018,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,5,3-5-C,C,C,C-C,Woody,Rubus spp.,1
 2,2022-10-16,3,5,3-5-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,5,3-5-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,5,3-5-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,3,5,3-5-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,5,3-5-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,5,3-5-C,C,C,C-C,Forb,Crotalaria rotundifolia,0
 2,2022-10-16,3,5,3-5-C,C,C,C-C,Forb,Crotalaria spectabilis,0
@@ -3053,7 +3053,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Paspalum notatum,1
 2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,6,3-6-Tw,Tw,C,Tw-C,Forb,Crotalaria rotundifolia,0
@@ -3092,7 +3092,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Paspalum setaceum,1
 2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,7,3-7-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -3127,7 +3127,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,8,3-8-S,S,C,S-C,Woody,Eupatorium capilifolium,2
 2,2022-10-16,3,8,3-8-S,S,C,S-C,Forb,Lactuca canadensis,2
 2,2022-10-16,3,8,3-8-S,S,C,S-C,Grass,Andropogon ternarius,1
-2,2022-10-16,3,8,3-8-S,S,C,S-C,Grass,Aristida stricta,1
+2,2022-10-16,3,8,3-8-S,S,C,S-C,Grass,Aristida beyrichiana,1
 2,2022-10-16,3,8,3-8-S,S,C,S-C,Sedge,Bulbostylis spp.,1
 2,2022-10-16,3,8,3-8-S,S,C,S-C,Grass,Cynodon dactylon,1
 2,2022-10-16,3,8,3-8-S,S,C,S-C,Sedge,Cyperus spp.,1
@@ -3169,7 +3169,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,9,3-9-S,S,C,S-C,Grass,Paspalum setaceum,2
 2,2022-10-16,3,9,3-9-S,S,C,S-C,Forb,Richardia spp.,2
 2,2022-10-16,3,9,3-9-S,S,C,S-C,Forb,Rumex hastatulus,2
-2,2022-10-16,3,9,3-9-S,S,C,S-C,Grass,Aristida stricta,1
+2,2022-10-16,3,9,3-9-S,S,C,S-C,Grass,Aristida beyrichiana,1
 2,2022-10-16,3,9,3-9-S,S,C,S-C,Bare,Bareground,1
 2,2022-10-16,3,9,3-9-S,S,C,S-C,Sedge,Bulbostylis spp.,1
 2,2022-10-16,3,9,3-9-S,S,C,S-C,Forb,Crotalaria rotundifolia,1
@@ -3210,7 +3210,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Forb,Rumex hastatulus,1
 2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,10,3-10-Tw,Tw,C,Tw-C,Forb,Crotalaria rotundifolia,0
@@ -3246,7 +3246,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Forb,Lactuca canadensis,1
 2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,11,3-11-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -3293,7 +3293,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,12,3-12-C,C,C,C-C,Forb,Richardia spp.,1
 2,2022-10-16,3,12,3-12-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,12,3-12-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,12,3-12-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,3,12,3-12-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,12,3-12-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,12,3-12-C,C,C,C-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,12,3-12-C,C,C,C-C,Forb,Crotalaria spectabilis,0
@@ -3332,7 +3332,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Forb,Rumex hastatulus,1
 2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,13,3-13-Tw,Tw,C,Tw-C,Forb,Crotalaria rotundifolia,0
@@ -3377,7 +3377,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,14,3-14-S,S,C,S-C,Forb,Richardia spp.,1
 2,2022-10-16,3,14,3-14-S,S,C,S-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,14,3-14-S,S,C,S-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,14,3-14-S,S,C,S-C,Grass,Aristida stricta,1
+2,2022-10-16,3,14,3-14-S,S,C,S-C,Grass,Aristida beyrichiana,1
 2,2022-10-16,3,14,3-14-S,S,C,S-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,14,3-14-S,S,C,S-C,Sedge,Bulbostylis spp.,0
 2,2022-10-16,3,14,3-14-S,S,C,S-C,Forb,Cirsium spp.,0
@@ -3411,7 +3411,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,15,3-15-C,C,C,C-C,Grass,Paspalum notatum,1
 2,2022-10-16,3,15,3-15-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,15,3-15-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,15,3-15-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,3,15,3-15-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,15,3-15-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,15,3-15-C,C,C,C-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,15,3-15-C,C,C,C-C,Forb,Crotalaria rotundifolia,0
@@ -3453,7 +3453,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Paspalum setaceum,1
 2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,3,16,3-16-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -3488,7 +3488,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,1,4-1-S,S,W,S-W,Forb,Oxalis corniculata,2
 2,2022-10-16,4,1,4-1-S,S,W,S-W,Forb,Rumex hastatulus,2
 2,2022-10-16,4,1,4-1-S,S,W,S-W,Grass,Andropogon ternarius,1
-2,2022-10-16,4,1,4-1-S,S,W,S-W,Grass,Aristida stricta,1
+2,2022-10-16,4,1,4-1-S,S,W,S-W,Grass,Aristida beyrichiana,1
 2,2022-10-16,4,1,4-1-S,S,W,S-W,Bare,Bareground,1
 2,2022-10-16,4,1,4-1-S,S,W,S-W,Grass,Cynodon dactylon,1
 2,2022-10-16,4,1,4-1-S,S,W,S-W,Grass,Eremochloa ophiuroides,1
@@ -3530,7 +3530,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Forb,Rumex hastatulus,1
 2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
 2,2022-10-16,4,2,4-2-Tw,Tw,W,Tw-W,Forb,Crotalaria rotundifolia,0
@@ -3568,7 +3568,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,3,4-3-C,C,W,C-W,Forb,Rumex hastatulus,2
 2,2022-10-16,4,3,4-3-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,3,4-3-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,3,4-3-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-16,4,3,4-3-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,3,4-3-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,3,4-3-C,C,W,C-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,3,4-3-C,C,W,C-W,Forb,Cirsium spp.,0
@@ -3607,7 +3607,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Paspalum setaceum,1
 2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,4,4-4-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
@@ -3647,7 +3647,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,5,4-5-C,C,W,C-W,Forb,Rumex hastatulus,1
 2,2022-10-16,4,5,4-5-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,5,4-5-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,5,4-5-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-16,4,5,4-5-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,5,4-5-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,5,4-5-C,C,W,C-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,5,4-5-C,C,W,C-W,Forb,Cirsium spp.,0
@@ -3688,7 +3688,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,6,4-6-S,S,W,S-W,Forb,Pityopsis trayci,2
 2,2022-10-16,4,6,4-6-S,S,W,S-W,Grass,Sorghastrum secundum,2
 2,2022-10-16,4,6,4-6-S,S,W,S-W,Grass,Andropogon ternarius,1
-2,2022-10-16,4,6,4-6-S,S,W,S-W,Grass,Aristida stricta,1
+2,2022-10-16,4,6,4-6-S,S,W,S-W,Grass,Aristida beyrichiana,1
 2,2022-10-16,4,6,4-6-S,S,W,S-W,Bare,Bareground,1
 2,2022-10-16,4,6,4-6-S,S,W,S-W,Grass,Cynodon dactylon,1
 2,2022-10-16,4,6,4-6-S,S,W,S-W,Grass,Digitaria spp.,1
@@ -3727,7 +3727,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Forb,Gamochaeta spp.,1
 2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,7,4-7-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
@@ -3763,7 +3763,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Cynodon dactylon,1
 2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,8,4-8-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
@@ -3812,7 +3812,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Forb,Gamochaeta spp.,1
 2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
 2,2022-10-16,4,9,4-9-Tw,Tw,W,Tw-W,Forb,Crotalaria spectabilis,0
@@ -3849,7 +3849,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Dichanthelium spp.,1
 2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,10,4-10-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
@@ -3902,7 +3902,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,11,4-11-S,S,W,S-W,Woody,Rubus spp.,1
 2,2022-10-16,4,11,4-11-S,S,W,S-W,Forb,Solanum viarum,1
 2,2022-10-16,4,11,4-11-S,S,W,S-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,11,4-11-S,S,W,S-W,Grass,Aristida stricta,0
+2,2022-10-16,4,11,4-11-S,S,W,S-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,11,4-11-S,S,W,S-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,11,4-11-S,S,W,S-W,Forb,Cirsium spp.,0
 2,2022-10-16,4,11,4-11-S,S,W,S-W,Forb,Crotalaria rotundifolia,0
@@ -3933,7 +3933,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,12,4-12-C,C,W,C-W,Forb,Rumex hastatulus,1
 2,2022-10-16,4,12,4-12-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,12,4-12-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,12,4-12-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-16,4,12,4-12-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,12,4-12-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,12,4-12-C,C,W,C-W,Forb,Crotalaria spectabilis,0
 2,2022-10-16,4,12,4-12-C,C,W,C-W,Grass,Dichanthelium spp.,0
@@ -3972,7 +3972,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Paspalum setaceum,1
 2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Forb,Cirsium spp.,0
 2,2022-10-16,4,13,4-13-Tsp,Tsp,W,Tsp-W,Forb,Crotalaria rotundifolia,0
@@ -4012,7 +4012,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,14,4-14-C,C,W,C-W,Forb,Rumex hastatulus,1
 2,2022-10-16,4,14,4-14-C,C,W,C-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,14,4-14-C,C,W,C-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,14,4-14-C,C,W,C-W,Grass,Aristida stricta,0
+2,2022-10-16,4,14,4-14-C,C,W,C-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,14,4-14-C,C,W,C-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,14,4-14-C,C,W,C-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,14,4-14-C,C,W,C-W,Forb,Cirsium spp.,0
@@ -4052,7 +4052,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Forb,Rumex hastatulus,1
 2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
 2,2022-10-16,4,15,4-15-Tw,Tw,W,Tw-W,Forb,Cirsium spp.,0
@@ -4089,7 +4089,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,4,16,4-16-S,S,W,S-W,Forb,Oxalis corniculata,2
 2,2022-10-16,4,16,4-16-S,S,W,S-W,Grass,Paspalum setaceum,2
 2,2022-10-16,4,16,4-16-S,S,W,S-W,Woody,Rubus spp.,2
-2,2022-10-16,4,16,4-16-S,S,W,S-W,Grass,Aristida stricta,1
+2,2022-10-16,4,16,4-16-S,S,W,S-W,Grass,Aristida beyrichiana,1
 2,2022-10-16,4,16,4-16-S,S,W,S-W,Bare,Bareground,1
 2,2022-10-16,4,16,4-16-S,S,W,S-W,Sedge,Bulbostylis spp.,1
 2,2022-10-16,4,16,4-16-S,S,W,S-W,Forb,Crotalaria rotundifolia,1
@@ -4134,7 +4134,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,1,5-1-C,C,C,C-C,Forb,Richardia spp.,1
 2,2022-10-16,5,1,5-1-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,1,5-1-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,1,5-1-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,5,1,5-1-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,1,5-1-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,1,5-1-C,C,C,C-C,Sedge,Bulbostylis spp.,0
 2,2022-10-16,5,1,5-1-C,C,C,C-C,Forb,Cirsium spp.,0
@@ -4178,7 +4178,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Forb,Rumex hastatulus,1
 2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,2,5-2-Tw,Tw,C,Tw-C,Forb,Crotalaria rotundifolia,0
@@ -4214,7 +4214,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Sedge,Cyperus spp.,1
 2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Forb,Lactuca canadensis,1
 2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
-2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,3,5-3-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -4250,7 +4250,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,4,5-4-S,S,C,S-C,Forb,Dichondra spp.,2
 2,2022-10-16,5,4,5-4-S,S,C,S-C,Grass,Andropogon ternarius,1
 2,2022-10-16,5,4,5-4-S,S,C,S-C,Grass,Andropogon virginicus,1
-2,2022-10-16,5,4,5-4-S,S,C,S-C,Grass,Aristida stricta,1
+2,2022-10-16,5,4,5-4-S,S,C,S-C,Grass,Aristida beyrichiana,1
 2,2022-10-16,5,4,5-4-S,S,C,S-C,Bare,Bareground,2
 2,2022-10-16,5,4,5-4-S,S,C,S-C,Sedge,Bulbostylis spp.,1
 2,2022-10-16,5,4,5-4-S,S,C,S-C,Forb,Crotalaria rotundifolia,1
@@ -4294,7 +4294,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,5,5-5-S,S,C,S-C,Forb,Lactuca canadensis,2
 2,2022-10-16,5,5,5-5-S,S,C,S-C,Grass,Paspalum notatum,2
 2,2022-10-16,5,5,5-5-S,S,C,S-C,Forb,Rumex hastatulus,2
-2,2022-10-16,5,5,5-5-S,S,C,S-C,Grass,Aristida stricta,1
+2,2022-10-16,5,5,5-5-S,S,C,S-C,Grass,Aristida beyrichiana,1
 2,2022-10-16,5,5,5-5-S,S,C,S-C,Bare,Bareground,1
 2,2022-10-16,5,5,5-5-S,S,C,S-C,Forb,Crotalaria rotundifolia,1
 2,2022-10-16,5,5,5-5-S,S,C,S-C,Sedge,Cyperus esculentus,1
@@ -4341,7 +4341,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Forb,Richardia spp.,1
 2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,6,5-6-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -4381,7 +4381,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Forb,Polypremum procumbens,1
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Forb,Crotalaria rotundifolia,0
@@ -4423,7 +4423,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Forb,Dichondra spp.,1
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Forb,Erigeron canadensis,1
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Forb,Lactuca canadensis,1
-2,2022-10-16,5,8,5-8-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,5,8,5-8-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Forb,Crotalaria rotundifolia,0
@@ -4463,7 +4463,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Forb,Rumex hastatulus,1
 2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,9,5-9-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -4513,7 +4513,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,10,5-10-S,S,C,S-C,Forb,Galactia spp.,1
 2,2022-10-16,5,10,5-10-S,S,C,S-C,Forb,Gamochaeta spp.,1
 2,2022-10-16,5,10,5-10-S,S,C,S-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,10,5-10-S,S,C,S-C,Grass,Aristida stricta,0
+2,2022-10-16,5,10,5-10-S,S,C,S-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,10,5-10-S,S,C,S-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,10,5-10-S,S,C,S-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,10,5-10-S,S,C,S-C,Forb,Crotalaria spectabilis,0
@@ -4540,7 +4540,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,11,5-11-C,C,C,C-C,Forb,Rumex hastatulus,1
 2,2022-10-16,5,11,5-11-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,11,5-11-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,11,5-11-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,5,11,5-11-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,11,5-11-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,11,5-11-C,C,C,C-C,Sedge,Bulbostylis spp.,0
 2,2022-10-16,5,11,5-11-C,C,C,C-C,Forb,Cirsium spp.,0
@@ -4586,7 +4586,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Forb,Erigeron canadensis,1
 2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
 2,2022-10-16,5,12,5-12-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
@@ -4626,7 +4626,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Dichanthelium spp.,1
 2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
 2,2022-10-16,5,13,5-13-Tw,Tw,C,Tw-C,Forb,Cirsium spp.,0
@@ -4666,7 +4666,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,14,5-14-C,C,C,C-C,Forb,Rumex hastatulus,2
 2,2022-10-16,5,14,5-14-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,14,5-14-C,C,C,C-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,14,5-14-C,C,C,C-C,Grass,Aristida stricta,0
+2,2022-10-16,5,14,5-14-C,C,C,C-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,14,5-14-C,C,C,C-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,14,5-14-C,C,C,C-C,Sedge,Bulbostylis spp.,0
 2,2022-10-16,5,14,5-14-C,C,C,C-C,Forb,Cirsium spp.,0
@@ -4703,7 +4703,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,15,5-15-S,S,C,S-C,Sedge,Cyperus spp.,2
 2,2022-10-16,5,15,5-15-S,S,C,S-C,Forb,Dichondra spp.,2
 2,2022-10-16,5,15,5-15-S,S,C,S-C,Grass,Andropogon ternarius,1
-2,2022-10-16,5,15,5-15-S,S,C,S-C,Grass,Aristida stricta,1
+2,2022-10-16,5,15,5-15-S,S,C,S-C,Grass,Aristida beyrichiana,1
 2,2022-10-16,5,15,5-15-S,S,C,S-C,Bare,Bareground,1
 2,2022-10-16,5,15,5-15-S,S,C,S-C,Forb,Crotalaria rotundifolia,1
 2,2022-10-16,5,15,5-15-S,S,C,S-C,Grass,Cynodon dactylon,1
@@ -4750,7 +4750,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Forb,Rumex hastatulus,1
 2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Forb,Cirsium spp.,0
 2,2022-10-16,5,16,5-16-Tsp,Tsp,C,Tsp-C,Forb,Crotalaria rotundifolia,0
@@ -4785,7 +4785,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Forb,Oxalis corniculata,2
 2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Forb,Rumex hastatulus,2
 2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Grass,Andropogon ternarius,1
-2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Bare,Bareground,1
 2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Grass,Cynodon dactylon,1
 2,2022-10-16,6,1,6-1-S,S,Sp,S-Sp,Sedge,Cyperus esculentus,1
@@ -4833,7 +4833,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Forb,Erigeron canadensis,1
 2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -4875,7 +4875,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Forb,Gamochaeta spp.,1
 2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -4917,7 +4917,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Sedge,Cyperus esculentus,1
 2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,4,6-4-C,C,Sp,C-Sp,Forb,Crotalaria rotundifolia,0
@@ -4956,7 +4956,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Forb,Phyllanthus urinaria,1
 2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -4995,7 +4995,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Sedge,Cyperus spp.,1
 2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,6,6-6-C,C,Sp,C-Sp,Forb,Crotalaria rotundifolia,0
@@ -5035,7 +5035,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Forb,Lactuca canadensis,2
 2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Forb,Rumex hastatulus,2
 2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Grass,Andropogon ternarius,1
-2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Bare,Bareground,1
 2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,1
 2,2022-10-16,6,7,6-7-S,S,Sp,S-Sp,Forb,Cirsium spp.,1
@@ -5080,7 +5080,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Forb,Richardia spp.,1
 2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -5117,7 +5117,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Forb,Rumex hastatulus,1
 2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -5160,7 +5160,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Forb,Gamochaeta spp.,1
 2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -5203,7 +5203,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Forb,Gamochaeta spp.,1
 2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
 2,2022-10-16,6,11,6-11-C,C,Sp,C-Sp,Forb,Crotalaria rotundifolia,0
@@ -5238,7 +5238,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Grass,Paspalum notatum,2
 2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Forb,Rumex hastatulus,2
 2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Grass,Andropogon ternarius,1
-2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Bare,Bareground,1
 2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Grass,Cynodon dactylon,1
 2,2022-10-16,6,12,6-12-S,S,Sp,S-Sp,Sedge,Cyperus spp.,1
@@ -5283,7 +5283,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Forb,Erigeron canadensis,1
 2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,13,6-13-C,C,Sp,C-Sp,Forb,Crotalaria rotundifolia,0
@@ -5320,7 +5320,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Forb,Lactuca canadensis,2
 2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Forb,Rumex hastatulus,2
 2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Grass,Andropogon ternarius,1
-2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Grass,Aristida stricta,1
+2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,1
 2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Bare,Bareground,1
 2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,1
 2,2022-10-16,6,14,6-14-S,S,Sp,S-Sp,Forb,Crotalaria rotundifolia,1
@@ -5364,7 +5364,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Forb,Erigeron canadensis,1
 2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Forb,Crotalaria rotundifolia,0
@@ -5404,7 +5404,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Erigeron canadensis,1
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Cirsium spp.,0
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Crotalaria rotundifolia,0
@@ -5433,7 +5433,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Verbena spp.,0
 3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,4
 3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,2
@@ -5471,7 +5471,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,1,1-1-Tsp,Tsp,Sp,Tsp-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Bare,Bareground,5
 3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,2
@@ -5509,7 +5509,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,2,1-2-C,C,Sp,C-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Bare,Bareground,5
 3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,2
@@ -5547,7 +5547,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,3,1-3-S,S,Sp,S-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,5
 3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -5585,7 +5585,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,4,1-4-Tw,Tw,Sp,Tw-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Grass,Aristida stricta,4
+3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,4
 3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Bare,Bareground,5
 3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,0
@@ -5623,7 +5623,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,5,1-5-S,S,Sp,S-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,6
 3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,0
@@ -5661,7 +5661,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,6,1-6-Tsp,Tsp,Sp,Tsp-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,3
 3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -5699,7 +5699,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,7,1-7-Tw,Tw,Sp,Tw-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Bare,Bareground,3
 3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
@@ -5737,7 +5737,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,8,1-8-C,C,Sp,C-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,6
 3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,0
@@ -5775,7 +5775,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,9,1-9-Tsp,Tsp,Sp,Tsp-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,2
 3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -5813,7 +5813,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,10,1-10-Tw,Tw,Sp,Tw-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Bare,Bareground,2
 3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,1
@@ -5851,7 +5851,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,11,1-11-C,C,Sp,C-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Grass,Andropogon ternarius,5
 3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Grass,Andropogon virginicus,5
-3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Bare,Bareground,7
 3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,1
@@ -5889,7 +5889,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,12,1-12-S,S,Sp,S-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Bare,Bareground,2
 3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
@@ -5927,7 +5927,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,13,1-13-C,C,Sp,C-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,5
-3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,4
 3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -5965,7 +5965,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,14,1-14-Tw,Tw,Sp,Tw-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Grass,Andropogon ternarius,3
 3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Grass,Aristida stricta,3
+3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,3
 3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Bare,Bareground,5
 3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,0
@@ -6003,7 +6003,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,15,1-15-S,S,Sp,S-Sp,Forb,Urtica dioica,0
 3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,5
 3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,2
@@ -6041,7 +6041,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,1,16,1-16-Tsp,Tsp,Sp,Tsp-Sp,Forb,Urtica dioica,0
 3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Bare,Bareground,1
 3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,1
@@ -6080,7 +6080,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,1,2-1-Tw,Tw,W,Tw-W,Forb,Urtica dioica,0
 3,2023-10-30,2,2,2-2-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,2,2-2-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,2,2-2-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-30,2,2,2-2-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,2,2-2-C,C,W,C-W,Woody,Baccharis halimifolia,6
 3,2023-10-30,2,2,2-2-C,C,W,C-W,Bare,Bareground,5
 3,2023-10-30,2,2,2-2-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -6118,7 +6118,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,2,2-2-C,C,W,C-W,Forb,Urtica dioica,0
 3,2023-10-30,2,3,2-3-S,S,W,S-W,Grass,Andropogon ternarius,3
 3,2023-10-30,2,3,2-3-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,3,2-3-S,S,W,S-W,Grass,Aristida stricta,2
+3,2023-10-30,2,3,2-3-S,S,W,S-W,Grass,Aristida beyrichiana,2
 3,2023-10-30,2,3,2-3-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,3,2-3-S,S,W,S-W,Bare,Bareground,1
 3,2023-10-30,2,3,2-3-S,S,W,S-W,Sedge,Bulbostylis spp.,1
@@ -6156,7 +6156,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,3,2-3-S,S,W,S-W,Forb,Urtica dioica,0
 3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Bare,Bareground,5
 3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,1
@@ -6194,7 +6194,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,4,2-4-Tsp,Tsp,W,Tsp-W,Forb,Urtica dioica,0
 3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Bare,Bareground,2
 3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -6233,7 +6233,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,5,2-5-Tsp,Tsp,W,Tsp-W,Forb,Urtica dioica,0
 3,2023-10-30,2,6,2-6-S,S,W,S-W,Grass,Andropogon ternarius,2
 3,2023-10-30,2,6,2-6-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,6,2-6-S,S,W,S-W,Grass,Aristida stricta,2
+3,2023-10-30,2,6,2-6-S,S,W,S-W,Grass,Aristida beyrichiana,2
 3,2023-10-30,2,6,2-6-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,6,2-6-S,S,W,S-W,Bare,Bareground,1
 3,2023-10-30,2,6,2-6-S,S,W,S-W,Sedge,Bulbostylis spp.,0
@@ -6272,7 +6272,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,6,2-6-S,S,W,S-W,Forb,Urtica dioica,0
 3,2023-10-30,2,7,2-7-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,7,2-7-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,7,2-7-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-30,2,7,2-7-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,7,2-7-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,7,2-7-C,C,W,C-W,Bare,Bareground,2
 3,2023-10-30,2,7,2-7-C,C,W,C-W,Sedge,Bulbostylis spp.,1
@@ -6311,7 +6311,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,7,2-7-C,C,W,C-W,Forb,Urtica dioica,0
 3,2023-10-30,2,8,2-8-S,S,W,S-W,Grass,Andropogon ternarius,1
 3,2023-10-30,2,8,2-8-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,8,2-8-S,S,W,S-W,Grass,Aristida stricta,2
+3,2023-10-30,2,8,2-8-S,S,W,S-W,Grass,Aristida beyrichiana,2
 3,2023-10-30,2,8,2-8-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,8,2-8-S,S,W,S-W,Bare,Bareground,3
 3,2023-10-30,2,8,2-8-S,S,W,S-W,Sedge,Bulbostylis spp.,0
@@ -6350,7 +6350,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,8,2-8-S,S,W,S-W,Forb,Urtica dioica,0
 3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Bare,Bareground,6
 3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -6389,7 +6389,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,9,2-9-Tsp,Tsp,W,Tsp-W,Forb,Urtica dioica,0
 3,2023-10-30,2,10,2-10-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,10,2-10-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,10,2-10-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-30,2,10,2-10-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,10,2-10-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,10,2-10-C,C,W,C-W,Bare,Bareground,4
 3,2023-10-30,2,10,2-10-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -6428,7 +6428,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,10,2-10-C,C,W,C-W,Forb,Urtica dioica,0
 3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Bare,Bareground,4
 3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -6467,7 +6467,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,11,2-11-Tsp,Tsp,W,Tsp-W,Forb,Urtica dioica,0
 3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,4
-3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Bare,Bareground,3
 3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
@@ -6506,7 +6506,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,12,2-12-Tw,Tw,W,Tw-W,Forb,Urtica dioica,0
 3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Bare,Bareground,2
 3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
@@ -6545,7 +6545,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,13,2-13-Tw,Tw,W,Tw-W,Forb,Urtica dioica,0
 3,2023-10-30,2,14,2-14-S,S,W,S-W,Grass,Andropogon ternarius,2
 3,2023-10-30,2,14,2-14-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,14,2-14-S,S,W,S-W,Grass,Aristida stricta,2
+3,2023-10-30,2,14,2-14-S,S,W,S-W,Grass,Aristida beyrichiana,2
 3,2023-10-30,2,14,2-14-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,14,2-14-S,S,W,S-W,Bare,Bareground,3
 3,2023-10-30,2,14,2-14-S,S,W,S-W,Sedge,Bulbostylis spp.,0
@@ -6584,7 +6584,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,14,2-14-S,S,W,S-W,Forb,Urtica dioica,0
 3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Bare,Bareground,2
 3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,1
@@ -6623,7 +6623,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,15,2-15-Tw,Tw,W,Tw-W,Forb,Urtica dioica,0
 3,2023-10-30,2,16,2-16-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-30,2,16,2-16-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-30,2,16,2-16-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-30,2,16,2-16-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-30,2,16,2-16-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-30,2,16,2-16-C,C,W,C-W,Bare,Bareground,2
 3,2023-10-30,2,16,2-16-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -6662,7 +6662,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,2,16,2-16-C,C,W,C-W,Forb,Urtica dioica,0
 3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Bare,Bareground,3
 3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,1
@@ -6701,7 +6701,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,1,3-1-Tw,Tw,C,Tw-C,Forb,Urtica dioica,0
 3,2023-10-30,3,2,3-2-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,2,3-2-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,2,3-2-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-30,3,2,3-2-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,2,3-2-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,2,3-2-C,C,C,C-C,Bare,Bareground,4
 3,2023-10-30,3,2,3-2-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -6740,7 +6740,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,2,3-2-C,C,C,C-C,Forb,Urtica dioica,0
 3,2023-10-30,3,3,3-3-S,S,C,S-C,Grass,Andropogon ternarius,5
 3,2023-10-30,3,3,3-3-S,S,C,S-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,3,3-3-S,S,C,S-C,Grass,Aristida stricta,3
+3,2023-10-30,3,3,3-3-S,S,C,S-C,Grass,Aristida beyrichiana,3
 3,2023-10-30,3,3,3-3-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,3,3-3-S,S,C,S-C,Bare,Bareground,1
 3,2023-10-30,3,3,3-3-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -6779,7 +6779,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,3,3-3-S,S,C,S-C,Forb,Urtica dioica,0
 3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Bare,Bareground,3
 3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -6818,7 +6818,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,4,3-4-Tsp,Tsp,C,Tsp-C,Forb,Urtica dioica,0
 3,2023-10-30,3,5,3-5-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,5,3-5-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,5,3-5-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-30,3,5,3-5-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,5,3-5-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,5,3-5-C,C,C,C-C,Bare,Bareground,3
 3,2023-10-30,3,5,3-5-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -6858,7 +6858,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,5,3-5-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Bare,Bareground,2
 3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
@@ -6898,7 +6898,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,6,3-6-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Bare,Bareground,3
 3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -6938,7 +6938,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,7,3-7-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-30,3,8,3-8-S,S,C,S-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,8,3-8-S,S,C,S-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,8,3-8-S,S,C,S-C,Grass,Aristida stricta,3
+3,2023-10-30,3,8,3-8-S,S,C,S-C,Grass,Aristida beyrichiana,3
 3,2023-10-30,3,8,3-8-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,8,3-8-S,S,C,S-C,Bare,Bareground,2
 3,2023-10-30,3,8,3-8-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -6978,7 +6978,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,8,3-8-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-30,3,9,3-9-S,S,C,S-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,9,3-9-S,S,C,S-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,9,3-9-S,S,C,S-C,Grass,Aristida stricta,1
+3,2023-10-30,3,9,3-9-S,S,C,S-C,Grass,Aristida beyrichiana,1
 3,2023-10-30,3,9,3-9-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,9,3-9-S,S,C,S-C,Bare,Bareground,1
 3,2023-10-30,3,9,3-9-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -7018,7 +7018,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,9,3-9-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Bare,Bareground,1
 3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,1
@@ -7058,7 +7058,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,10,3-10-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Bare,Bareground,2
 3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -7098,7 +7098,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,11,3-11-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-30,3,12,3-12-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,12,3-12-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,12,3-12-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-30,3,12,3-12-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,12,3-12-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,12,3-12-C,C,C,C-C,Bare,Bareground,3
 3,2023-10-30,3,12,3-12-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -7138,7 +7138,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,12,3-12-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Bare,Bareground,4
 3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
@@ -7178,7 +7178,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,13,3-13-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-30,3,14,3-14-S,S,C,S-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,14,3-14-S,S,C,S-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,14,3-14-S,S,C,S-C,Grass,Aristida stricta,0
+3,2023-10-30,3,14,3-14-S,S,C,S-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,14,3-14-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,14,3-14-S,S,C,S-C,Bare,Bareground,1
 3,2023-10-30,3,14,3-14-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -7219,7 +7219,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,14,3-14-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-30,3,15,3-15-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,15,3-15-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,15,3-15-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-30,3,15,3-15-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,15,3-15-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,15,3-15-C,C,C,C-C,Bare,Bareground,2
 3,2023-10-30,3,15,3-15-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -7259,7 +7259,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,15,3-15-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Bare,Bareground,1
 3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -7299,7 +7299,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-30,3,16,3-16-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-31,4,1,4-1-S,S,W,S-W,Grass,Andropogon ternarius,1
 3,2023-10-31,4,1,4-1-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,1,4-1-S,S,W,S-W,Grass,Aristida stricta,2
+3,2023-10-31,4,1,4-1-S,S,W,S-W,Grass,Aristida beyrichiana,2
 3,2023-10-31,4,1,4-1-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,1,4-1-S,S,W,S-W,Bare,Bareground,1
 3,2023-10-31,4,1,4-1-S,S,W,S-W,Sedge,Bulbostylis spp.,0
@@ -7339,7 +7339,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,1,4-1-S,S,W,S-W,Forb,Verbena spp.,0
 3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Bare,Bareground,3
 3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
@@ -7379,7 +7379,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,2,4-2-Tw,Tw,W,Tw-W,Forb,Verbena spp.,0
 3,2023-10-31,4,3,4-3-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,3,4-3-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,3,4-3-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-31,4,3,4-3-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,3,4-3-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,3,4-3-C,C,W,C-W,Bare,Bareground,2
 3,2023-10-31,4,3,4-3-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -7419,7 +7419,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,3,4-3-C,C,W,C-W,Forb,Verbena spp.,0
 3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Bare,Bareground,3
 3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -7459,7 +7459,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,4,4-4-Tsp,Tsp,W,Tsp-W,Forb,Verbena spp.,0
 3,2023-10-31,4,5,4-5-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,5,4-5-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,5,4-5-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-31,4,5,4-5-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,5,4-5-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,5,4-5-C,C,W,C-W,Bare,Bareground,1
 3,2023-10-31,4,5,4-5-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -7500,7 +7500,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,5,4-5-C,C,W,C-W,Forb,Verbena spp.,0
 3,2023-10-31,4,6,4-6-S,S,W,S-W,Grass,Andropogon ternarius,1
 3,2023-10-31,4,6,4-6-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,6,4-6-S,S,W,S-W,Grass,Aristida stricta,2
+3,2023-10-31,4,6,4-6-S,S,W,S-W,Grass,Aristida beyrichiana,2
 3,2023-10-31,4,6,4-6-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,6,4-6-S,S,W,S-W,Bare,Bareground,1
 3,2023-10-31,4,6,4-6-S,S,W,S-W,Sedge,Bulbostylis spp.,0
@@ -7540,7 +7540,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,6,4-6-S,S,W,S-W,Forb,Verbena spp.,0
 3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Bare,Bareground,5
 3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -7580,7 +7580,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,7,4-7-Tsp,Tsp,W,Tsp-W,Forb,Verbena spp.,0
 3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Bare,Bareground,2
 3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
@@ -7620,7 +7620,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,8,4-8-Tw,Tw,W,Tw-W,Forb,Verbena spp.,0
 3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Bare,Bareground,1
 3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
@@ -7660,7 +7660,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,9,4-9-Tw,Tw,W,Tw-W,Forb,Verbena spp.,0
 3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Bare,Bareground,5
 3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -7701,7 +7701,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,10,4-10-Tsp,Tsp,W,Tsp-W,Forb,Verbena spp.,0
 3,2023-10-31,4,11,4-11-S,S,W,S-W,Grass,Andropogon ternarius,3
 3,2023-10-31,4,11,4-11-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,11,4-11-S,S,W,S-W,Grass,Aristida stricta,3
+3,2023-10-31,4,11,4-11-S,S,W,S-W,Grass,Aristida beyrichiana,3
 3,2023-10-31,4,11,4-11-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,11,4-11-S,S,W,S-W,Bare,Bareground,1
 3,2023-10-31,4,11,4-11-S,S,W,S-W,Sedge,Bulbostylis spp.,0
@@ -7742,7 +7742,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,11,4-11-S,S,W,S-W,Forb,Verbena spp.,0
 3,2023-10-31,4,12,4-12-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,12,4-12-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,12,4-12-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-31,4,12,4-12-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,12,4-12-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,12,4-12-C,C,W,C-W,Bare,Bareground,3
 3,2023-10-31,4,12,4-12-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -7782,7 +7782,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,12,4-12-C,C,W,C-W,Forb,Verbena spp.,0
 3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Aristida stricta,0
+3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Bare,Bareground,2
 3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Sedge,Bulbostylis spp.,0
@@ -7823,7 +7823,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,13,4-13-Tsp,Tsp,W,Tsp-W,Forb,Verbena spp.,0
 3,2023-10-31,4,14,4-14-C,C,W,C-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,14,4-14-C,C,W,C-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,14,4-14-C,C,W,C-W,Grass,Aristida stricta,0
+3,2023-10-31,4,14,4-14-C,C,W,C-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,14,4-14-C,C,W,C-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,14,4-14-C,C,W,C-W,Bare,Bareground,2
 3,2023-10-31,4,14,4-14-C,C,W,C-W,Sedge,Bulbostylis spp.,0
@@ -7864,7 +7864,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,14,4-14-C,C,W,C-W,Forb,Verbena spp.,0
 3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Aristida stricta,0
+3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Grass,Aristida beyrichiana,0
 3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Bare,Bareground,1
 3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Sedge,Bulbostylis spp.,0
@@ -7905,7 +7905,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,15,4-15-Tw,Tw,W,Tw-W,Forb,Verbena spp.,0
 3,2023-10-31,4,16,4-16-S,S,W,S-W,Grass,Andropogon ternarius,0
 3,2023-10-31,4,16,4-16-S,S,W,S-W,Grass,Andropogon virginicus,0
-3,2023-10-31,4,16,4-16-S,S,W,S-W,Grass,Aristida stricta,1
+3,2023-10-31,4,16,4-16-S,S,W,S-W,Grass,Aristida beyrichiana,1
 3,2023-10-31,4,16,4-16-S,S,W,S-W,Woody,Baccharis halimifolia,0
 3,2023-10-31,4,16,4-16-S,S,W,S-W,Bare,Bareground,4
 3,2023-10-31,4,16,4-16-S,S,W,S-W,Sedge,Bulbostylis spp.,1
@@ -7946,7 +7946,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,4,16,4-16-S,S,W,S-W,Forb,Verbena spp.,0
 3,2023-10-31,5,1,5-1-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,1,5-1-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,1,5-1-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-31,5,1,5-1-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,1,5-1-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,1,5-1-C,C,C,C-C,Bare,Bareground,1
 3,2023-10-31,5,1,5-1-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -7987,7 +7987,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,1,5-1-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,4
-3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Bare,Bareground,3
 3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
@@ -8028,7 +8028,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,2,5-2-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,9
-3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Bare,Bareground,3
 3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -8069,7 +8069,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,3,5-3-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-31,5,4,5-4-S,S,C,S-C,Grass,Andropogon ternarius,2
 3,2023-10-31,5,4,5-4-S,S,C,S-C,Grass,Andropogon virginicus,2
-3,2023-10-31,5,4,5-4-S,S,C,S-C,Grass,Aristida stricta,2
+3,2023-10-31,5,4,5-4-S,S,C,S-C,Grass,Aristida beyrichiana,2
 3,2023-10-31,5,4,5-4-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,4,5-4-S,S,C,S-C,Bare,Bareground,2
 3,2023-10-31,5,4,5-4-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -8110,7 +8110,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,4,5-4-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-31,5,5,5-5-S,S,C,S-C,Grass,Andropogon ternarius,2
 3,2023-10-31,5,5,5-5-S,S,C,S-C,Grass,Andropogon virginicus,2
-3,2023-10-31,5,5,5-5-S,S,C,S-C,Grass,Aristida stricta,2
+3,2023-10-31,5,5,5-5-S,S,C,S-C,Grass,Aristida beyrichiana,2
 3,2023-10-31,5,5,5-5-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,5,5-5-S,S,C,S-C,Bare,Bareground,1
 3,2023-10-31,5,5,5-5-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -8151,7 +8151,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,5,5-5-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Bare,Bareground,6
 3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -8192,7 +8192,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,6,5-6-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Bare,Bareground,5
 3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
@@ -8233,7 +8233,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,7,5-7-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-31,5,8,5-8-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,8,5-8-C,C,C,C-C,Grass,Andropogon virginicus,6
-3,2023-10-31,5,8,5-8-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-31,5,8,5-8-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,8,5-8-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,8,5-8-C,C,C,C-C,Bare,Bareground,7
 3,2023-10-31,5,8,5-8-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -8274,7 +8274,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,8,5-8-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,2
-3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Bare,Bareground,7
 3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,3
@@ -8315,7 +8315,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,9,5-9-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-31,5,10,5-10-S,S,C,S-C,Grass,Andropogon ternarius,2
 3,2023-10-31,5,10,5-10-S,S,C,S-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,10,5-10-S,S,C,S-C,Grass,Aristida stricta,0
+3,2023-10-31,5,10,5-10-S,S,C,S-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,10,5-10-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,10,5-10-S,S,C,S-C,Bare,Bareground,1
 3,2023-10-31,5,10,5-10-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -8356,7 +8356,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,10,5-10-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-31,5,11,5-11-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,11,5-11-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,11,5-11-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-31,5,11,5-11-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,11,5-11-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,11,5-11-C,C,C,C-C,Bare,Bareground,7
 3,2023-10-31,5,11,5-11-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -8397,7 +8397,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,11,5-11-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Bare,Bareground,1
 3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
@@ -8438,7 +8438,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,12,5-12-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Aristida stricta,0
+3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Bare,Bareground,2
 3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Sedge,Bulbostylis spp.,0
@@ -8479,7 +8479,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,13,5-13-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
 3,2023-10-31,5,14,5-14-C,C,C,C-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,14,5-14-C,C,C,C-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,14,5-14-C,C,C,C-C,Grass,Aristida stricta,0
+3,2023-10-31,5,14,5-14-C,C,C,C-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,14,5-14-C,C,C,C-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,14,5-14-C,C,C,C-C,Bare,Bareground,2
 3,2023-10-31,5,14,5-14-C,C,C,C-C,Sedge,Bulbostylis spp.,0
@@ -8520,7 +8520,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,14,5-14-C,C,C,C-C,Forb,Verbena spp.,0
 3,2023-10-31,5,15,5-15-S,S,C,S-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,15,5-15-S,S,C,S-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,15,5-15-S,S,C,S-C,Grass,Aristida stricta,2
+3,2023-10-31,5,15,5-15-S,S,C,S-C,Grass,Aristida beyrichiana,2
 3,2023-10-31,5,15,5-15-S,S,C,S-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,15,5-15-S,S,C,S-C,Bare,Bareground,2
 3,2023-10-31,5,15,5-15-S,S,C,S-C,Sedge,Bulbostylis spp.,0
@@ -8561,7 +8561,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,15,5-15-S,S,C,S-C,Forb,Verbena spp.,0
 3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon ternarius,0
 3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Andropogon virginicus,0
-3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida stricta,0
+3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Grass,Aristida beyrichiana,0
 3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Woody,Baccharis halimifolia,0
 3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Bare,Bareground,8
 3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Sedge,Bulbostylis spp.,0
@@ -8602,7 +8602,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,5,16,5-16-Tsp,Tsp,C,Tsp-C,Forb,Verbena spp.,0
 3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Bare,Bareground,6
 3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,0
@@ -8643,7 +8643,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,1,6-1-S,S,Sp,S-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,1
 3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -8684,7 +8684,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,2,6-2-Tw,Tw,Sp,Tw-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,3
 3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,0
@@ -8725,7 +8725,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,3,6-3-Tsp,Tsp,Sp,Tsp-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Bare,Bareground,2
 3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
@@ -8766,7 +8766,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,4,6-4-C,C,Sp,C-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,6
 3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,0
@@ -8807,7 +8807,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,5,6-5-Tsp,Tsp,Sp,Tsp-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Bare,Bareground,4
 3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
@@ -8848,7 +8848,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,6,6-6-C,C,Sp,C-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Bare,Bareground,6
 3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,0
@@ -8889,7 +8889,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,7,6-7-S,S,Sp,S-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,2
 3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -8930,7 +8930,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,8,6-8-Tw,Tw,Sp,Tw-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,2
 3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -8971,7 +8971,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,9,6-9-Tw,Tw,Sp,Tw-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,4
 3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,0
@@ -9012,7 +9012,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,10,6-10-Tsp,Tsp,Sp,Tsp-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Bare,Bareground,2
 3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
@@ -9053,7 +9053,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,11,6-11-C,C,Sp,C-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Grass,Aristida stricta,2
+3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,2
 3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Bare,Bareground,8
 3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,0
@@ -9094,7 +9094,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,12,6-12-S,S,Sp,S-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Bare,Bareground,5
 3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Sedge,Bulbostylis spp.,0
@@ -9136,7 +9136,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,13,6-13-C,C,Sp,C-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Grass,Andropogon ternarius,5
 3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Grass,Andropogon virginicus,4
-3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Bare,Bareground,7
 3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Sedge,Bulbostylis spp.,0
@@ -9177,7 +9177,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,14,6-14-S,S,Sp,S-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Bare,Bareground,3
 3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Sedge,Bulbostylis spp.,0
@@ -9218,7 +9218,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 3,2023-10-31,6,15,6-15-Tw,Tw,Sp,Tw-Sp,Forb,Verbena spp.,0
 3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon ternarius,0
 3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Andropogon virginicus,0
-3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida stricta,0
+3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Grass,Aristida beyrichiana,0
 3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Woody,Baccharis halimifolia,0
 3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Bare,Bareground,3
 3,2023-10-31,6,16,6-16-Tsp,Tsp,Sp,Tsp-Sp,Sedge,Bulbostylis spp.,0

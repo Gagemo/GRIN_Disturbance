@@ -233,7 +233,7 @@ for (name in names(pairwise.adonis)) {
 }
 
 # Save the workbook to an Excel file
-saveWorkbook(wb, "Figures/pairwise_adonis_23_same_sheet.xlsx", overwrite = TRUE)
+saveWorkbook(wb, "Figures/Chapter 2 - Fire/pairwise_adonis_23_same_sheet.xlsx", overwrite = TRUE)
 
 ##########################     2022 Data       #################################
 
@@ -391,7 +391,7 @@ for (name in names(pairwise.adonis)) {
 }
 
 # Save the workbook to an Excel file
-saveWorkbook(wb, "Figures/pairwise_adonis_22_same_sheet.xlsx", overwrite = TRUE)
+saveWorkbook(wb, "Figures/Chapter 2 - Fire/pairwise_adonis_22_same_sheet.xlsx", overwrite = TRUE)
 
 ##########################     2021 Data       #################################
 
@@ -551,7 +551,7 @@ for (name in names(pairwise.adonis)) {
 }
 
 # Save the workbook to an Excel file
-saveWorkbook(wb, "Figures/pairwise_adonis_21_same_sheet.xlsx", overwrite = TRUE)
+saveWorkbook(wb, "Figures/Chapter 2 - Fire/pairwise_adonis_21_same_sheet.xlsx", overwrite = TRUE)
 
 ################## Save Figures Above using ggarrange ##########################
 NMDS_22_23 = 

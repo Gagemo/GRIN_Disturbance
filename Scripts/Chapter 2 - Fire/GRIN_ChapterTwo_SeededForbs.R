@@ -60,7 +60,7 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(10, Coverage) ~ 97.5
 ))
 
-data = filter(GRIN, Species == "Pityopsis graminifolia" | 
+data = filter(GRIN, Species == "Pityopsis trayci" | 
               Species == "Liatris gracilis")
 
 # Creates data sets by year #
