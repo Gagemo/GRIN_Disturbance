@@ -69,7 +69,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot three dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(GRIN, distance = "bray", k=2)
+MDS = metaMDS(GRIN, distance = "bray", k=2, autotransform = FALSE)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
@@ -114,7 +114,7 @@ NMDS_plot =
   labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_Seedbank.png", 
+ggsave("Figures/Chapter 2 - Fire/NMDS_Seedbank.png", 
        width = 12, height = 8)
 
 # Perform adonis to test the significance of treatments#

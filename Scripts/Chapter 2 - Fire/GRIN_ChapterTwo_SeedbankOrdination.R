@@ -50,7 +50,7 @@ GRIN = GRIN %>% remove_rownames %>% column_to_rownames(var="ID")
 
 # Calculate distance matrix
 GRIN <- 
-  vegdist(GRIN, method = "hellinger")
+  vegdist(GRIN, method = "bray")
 
 # Use dissimilarities to create scree plot - attain the number of dimensions #
 # for NMDS with least stress. Using function that produces a # 
@@ -69,7 +69,7 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot three dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(GRIN, distance = "bray", k=2)
+MDS = metaMDS(GRIN, distance = "bray", k=2, autotransform = FALSE)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
@@ -119,6 +119,6 @@ ggsave("Figures/Chapter 2 - Fire/NMDS_Seedbank.png",
 
 # Perform adonis to test the significance of treatments#
 
-adon.results <- adonis2(GRIN ~ NMDS$Treatment, method="hellinger",perm=999)
+adon.results <- adonis2(GRIN ~ NMDS$Treatment, method="bray",perm=999)
 print(adon.results)
 

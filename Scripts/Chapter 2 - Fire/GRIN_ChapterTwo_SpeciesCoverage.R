@@ -73,8 +73,8 @@ Pt = filter(Data, Species == "Pityopsis trayci")
 summary(Pt)
 
 # Creates data sets by year #
-Pt_22 = filter(Pt, Year == 1)
-Pt_23 = filter(Pt, Year == 2)
+Pt_22 = filter(Pt, Year == 2)
+Pt_23 = filter(Pt, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -136,8 +136,9 @@ PtBox22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_22,size = 8, bracket.size = 1, hide.ns = T)+
+  ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
        caption = get_pwc_label(tukey_22)) +
@@ -170,7 +171,7 @@ PtBox23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_23,
                                  detailed = TRUE),
@@ -205,14 +206,18 @@ tmp
 
 write.csv.tabular(tmp, "Figures/Chapter 2 - Fire/Pt_23.csv")
 
+################################################################################
+################################################################################
 ############################### Liatris ########################################
+################################################################################
+################################################################################
 
 Lg = filter(Data, Species == "Liatris gracilis")
 summary(Lg)
 
 # Creates data sets by year #
-Lg_22 = filter(Lg, Year == 1)
-Lg_23 = filter(Lg, Year == 2)
+Lg_22 = filter(Lg, Year == 2)
+Lg_23 = filter(Lg, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -275,7 +280,7 @@ LgBox22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -308,7 +313,7 @@ LgBox23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_23, size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_23,
@@ -354,8 +359,8 @@ Ss = filter(Data, Species == "Sorghastrum secundum")
 summary(Ss)
 
 # Creates data sets by year #
-Ss_22 = filter(Ss, Year == 1)
-Ss_23 = filter(Ss, Year == 2)
+Ss_22 = filter(Ss, Year == 2)
+Ss_23 = filter(Ss, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -417,7 +422,7 @@ SsBox22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_22,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
@@ -451,7 +456,7 @@ SsBox23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_23, size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_23,
@@ -497,8 +502,8 @@ At = filter(Data, Species == "Andropogon ternarius")
 summary(At)
 
 # Creates data sets by year #
-At_22 = filter(At, Year == 1)
-At_23 = filter(At, Year == 2)
+At_22 = filter(At, Year == 2)
+At_23 = filter(At, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -561,7 +566,7 @@ AtBox22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -598,7 +603,7 @@ AtBox23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_23,
                                  detailed = TRUE),
@@ -643,8 +648,8 @@ Ab = filter(Data, Species == "Aristida beyrichiana")
 summary(Ab)
 
 # Creates data sets by year #
-Ab_22 = filter(Ab, Year == 1)
-Ab_23 = filter(Ab, Year == 2)
+Ab_22 = filter(Ab, Year == 2)
+Ab_23 = filter(Ab, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -707,7 +712,7 @@ AbBox22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -727,7 +732,7 @@ AbBox22 =
           element_text(size = 20, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "A. ternarius % Coverage", title = "2022")
+  labs(x = "", y = "A. beyrichiana % Coverage", title = "2022")
 AbBox22
 
 ## Coverage 2023 Boxplot ##
@@ -741,7 +746,7 @@ AbBox23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_23,
                                  detailed = TRUE),
@@ -763,7 +768,7 @@ AbBox23 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "", y = "A. ternarius % Coverage", title = "2023")
+  labs(x = "", y = "A. beyrichiana % Coverage", title = "2023")
 AbBox23
 
 tmp <- tabular(T.F ~ Coverage * (mean+sd+std.error), data=Ab_22)
@@ -786,8 +791,8 @@ Es = filter(Data, Species == "Eragrostis spectabilis")
 summary(Es)
 
 # Creates data sets by year #
-Es_22 = filter(Es, Year == 1)
-Es_23 = filter(Es, Year == 2)
+Es_22 = filter(Es, Year == 2)
+Es_23 = filter(Es, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -850,7 +855,7 @@ EsBox22 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -873,9 +878,6 @@ EsBox22 =
   labs(x = "", y = "E. spectabilis % Coverage", title = "2022")
 EsBox22
 
-ggsave("Figures/Chapter 2 - Fire/Es_box22.png", 
-       width = 12, height = 8)
-
 ## Coverage 2023 Boxplot ##
 EsBox23 = 
   ggplot(Es_23, aes(x = T.F, y = Coverage), colour = T.F) +
@@ -887,7 +889,7 @@ EsBox23 =
                     values=c("#333333", "#FF9900", "#3366FF")) +
   scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
                      values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_23,
                                  detailed = TRUE),
@@ -929,5 +931,5 @@ all =
              ncol = 2, nrow = 6)
 all
 ggsave("Figures/Chapter 2 - Fire/22-23_Obli_Forb_Grass.png", 
-       width = 14, height = 18)
+       width = 14, height = 22)
 

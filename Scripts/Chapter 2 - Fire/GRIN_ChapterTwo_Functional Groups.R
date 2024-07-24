@@ -228,8 +228,6 @@ Forb_Box =
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "Total (%) Coverage", title = "Forb")
 Forb_Box
-ggsave("Figures/Chapter 2 - Fire/2022Forb.png", 
-       width = 10, height = 7)
 
 # Grasses 2022 #
 Grass_Box = 
@@ -261,8 +259,6 @@ Grass_Box =
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "Total (%) Coverage", title = "Grass")
 Grass_Box
-ggsave("Figures/Chapter 2 - Fire/2022Grass.png", 
-       width = 10, height = 7)
 
 # Sedges 2022 #
 Sedge_Box = 
@@ -294,8 +290,6 @@ Sedge_Box =
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "Total (%) Coverage", title = "Sedge")
 Sedge_Box
-ggsave("Figures/Chapter 2 - Fire/2022Sedge_Box.png", 
-       width = 10, height = 7)
 
 # Woody 2022 #
 Woody_Box = 
@@ -327,8 +321,6 @@ Woody_Box =
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "Total (%) Coverage", title = "Woody")
 Woody_Box
-ggsave("Figures/Chapter 2 - Fire/2022Woody.png", 
-       width = 12, height = 8)
 
 ################## Save Figures Above using ggarrange ##########################
 CombinedFun_2022 = 

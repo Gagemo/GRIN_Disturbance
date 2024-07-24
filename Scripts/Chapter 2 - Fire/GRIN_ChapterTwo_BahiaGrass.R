@@ -118,10 +118,6 @@ tukey_23 <- PN_23 %>%
   add_xy_position()
 tukey_23
 
-################################################################################
-################ Create Box Plot for Bahia Across Years ########################
-################################################################################
-
 ## Bahia Coverage 2022 Box plot ##
 BahiaBox22 = 
   ggplot(PN_22, aes(x = Fire, y = Coverage), colour = Fire) +
@@ -145,20 +141,17 @@ BahiaBox22 =
         panel.border = element_blank(),
         panel.background = element_blank(),
         plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
-        text=element_text(size=16),
-        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
-        axis.title.y = element_text(size=15, face="italic", colour = "black"),   
-        axis.text.x=element_text(size=15, face = "bold", color = "black"),
-        axis.text.y=element_text(size=15, face = "bold", color = "black"),
+        text=element_text(size=20),
+        axis.title.x = element_text(size=20, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=20, face="italic", colour = "black"),   
+        axis.text.x=element_text(size=20, face = "bold", color = "black"),
+        axis.text.y=element_text(size=20, face = "bold", color = "black"),
         strip.text.x = 
-          element_text(size = 15, colour = "black", face = "bold"),
+          element_text(size = 20, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "P. notatum % Coverage", title = "2022")
 BahiaBox22
-
-ggsave("Figures/Chapter 2 - Fire/Bahia_box22.png", 
-       width = 12, height = 8)
 
 ## Bahia Coverage 2023 Boxplot ##
 BahiaBox23 = 
@@ -183,25 +176,22 @@ BahiaBox23 =
         panel.border = element_blank(),
         panel.background = element_blank(),
         plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
-        text=element_text(size=16),
-        axis.title.x = element_text(size=15, face="bold", colour = "black"),    
+        text=element_text(size=20),
+        axis.title.x = element_text(size=20, face="bold", colour = "black"),    
         axis.title.y = element_blank(),   
-        axis.text.x=element_text(size=15, face = "bold", color = "black"),
+        axis.text.x=element_text(size=20, face = "bold", color = "black"),
         axis.text.y=element_blank(),
         axis.line.y = element_blank(),
         axis.ticks = element_blank(), 
         strip.text.x = 
-          element_text(size = 15, colour = "black", face = "bold"),
+          element_text(size = 20, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
   labs(x = "", y = "P. notatum % Coverage", title = "2023")
 BahiaBox23
 
-ggsave("Figures/Chapter 2 - Fire/Bahia_box23.png", 
-       width = 12, height = 8)
-
 ################## Save Figures Above using ggarrange ##########################
 ggarrange(BahiaBox22, BahiaBox23, ncol = 2, nrow = 1)
 ggsave("Figures/Chapter 2 - Fire/22-23_BahiaBox.png", 
-       width = 12, height = 10)
+       width = 10, height = 8)
 
