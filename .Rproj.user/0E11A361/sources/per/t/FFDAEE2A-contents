@@ -1,10 +1,10 @@
 ################################################################################
 ################################################################################
-######################### GRIN - Fire Seasonality ##############################
+#########################   GRIN - Disturbance    ##############################
 #########################      Seed Bank          ##############################
 #########################  University of Florida  ##############################
 #########################     Gage LaPierre       ##############################
-#########################      2021 - 2023        ##############################
+#########################      2021 - 2022        ##############################
 ################################################################################
 ################################################################################
 
@@ -34,13 +34,11 @@ GRIN = read.csv("Data/GRIN - SeedBank.csv")
 str(GRIN)
 summary(GRIN)
 
-# Remove Tilling Treatment # 
-GRIN = filter(GRIN, Treatment == 'S')
-
-GRIN$Fire = factor(GRIN$Fire, levels=c('C', 'Sp', 'W'))
+# Remove Seeding Treatment # 
+GRIN = filter(GRIN, Treatment != 'S')
 
 # Create grouped treatment/environment table and summaries to fit species table #
-Treat = group_by(GRIN, ID, Fire) %>% dplyr::summarize()
+Treat = group_by(GRIN, ID, Treatment) %>% dplyr::summarize()
 
 GRIN$Plot = NULL
 GRIN$Sub_Plot = NULL
@@ -69,14 +67,14 @@ NMDS.scree <- function(x) { # x is the name of the data frame variable
 # --> Based on scree plot three dimensions will be sufficient for NMDS #
 
 # MDS and plot stress using a Shepherd Plot #
-MDS = metaMDS(GRIN, distance = "bray", k=2, autotransform = FALSE)
+MDS = metaMDS(GRIN, distance = "bray", k=2)
 MDS$stress
 stressplot(MDS) 
 goodness(MDS)
 # --> Shepherd plots showcase a not perfect, but acceptable R^2 value #
 
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
-NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Fire, 
+NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
                   Plot = Treat$ID)
 
 # NMDS Graphs
@@ -91,11 +89,11 @@ NMDS_plot =
   stat_ellipse(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, color = Treatment, 
                                 fill = Treatment),geom = "polygon", 
                alpha = 0.15, linetype = "solid", show.legend = T) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  ggtitle("2020 Pre-Treatment Seedbank") +
+  scale_color_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                     values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  ggtitle("2020 Pre-Treatment") +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -114,11 +112,11 @@ NMDS_plot =
   labs(x = "MDS1", y = "MDS2")
 NMDS_plot
 
-ggsave("Figures/Chapter 2 - Fire/NMDS_Seedbank.png", 
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_Seedbank.png", 
        width = 12, height = 8)
 
 # Perform adonis to test the significance of treatments#
 
-adon.results <- adonis2(GRIN ~ NMDS$Treatment, method="bray",perm=999)
+adon.results <- adonis2(GRIN ~ NMDS$Treat, method="bray",perm=999)
 print(adon.results)
 

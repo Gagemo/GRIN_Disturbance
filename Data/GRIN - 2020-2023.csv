@@ -4406,7 +4406,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Species,Coverage
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Grass,Sorghastrum secundum,0
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Forb,Urtica dioica,0
 2,2022-10-16,5,7,5-7-Tw,Tw,C,Tw-C,Forb,Verbena spp.,0
-2,2022-10-16,5,8,5-8-C,C,C,C-C,Grass,Andropogon ternarius,2
+2,2022-10-16,5,8,5-8-C,C,C,C-C,Grass,Andropogon ternarius,0
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Grass,Andropogon virginicus,7
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Grass,Paspalum notatum,6
 2,2022-10-16,5,8,5-8-C,C,C,C-C,Woody,Rubus spp.,6
