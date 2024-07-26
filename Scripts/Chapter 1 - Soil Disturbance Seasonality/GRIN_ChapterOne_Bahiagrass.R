@@ -15,7 +15,7 @@ cat("\014")
 #########################     Installs Packages   ##############################
 list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", 
                       "ggsignif", "multcompView", "ggpubr", "rstatix",
-                      "vegan", "labdsv")
+                      "vegan", "labdsv", "tables", "plotrix")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -33,9 +33,11 @@ library(ggpubr)
 library(rstatix)
 library(vegan)
 library(labdsv)
+library(tables)
+library(plotrix)
 
 ####################### Read in 2021 - 2023 Data  ##############################
-GRIN = read.csv("Data/GRIN - 2021-2023.csv")
+GRIN = read.csv("Data/GRIN - 2020-2023.csv")
 GRIN$Coverage = as.numeric(GRIN$Coverage)
 GRIN$Plot = as.character(GRIN$Plot)
 
@@ -47,7 +49,7 @@ GRIN = filter(GRIN, Treatment != 'S')
 
 # Reclasifys coverage data (CV) from 1-10 scale to percent scale #
 GRIN <- mutate(GRIN, Coverage = case_when(
-  grepl(0, Coverage) ~ 0,
+  grepl(10, Coverage) ~ 97.5,
   grepl(1, Coverage) ~ 0.1,
   grepl(2, Coverage) ~ 0.5,
   grepl(3, Coverage) ~ 1.5,
@@ -57,7 +59,7 @@ GRIN <- mutate(GRIN, Coverage = case_when(
   grepl(7, Coverage) ~ 37.5,
   grepl(8, Coverage) ~ 62.5,
   grepl(9, Coverage) ~ 85,
-  grepl(10, Coverage) ~ 97.5
+  grepl(0, Coverage) ~ 0,
 ))
 
 PN = filter(GRIN, Species == "Paspalum notatum")
@@ -66,7 +68,6 @@ summary(PN)
 # Creates data sets by year #
 PN_21 = filter(PN, Year == 1)
 PN_22 = filter(PN, Year == 2)
-PN_23 = filter(PN, Year == 3)
 
 ################################################################################
 ################ Test for Significance across years ############################
@@ -151,11 +152,8 @@ BahiaBox21 =
           element_text(size = 15, colour = "black", face = "bold"),
         legend.position = "none") +
   guides(fill = guide_legend(label.position = "bottom")) +
-  labs(x = "Treatment", y = "Bare Ground % Coverage", title = "2021")
+  labs(x = "Treatment", y = "P. notatum % Coverage", title = "2021")
 BahiaBox21
-
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Bahia_box21.png", 
-       width = 10, height = 7)
 
 ## Bahia Coverage 2022 Boxplot ##
 BahiaBox22 = 
@@ -191,10 +189,17 @@ BahiaBox22 =
   labs(x = "Treatment", y = "", title = "2022")
 BahiaBox22
 
-ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Bahia_box22.png", 
-       width = 10, height = 7)
-
 ################## Save Figures Above using ggarrange ##########################
 ggarrange(BahiaBox21, BahiaBox22, ncol = 2, nrow = 1)
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/21-22_BahiaBox.png", 
        width = 12, height = 10)
+
+tmp <- tabular(Treatment ~ Coverage * (mean+sd+std.error), data=PN_21)
+tmp
+
+write.csv.tabular(tmp, "Figures/Chapter 1 - Soil Disturbance Seasonality/Pn_21.csv")
+
+tmp <- tabular(Treatment ~ Coverage * (mean+sd+std.error), data=PN_22)
+tmp
+
+write.csv.tabular(tmp, "Figures/Chapter 1 - Soil Disturbance Seasonality/Pn_22.csv")
