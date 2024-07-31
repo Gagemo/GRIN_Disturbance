@@ -1006,3 +1006,122 @@ tmp <- tabular(Treatment ~ Coverage * (mean+sd+std.error), data=Ds_22)
 tmp
 
 write.csv.tabular(tmp, "Figures/Chapter 1 - Soil Disturbance Seasonality/Ds_22.csv")
+
+
+################################################################################
+################################################################################
+################################################################################
+############################### Hairy Indigo ###################################
+################################################################################
+################################################################################
+################################################################################
+
+Eo = filter(Data, Species == "Eremochloa ophiuroides")
+summary(Eo)
+
+# Creates data sets by year #
+Eo_21 = filter(Eo, Year == 1)
+Eo_22 = filter(Eo, Year == 2)
+
+################################################################################
+################ Test for Significance across years ############################
+################################################################################
+
+############################### 2022 Eo ######################################
+# Check Assumptions #
+model  <- lm(Coverage ~ Treatment, data = Eo_22)
+# Create a QQ plot of residuals
+ggqqplot(residuals(model))
+# Compute Shapiro-Wilk test of normality
+shapiro_test(residuals(model))
+plot(model, 1)
+# Compute Levene's Test
+Eo_22$Treatment= as.factor(Eo_22$Treatment)
+Eo_22 %>% levene_test(Coverage ~ Treatment)
+
+# Test for Significance #
+anova_22 = Eo_22 %>% kruskal_test(Coverage ~ Treatment) %>% 
+  add_significance()
+summary(anova_22)
+
+tukey_22 <- Eo_22 %>% 
+  dunn_test(Coverage ~ Treatment) %>% 
+  add_significance() %>% 
+  add_xy_position()
+tukey_22
+
+## Lovegrass Coverage 2022 Box plot ##
+EoBox21 = 
+  ggplot(Eo_21, aes(x = Treatment, y = Coverage), colour = Treatment) +
+  geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Treatment), 
+             position = position_jitterdodge(), size = 2, alpha = 0.5) +
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                    values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                     values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
+  ylim(0, 100) +
+  labs(subtitle = get_test_label(anova_21,
+                                 detailed = TRUE),
+       caption = get_pwc_label(tukey_21)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=20),
+        axis.title.x = element_text(size=20, face="bold", colour = "black"),    
+        axis.title.y = element_text(size=20, face="italic", colour = "black"),   
+        axis.text.x=element_text(size=20, face = "bold", color = "black"),
+        axis.text.y=element_text(size=20, face = "bold", color = "black"),
+        strip.text.x = 
+          element_text(size = 20, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "", y = "E. ophiuroides % Coverage", title = "2021")
+EoBox21
+
+## Coverage 2023 Boxplot ##
+EoBox22 = 
+  ggplot(Eo_22, aes(x = Treatment, y = Coverage), colour = Treatment) +
+  geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
+  geom_point(aes(fill=Treatment), 
+             position = position_jitterdodge(), size = 2, alpha = 0.5) +
+  stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
+  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                    values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
+                     values=c("#333333", "#FF9900", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  ylim(0, 100) +
+  labs(subtitle = get_test_label(anova_22,
+                                 detailed = TRUE),
+       caption = get_pwc_label(tukey_22)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(),
+        plot.title = element_text(hjust = 0.5, face="bold", colour = "black"),
+        text=element_text(size=20),
+        axis.title.x = element_text(size=20, face="bold", colour = "black"),    
+        axis.title.y = element_blank(),   
+        axis.text.x=element_text(size=20, face = "bold", color = "black"),
+        axis.text.y=element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks = element_blank(), 
+        strip.text.x = 
+          element_text(size = 15, colour = "black", face = "bold"),
+        legend.position = "none") +
+  guides(fill = guide_legend(label.position = "bottom")) +
+  labs(x = "", y = "E. ophiuroides % Coverage", title = "2022")
+EoBox22
+
+tmp <- tabular(Treatment ~ Coverage * (mean+sd+std.error), data=Eo_22)
+tmp
+
+write.csv.tabular(tmp, "Figures/Chapter 1 - Soil Disturbance Seasonality/Eo_22.csv")
+

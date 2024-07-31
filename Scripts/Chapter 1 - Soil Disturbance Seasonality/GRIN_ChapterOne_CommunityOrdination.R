@@ -131,6 +131,38 @@ species.scores$Native <- species_groups$Native
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,Plot = Treat$ID)
 
+
+# 1. Vector fitting with envfit
+envfit_result <- envfit(MDS, Spp)
+print(envfit_result)
+
+# 3. Similarity Percentages (SIMPER)
+simper_result <- simper(Spp, Treat$Treatment)
+simper_result
+simper_summary <- summary(simper_result)
+
+## Extract relevant information
+simper_list <- lapply(names(simper_result), function(comparison) {
+    simper_data <- simper_result[[comparison]]
+    # Convert the simper_data to a data frame
+    df <- data.frame(
+        Species = rownames(simper_data),
+        Average_Abundance_Group1 = simper_data$mean[, 1],
+        Average_Abundance_Group2 = simper_data$mean[, 2],
+        Average_Contribution = simper_data$contr,
+        Cumulative_Contribution = cumsum(simper_data$contr),
+        SD_Contribution = simper_data$sd
+    )
+    df$Comparison <- comparison  # Add a column for comparison name
+    return(df)
+})
+
+# Combine all comparisons into a single data frame
+combined_simper_df <- do.call(rbind, simper_list)
+
+# Save the combined data frame to a CSV file
+write.csv(combined_simper_df, "simper_results.csv", row.names = FALSE)rite.csv(combined_simper_df, "Figures/Chapter 1 - Soil Disturbance Seasonality/combined_simper_df_22.csv", row.names = FALSE)
+
 # NMDS Graphs
 NMDS_22 = 
   ggplot() +
@@ -311,6 +343,29 @@ species.scores$Native <- species_groups$Native
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,Plot = Treat$ID)
 
+# 1. Vector fitting with envfit
+envfit_result <- envfit(MDS, Spp)
+print(envfit_result)
+
+# 3. Similarity Percentages (SIMPER)
+simper_result <- simper(Spp, Treat$Treatment)
+simper_result
+simper_summary <- summary(simper_result)
+
+# Extract SIMPER results and convert them to a list of data frames
+simper_list <- lapply(names(simper_result), function(comparison) {
+  simper_data <- simper_result[[comparison]]
+  df <- as.data.frame(simper_data)
+  df$Comparison <- comparison  # Add a column for comparison name
+  return(df)
+})
+
+# Combine all comparisons into a single data frame
+combined_simper_df <- do.call(rbind, simper_list)
+
+# Save the combined data frame to a CSV file
+write.csv(combined_simper_df, "Figures/Chapter 1 - Soil Disturbance Seasonality/combined_simper_df_21.csv", row.names = FALSE)
+
 # NMDS Graphs
 NMDS_21 = 
   ggplot() +
@@ -483,6 +538,29 @@ species.scores$Group <- species_groups$Group
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
                   Plot = Treat$ID)
+
+# 1. Vector fitting with envfit
+envfit_result <- envfit(MDS, Spp)
+print(envfit_result)
+
+# 3. Similarity Percentages (SIMPER)
+simper_result <- simper(Spp, Treat$Treatment)
+simper_result
+simper_summary <- summary(simper_result)
+
+# Extract SIMPER results and convert them to a list of data frames
+simper_list <- lapply(names(simper_result), function(comparison) {
+  simper_data <- simper_result[[comparison]]
+  df <- as.data.frame(simper_data)
+  df$Comparison <- comparison  # Add a column for comparison name
+  return(df)
+})
+
+# Combine all comparisons into a single data frame
+combined_simper_df <- do.call(rbind, simper_list)
+
+# Save the combined data frame to a CSV file
+write.csv(combined_simper_df, "Figures/Chapter 1 - Soil Disturbance Seasonality/combined_simper_df_20.csv", row.names = FALSE)
 
 # NMDS Graphs
 NMDS_20 = 
