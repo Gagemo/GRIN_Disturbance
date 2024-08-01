@@ -14,9 +14,9 @@ cat("\014")
 
 #########################     Installs Packages   ##############################
 list.of.packages <- c("tidyverse", "vegan", "agricolae", "extrafont", "ggrepel",
-                      "ggsignif", "multcompView", "ggpubr", "rstatix",'rmarkdown',
-                      "labdsv", "pairwiseAdonis", "devtools", "knitr",
-                      "tables", "openxlsx")
+                      "ggsignif", "multcompView", "ggpubr", "rstatix",
+                      'rmarkdown', "labdsv", "pairwiseAdonis", "devtools", 
+                      "knitr", "tables", "openxlsx", "labdsv")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -40,6 +40,8 @@ library(devtools)
 library(knitr)
 library(tables)
 library(openxlsx)
+library(labdsv)
+
 
 install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
 library(pairwiseAdonis)
@@ -77,7 +79,13 @@ GRIN_20 = filter(GRIN, Year == 0)
 GRIN_21 = filter(GRIN, Year == 1)
 GRIN_22 = filter(GRIN, Year == 2)
 
+################################################################################
+################################################################################
+################################################################################
 ########################### 2022 Data ##########################################
+################################################################################
+################################################################################
+################################################################################
 
 # Create species pivot table #
 Spp = dplyr::select(GRIN_22, ID, Species, Coverage) %>% matrify()
@@ -131,39 +139,105 @@ species.scores$Native <- species_groups$Native
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,Plot = Treat$ID)
 
+################################################################################
+############## NMDS Vector fitting with envfit##################################
+################################################################################
 
-# 1. Vector fitting with envfit
 envfit_result <- envfit(MDS, Spp)
-print(envfit_result)
 
-# 3. Similarity Percentages (SIMPER)
+# Extract vectors and/or factors
+vectors_df <- as.data.frame(envfit_result$vectors$arrows)
+vectors_pvals <- as.data.frame(envfit_result$vectors$pvals)
+
+if (!is.null(envfit_result$factors)) {
+  factors_df <- as.data.frame(envfit_result$factors$centroids)
+  factors_pvals <- as.data.frame(envfit_result$factors$pvals)
+}
+vectors_combined <- cbind(vectors_df, p_value = vectors_pvals)
+
+write.csv(
+  vectors_combined, 
+  "Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_FitValues_22.csv", 
+  row.names = TRUE)
+
+################################################################################
+######################### Indicator Species Analysis ###########################
+################################################################################
+
+# Identify columns with only zeros
+absent_species <- which(colSums(Spp) == 0)
+
+# Remove absent species
+Spp_filtered <- Spp[, -absent_species]
+
+# Perform Indicator Species Analysis
+indicator_results <- indval(Spp_filtered, Treat$Treatment)
+
+# Extract data frames
+indval_df <- indicator_results$indval
+species_names <- rownames(indval_df)
+
+# Combine data into a single data frame
+combined_df <- data.frame(
+  Species = species_names,
+  Indicator_Value_C = indval_df$C,
+  Indicator_Value_Tsp = indval_df$Tsp,
+  Indicator_Value_Tw = indval_df$Tw,
+  Max_Class = indicator_results$maxcls,
+  Indicator_Class = indicator_results$indcls,
+  P_Value = indicator_results$pval
+)
+
+# Filter for significant species (p < 0.05)
+significant_species <- combined_df[combined_df$P_Value < 0.05, ]
+
+# Add rank column based on indicator value in the max class
+significant_species$Rank <- 
+  ave(significant_species$Max_Class, significant_species$Max_Class, FUN = rank)
+
+# Save the combined data frame to CSV
+write.csv(
+  significant_species, 
+  file = "Figures/Chapter 1 - Soil Disturbance Seasonality/indicator_species_analysis_results_22.csv", 
+  row.names = TRUE)
+
+################################################################################
+####################Similarity Percentages (SIMPER)#############################
+################################################################################
+
 simper_result <- simper(Spp, Treat$Treatment)
-simper_result
 simper_summary <- summary(simper_result)
 
-## Extract relevant information
-simper_list <- lapply(names(simper_result), function(comparison) {
-    simper_data <- simper_result[[comparison]]
-    # Convert the simper_data to a data frame
-    df <- data.frame(
-        Species = rownames(simper_data),
-        Average_Abundance_Group1 = simper_data$mean[, 1],
-        Average_Abundance_Group2 = simper_data$mean[, 2],
-        Average_Contribution = simper_data$contr,
-        Cumulative_Contribution = cumsum(simper_data$contr),
-        SD_Contribution = simper_data$sd
-    )
-    df$Comparison <- comparison  # Add a column for comparison name
-    return(df)
-})
+# Extract the first pairwise comparison (adjust as needed)
+pairwise_data <- simper_result[[1]]
 
-# Combine all comparisons into a single data frame
-combined_simper_df <- do.call(rbind, simper_list)
+# Create the data frame with p-values
+table_data <- data.frame(
+  Species = names(pairwise_data$average),
+  Contribution = pairwise_data$average,
+  P_value = pairwise_data$p
+)
 
-# Save the combined data frame to a CSV file
-write.csv(combined_simper_df, "simper_results.csv", row.names = FALSE)rite.csv(combined_simper_df, "Figures/Chapter 1 - Soil Disturbance Seasonality/combined_simper_df_22.csv", row.names = FALSE)
+# Filter for significant species (p < 0.05)
+significant_species <- table_data[table_data$P_value < 0.05, ]
 
-# NMDS Graphs
+# Sort by contribution
+significant_species <- significant_species[order(significant_species$Contribution, decreasing = TRUE), ]
+
+# Add rank column
+significant_species$Rank <- seq_len(nrow(significant_species))
+
+head(significant_species)
+
+write.csv(
+  significant_species, 
+  file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_22.csv", 
+  row.names = TRUE)
+
+################################################################################
+#############################NMDS Graphs########################################
+################################################################################
+
 NMDS_22 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
@@ -287,7 +361,9 @@ saveWorkbook(wb, "Figures/Chapter 1 - Soil Disturbance Seasonality/pairwise_adon
 
 ################################################################################
 ################################################################################
-########################## 2021 Data ###########################################
+################################################################################
+########################### 2021 Data ##########################################
+################################################################################
 ################################################################################
 ################################################################################
 
@@ -343,30 +419,84 @@ species.scores$Native <- species_groups$Native
 # Turn MDS points into a dataframe with treatment data for use in ggplot #
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment,Plot = Treat$ID)
 
-# 1. Vector fitting with envfit
-envfit_result <- envfit(MDS, Spp)
-print(envfit_result)
+################################################################################
+############## NMDS Vector fitting with envfit##################################
+################################################################################
 
-# 3. Similarity Percentages (SIMPER)
+envfit_result <- envfit(MDS, Spp)
+
+# Extract vectors and/or factors
+vectors_df <- as.data.frame(envfit_result$vectors$arrows)
+vectors_pvals <- as.data.frame(envfit_result$vectors$pvals)
+
+if (!is.null(envfit_result$factors)) {
+  factors_df <- as.data.frame(envfit_result$factors$centroids)
+  factors_pvals <- as.data.frame(envfit_result$factors$pvals)
+}
+vectors_combined <- cbind(vectors_df, p_value = vectors_pvals)
+
+write.csv(vectors_combined, "Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_FitValues_21.csv", row.names = TRUE)
+
+################################################################################
+######################### Indicator Species Analysis ###########################
+################################################################################
+
+# Perform Indicator Species Analysis
+indicator_results <- indval(Spp, Treat$Treatment)
+
+# Extract data frames
+indval_df <- indicator_results$indval
+species_names <- rownames(indval_df)
+
+# Combine data into a single data frame
+combined_df <- data.frame(
+  Species = species_names,
+  Indicator_Value_C = indval_df$C,
+  Indicator_Value_Tsp = indval_df$Tsp,
+  Indicator_Value_Tw = indval_df$Tw,
+  Max_Class = indicator_results$maxcls,
+  Indicator_Class = indicator_results$indcls,
+  P_Value = indicator_results$pval
+)
+
+# Filter for significant species (p < 0.05)
+significant_species <- combined_df[combined_df$P_Value < 0.05, ]
+
+# Add rank column based on indicator value in the max class
+significant_species$Rank <- ave(significant_species$Max_Class, significant_species$Max_Class, FUN = rank)
+
+# Save the combined data frame to CSV
+write.csv(significant_species, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/indicator_species_analysis_results_21.csv", row.names = TRUE)
+
+################################################################################
+####################Similarity Percentages (SIMPER)#############################
+################################################################################
+
 simper_result <- simper(Spp, Treat$Treatment)
-simper_result
 simper_summary <- summary(simper_result)
 
-# Extract SIMPER results and convert them to a list of data frames
-simper_list <- lapply(names(simper_result), function(comparison) {
-  simper_data <- simper_result[[comparison]]
-  df <- as.data.frame(simper_data)
-  df$Comparison <- comparison  # Add a column for comparison name
-  return(df)
-})
+# Extract the first pairwise comparison (adjust as needed)
+pairwise_data <- simper_result[[1]]
 
-# Combine all comparisons into a single data frame
-combined_simper_df <- do.call(rbind, simper_list)
+# Create the data frame
+table_data <- data.frame(
+  Species = names(pairwise_data$average),
+  Contribution = pairwise_data$average
+)
 
-# Save the combined data frame to a CSV file
-write.csv(combined_simper_df, "Figures/Chapter 1 - Soil Disturbance Seasonality/combined_simper_df_21.csv", row.names = FALSE)
+# Sort by contribution
+table_data <- table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
-# NMDS Graphs
+# Add rank column
+table_data$Rank <- seq_len(nrow(table_data))
+head(table_data)
+
+write.csv(table_data, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_21.csv", row.names = TRUE)
+
+################################################################################
+#############################NMDS Graphs########################################
+################################################################################
+
 NMDS_21 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),
@@ -487,9 +617,12 @@ ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/2021_NMDS.png",
 
 ################################################################################
 ################################################################################
-############################# 2020 Data ########################################
+################################################################################
+########################### 2020 Data ##########################################
 ################################################################################
 ################################################################################
+################################################################################
+
 
 # Create species pivot table #
 Spp = dplyr::select(GRIN_20, ID, Species, Coverage) %>% matrify()
@@ -539,30 +672,90 @@ species.scores$Group <- species_groups$Group
 NMDS = data.frame(MDS = MDS$points, Treatment = Treat$Treatment, 
                   Plot = Treat$ID)
 
-# 1. Vector fitting with envfit
-envfit_result <- envfit(MDS, Spp)
-print(envfit_result)
 
-# 3. Similarity Percentages (SIMPER)
+################################################################################
+############## NMDS Vector fitting with envfit##################################
+################################################################################
+
+envfit_result <- envfit(MDS, Spp)
+
+# Extract vectors and/or factors
+vectors_df <- as.data.frame(envfit_result$vectors$arrows)
+vectors_pvals <- as.data.frame(envfit_result$vectors$pvals)
+
+if (!is.null(envfit_result$factors)) {
+  factors_df <- as.data.frame(envfit_result$factors$centroids)
+  factors_pvals <- as.data.frame(envfit_result$factors$pvals)
+}
+vectors_combined <- cbind(vectors_df, p_value = vectors_pvals)
+
+write.csv(vectors_combined, "Figures/Chapter 1 - Soil Disturbance Seasonality/NMDS_FitValues_20.csv", row.names = TRUE)
+
+################################################################################
+######################### Indicator Species Analysis ###########################
+################################################################################
+
+# Perform Indicator Species Analysis
+indicator_results <- indval(Spp, Treat$Treatment)
+
+# Extract data frames
+indval_df <- indicator_results$indval
+species_names <- rownames(indval_df)
+
+# Combine data into a single data frame
+combined_df <- data.frame(
+  Species = species_names,
+  Indicator_Value_C = indval_df$C,
+  Indicator_Value_Tsp = indval_df$Tsp,
+  Indicator_Value_Tw = indval_df$Tw,
+  Max_Class = indicator_results$maxcls,
+  Indicator_Class = indicator_results$indcls,
+  P_Value = indicator_results$pval
+)
+
+# Filter for significant species (p < 0.05)
+significant_species <- combined_df[combined_df$P_Value < 0.05, ]
+
+# Add rank column based on indicator value in the max class
+significant_species$Rank <- ave(significant_species$Max_Class, significant_species$Max_Class, FUN = rank)
+
+# Save the combined data frame to CSV
+write.csv(significant_species, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/indicator_species_analysis_results_20.csv", row.names = TRUE)
+
+################################################################################
+####################Similarity Percentages (SIMPER)#############################
+################################################################################
+
 simper_result <- simper(Spp, Treat$Treatment)
-simper_result
 simper_summary <- summary(simper_result)
 
-# Extract SIMPER results and convert them to a list of data frames
-simper_list <- lapply(names(simper_result), function(comparison) {
-  simper_data <- simper_result[[comparison]]
-  df <- as.data.frame(simper_data)
-  df$Comparison <- comparison  # Add a column for comparison name
-  return(df)
-})
+# Extract the first pairwise comparison (adjust as needed)
+pairwise_data <- simper_result[[1]]
 
-# Combine all comparisons into a single data frame
-combined_simper_df <- do.call(rbind, simper_list)
+# Create the data frame with p-values
+table_data <- data.frame(
+  Species = names(pairwise_data$average),
+  Contribution = pairwise_data$average,
+  P_value = pairwise_data$p
+)
 
-# Save the combined data frame to a CSV file
-write.csv(combined_simper_df, "Figures/Chapter 1 - Soil Disturbance Seasonality/combined_simper_df_20.csv", row.names = FALSE)
+# Filter for significant species (p < 0.05)
+significant_species <- table_data[table_data$P_value < 0.05, ]
 
-# NMDS Graphs
+# Sort by contribution
+significant_species <- significant_species[order(significant_species$Contribution, decreasing = TRUE), ]
+
+# Add rank column
+significant_species$Rank <- seq_len(nrow(significant_species))
+
+head(significant_species)
+
+write.csv(table_data, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_20.csv", row.names = TRUE)
+
+################################################################################
+#############################NMDS Graphs########################################
+################################################################################
+
 NMDS_20 = 
   ggplot() +
   geom_point(data = NMDS, aes(x = MDS.MDS1, y = MDS.MDS2, fill = Treatment),

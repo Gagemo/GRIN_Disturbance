@@ -1,17 +1,19 @@
 "","Species","Contribution","P_value","Rank"
-"Paspalum notatum","Paspalum notatum",0.210665402456081,0.002,1
+"Paspalum notatum","Paspalum notatum",0.210665402456081,0.001,1
 "Bareground","Bareground",0.138010341304074,0.001,2
 "Dichondra spp.","Dichondra spp.",0.0908882901985592,0.001,3
-"Oxalis corniculata","Oxalis corniculata",0.0417055098008621,0.004,4
-"Polypremum procumbens","Polypremum procumbens",0.00191565023477507,0.021,5
-"Raphanus raphanistrum","Raphanus raphanistrum",0.000926152046437697,0.037,6
-"Andropogon ternarius","Andropogon ternarius",0,0.001,7
-"Aristida beyrichiana","Aristida beyrichiana",0,0.001,8
-"Digitaria spp.","Digitaria spp.",0,0.001,9
-"Eragrostis spectabilis","Eragrostis spectabilis",0,0.001,10
-"Galactia spp.","Galactia spp.",0,0.001,11
-"Liatris gracilis","Liatris gracilis",0,0.001,12
-"Phytolacca americana","Phytolacca americana",0,0.001,13
-"Pityopsis trayci","Pityopsis trayci",0,0.001,14
-"Sorghastrum secundum","Sorghastrum secundum",0,0.001,15
-"Urtica dioica","Urtica dioica",0,0.001,16
+"Oxalis corniculata","Oxalis corniculata",0.0417055098008621,0.006,4
+"Polypremum procumbens","Polypremum procumbens",0.00191565023477507,0.042,5
+"Raphanus raphanistrum","Raphanus raphanistrum",0.000926152046437697,0.047,6
+"NA",NA,NA,NA,7
+"NA.1",NA,NA,NA,8
+"NA.2",NA,NA,NA,9
+"NA.3",NA,NA,NA,10
+"NA.4",NA,NA,NA,11
+"NA.5",NA,NA,NA,12
+"NA.6",NA,NA,NA,13
+"NA.7",NA,NA,NA,14
+"NA.8",NA,NA,NA,15
+"NA.9",NA,NA,NA,16
+"NA.10",NA,NA,NA,17
+"NA.11",NA,NA,NA,18

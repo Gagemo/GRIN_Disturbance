@@ -216,7 +216,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Native,Species,Coverage
 0,2020-07-20,2,15,2-15-Tw,Tw,W,Tw-W,Sedge,Native,Cyperus spp.,0
 0,2020-07-20,2,15,2-15-Tw,Tw,W,Tw-W,Forb,Native,Oxalis corniculata,0
 0,2020-07-20,2,15,2-15-Tw,Tw,W,Tw-W,Grass,Native,Paspalum setaceum,0
-0,2020-07-20,2,16,2-16-C,C,W,C-W,Bare,UK,Bareground,
+0,2020-07-20,2,16,2-16-C,C,W,C-W,Bare,UK,Bareground,0
 0,2020-07-20,2,16,2-16-C,C,W,C-W,Grass,Non-native,Paspalum notatum,6
 0,2020-07-20,2,16,2-16-C,C,W,C-W,Grass,Non-native,Cynodon dactylon,2
 0,2020-07-20,2,16,2-16-C,C,W,C-W,Grass,Non-native,Eremochloa ophiuroides,8
@@ -388,7 +388,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Native,Species,Coverage
 0,2020-07-20,4,7,4-7-Tsp,Tsp,W,Tsp-W,Forb,Native,Oxalis corniculata,0
 0,2020-07-20,4,7,4-7-Tsp,Tsp,W,Tsp-W,Grass,Native,Paspalum setaceum,0
 0,2020-07-20,4,7,4-7-Tsp,Tsp,W,Tsp-W,Forb,Native,Cnidoscolus stimulosus,1
-0,2020-07-20,4,8,4-8-Tw,Tw,W,Tw-W,Bare,UK,Bareground,4
+0,2020-07-20,4,8,4-8-Tw,Tw,W,Tw-W,Bare,UK,Bareground,2
 0,2020-07-20,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Non-native,Paspalum notatum,7
 0,2020-07-20,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Non-native,Cynodon dactylon,3
 0,2020-07-20,4,8,4-8-Tw,Tw,W,Tw-W,Grass,Non-native,Eremochloa ophiuroides,4
@@ -459,7 +459,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Native,Species,Coverage
 0,2020-07-20,5,1,5-1-C,C,C,C-C,Sedge,Native,Cyperus spp.,2
 0,2020-07-20,5,1,5-1-C,C,C,C-C,Forb,Native,Oxalis corniculata,2
 0,2020-07-20,5,1,5-1-C,C,C,C-C,Grass,Native,Paspalum setaceum,0
-0,2020-07-20,5,2,5-2-Tw,Tw,C,Tw-C,Bare,UK,Bareground,8
+0,2020-07-20,5,2,5-2-Tw,Tw,C,Tw-C,Bare,UK,Bareground,3
 0,2020-07-20,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Non-native,Paspalum notatum,5
 0,2020-07-20,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Non-native,Cynodon dactylon,4
 0,2020-07-20,5,2,5-2-Tw,Tw,C,Tw-C,Grass,Non-native,Eremochloa ophiuroides,6
@@ -515,7 +515,7 @@ Year,Date,Plot,Sub_Plot,ID,Treatment,Fire,T+F,Group,Native,Species,Coverage
 0,2020-07-20,5,9,5-9-Tsp,Tsp,C,Tsp-C,Sedge,Native,Cyperus spp.,0
 0,2020-07-20,5,9,5-9-Tsp,Tsp,C,Tsp-C,Forb,Native,Oxalis corniculata,0
 0,2020-07-20,5,9,5-9-Tsp,Tsp,C,Tsp-C,Grass,Native,Paspalum setaceum,0
-0,2020-07-20,5,10,5-10-S,S,C,S-C,Bare,UK,Bareground,10
+0,2020-07-20,5,10,5-10-S,S,C,S-C,Bare,UK,Bareground,3
 0,2020-07-20,5,10,5-10-S,S,C,S-C,Grass,Non-native,Paspalum notatum,0
 0,2020-07-20,5,10,5-10-S,S,C,S-C,Grass,Non-native,Cynodon dactylon,0
 0,2020-07-20,5,10,5-10-S,S,C,S-C,Grass,Non-native,Eremochloa ophiuroides,0
