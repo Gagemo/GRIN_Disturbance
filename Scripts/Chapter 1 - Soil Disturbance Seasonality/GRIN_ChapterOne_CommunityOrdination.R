@@ -206,8 +206,9 @@ write.csv(
 ####################Similarity Percentages (SIMPER)#############################
 ################################################################################
 
-simper_result <- simper(Spp, Treat$Treatment)
+simper_result <- simper(Spp, Treat$Fire, permutations = 99)
 simper_summary <- summary(simper_result)
+simper_summary
 
 # Extract the first pairwise comparison (adjust as needed)
 pairwise_data <- simper_result[[1]]
@@ -216,22 +217,22 @@ pairwise_data <- simper_result[[1]]
 table_data <- data.frame(
   Species = names(pairwise_data$average),
   Contribution = pairwise_data$average,
-  P_value = pairwise_data$p
+  SD = pairwise_data$sd,
+  P_value = pairwise_data$p,
+  Cumulative_Contribution = pairwise_data$cusum
 )
 
-# Filter for significant species (p < 0.05)
-significant_species <- table_data[table_data$P_value < 0.05, ]
-
 # Sort by contribution
-significant_species <- significant_species[order(significant_species$Contribution, decreasing = TRUE), ]
+table_data <- 
+  table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
 # Add rank column
-significant_species$Rank <- seq_len(nrow(significant_species))
+table_data$Rank <- seq_len(nrow(table_data))
 
-head(significant_species)
+head(table_data)
 
 write.csv(
-  significant_species, 
+  table_data, 
   file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_22.csv", 
   row.names = TRUE)
 
@@ -473,26 +474,33 @@ write.csv(significant_species, file = "Figures/Chapter 1 - Soil Disturbance Seas
 ####################Similarity Percentages (SIMPER)#############################
 ################################################################################
 
-simper_result <- simper(Spp, Treat$Treatment)
+simper_result <- simper(Spp, Treat$Treatment, permutations = 99)
 simper_summary <- summary(simper_result)
+simper_summary
 
 # Extract the first pairwise comparison (adjust as needed)
 pairwise_data <- simper_result[[1]]
 
-# Create the data frame
+# Create the data frame with p-values
 table_data <- data.frame(
   Species = names(pairwise_data$average),
-  Contribution = pairwise_data$average
+  Contribution = pairwise_data$average,
+  SD = pairwise_data$sd,
+  P_value = pairwise_data$p,
+  Cumulative_Contribution = pairwise_data$cusum
 )
 
 # Sort by contribution
-table_data <- table_data[order(table_data$Contribution, decreasing = TRUE), ]
+table_data <- 
+  table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
 # Add rank column
 table_data$Rank <- seq_len(nrow(table_data))
+
 head(table_data)
 
-write.csv(table_data, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_21.csv", row.names = TRUE)
+write.csv(
+  table_data, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_21.csv", row.names = TRUE)
 
 ################################################################################
 #############################NMDS Graphs########################################
@@ -727,8 +735,9 @@ write.csv(significant_species, file = "Figures/Chapter 1 - Soil Disturbance Seas
 ####################Similarity Percentages (SIMPER)#############################
 ################################################################################
 
-simper_result <- simper(Spp, Treat$Treatment)
+simper_result <- simper(Spp, Treat$Treatment, permutations = 99)
 simper_summary <- summary(simper_result)
+simper_summary
 
 # Extract the first pairwise comparison (adjust as needed)
 pairwise_data <- simper_result[[1]]
@@ -737,21 +746,22 @@ pairwise_data <- simper_result[[1]]
 table_data <- data.frame(
   Species = names(pairwise_data$average),
   Contribution = pairwise_data$average,
-  P_value = pairwise_data$p
+  SD = pairwise_data$sd,
+  P_value = pairwise_data$p,
+  Cumulative_Contribution = pairwise_data$cusum
 )
 
-# Filter for significant species (p < 0.05)
-significant_species <- table_data[table_data$P_value < 0.05, ]
-
 # Sort by contribution
-significant_species <- significant_species[order(significant_species$Contribution, decreasing = TRUE), ]
+table_data <- 
+  table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
 # Add rank column
-significant_species$Rank <- seq_len(nrow(significant_species))
+table_data$Rank <- seq_len(nrow(table_data))
 
-head(significant_species)
+head(table_data)
 
-write.csv(table_data, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_20.csv", row.names = TRUE)
+write.csv(
+  table_data, file = "Figures/Chapter 1 - Soil Disturbance Seasonality/SIMPER_20.csv", row.names = TRUE)
 
 ################################################################################
 #############################NMDS Graphs########################################
