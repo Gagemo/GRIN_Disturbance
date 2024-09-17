@@ -1,0 +1,27 @@
+{
+    "id": "443C6983",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/GRIN_SR.R",
+    "project_path": "Scripts/GRIN_SR.R",
+    "type": "r_source",
+    "hash": "1378007803",
+    "contents": "",
+    "dirty": false,
+    "created": 1672853922265.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "65,13",
+        "scrollLine": "40"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1672868950,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1672868950123,
+    "read_only": false,
+    "read_only_alternatives": []
+}
