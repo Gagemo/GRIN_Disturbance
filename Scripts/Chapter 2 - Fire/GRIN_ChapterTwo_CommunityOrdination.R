@@ -1063,3 +1063,10 @@ NMDS_21_22 =
 
 ggsave("Figures/Chapter 2 - Fire/21-22_NMDS.png", 
        width = 18, height = 10)
+
+NMDS_20_21 = 
+  ggarrange(NMDS_20, NMDS_graph_21, ncol = 2, nrow = 1, 
+            common.legend = TRUE, legend="bottom")
+
+ggsave("Figures/Chapter 2 - Fire/20-21_NMDS.png", 
+       width = 18, height = 10)

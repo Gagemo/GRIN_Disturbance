@@ -132,11 +132,9 @@ IhBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -167,11 +165,9 @@ IhBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -277,11 +273,9 @@ OcBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -312,11 +306,9 @@ OcBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -422,11 +414,9 @@ PsBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -457,11 +447,9 @@ PsBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -593,11 +581,9 @@ PnBox20 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_20, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_20,
                                  detailed = TRUE),
@@ -643,11 +629,9 @@ PnBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -678,11 +662,9 @@ PnBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -788,11 +770,9 @@ RsBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -823,11 +803,9 @@ RsBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -933,11 +911,9 @@ DsBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -968,11 +944,9 @@ DsBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -1056,11 +1030,9 @@ EoBox21 =
   geom_boxplot(aes(fill=Treatment), alpha = 0.5, outlier.shape = NA) +
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   stat_pvalue_manual(tukey_21,size = 8, bracket.size = 1, hide.ns = T)+
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_21,
@@ -1091,11 +1063,9 @@ EoBox22 =
   geom_point(aes(fill=Treatment), 
              position = position_jitterdodge(), size = 2, alpha = 0.5) +
   stat_pvalue_manual(tukey_22, size = 8, bracket.size = 1, hide.ns = T)+
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No-Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   ylim(0, 100) +
   labs(subtitle = get_test_label(anova_22,
                                  detailed = TRUE),
@@ -1125,3 +1095,21 @@ tmp
 
 write.csv.tabular(tmp, "Figures/Chapter 1 - Soil Disturbance Seasonality/Eo_22.csv")
 
+################## Save Figures Above using ggarrange ##########################
+Change = 
+  ggarrange(IhBox21, OcBox21, PsBox21,PnBox21, RsBox21, DsBox21, 
+            EoBox21, ncol = 2, nrow = 4)
+Change
+annotate_figure(Change, top = text_grob("", color = "black", 
+                                        face = "bold", size = 25))
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/species21.png", 
+       width = 10, height = 18)
+
+Change = 
+  ggarrange(IhBox22, OcBox22, PsBox22, PnBox22, RsBox22, DsBox22, 
+            EoBox22, ncol = 2, nrow = 4)
+Change
+annotate_figure(Change, top = text_grob("", color = "black", 
+                                        face = "bold", size = 25))
+ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/species22.png", 
+       width = 10, height = 18)
