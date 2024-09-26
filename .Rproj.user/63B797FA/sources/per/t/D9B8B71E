@@ -1,0 +1,26 @@
+{
+    "id": "D9B8B71E",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_SpeciesCoverage.R",
+    "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_SpeciesCoverage.R",
+    "type": "r_source",
+    "hash": "321994589",
+    "contents": "",
+    "dirty": false,
+    "created": 1727373347821.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "1115,0",
+        "scrollLine": "1094"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1727386454,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1727386454233,
+    "read_only": false,
+    "read_only_alternatives": []
+}
