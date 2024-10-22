@@ -132,11 +132,9 @@ woody_change_Box =
   labs(subtitle = get_test_label(anova_woody, detailed = TRUE),
        caption = get_pwc_label(tukey_woody)) +
   ylim(-30,80) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -194,11 +192,9 @@ forb_change_Box =
   stat_pvalue_manual(tukey_forb,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_forb, detailed = TRUE),
        caption = get_pwc_label(tukey_forb)) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -256,11 +252,9 @@ grass_change_Box =
   stat_pvalue_manual(tukey_grass,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_grass, detailed = TRUE),
        caption = get_pwc_label(tukey_grass)) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -318,11 +312,9 @@ sedge_change_Box =
   stat_pvalue_manual(tukey_sedge,size = 8, bracket.size = 1, hide.ns = T)+
   labs(subtitle = get_test_label(anova_sedge, detailed = TRUE),
        caption = get_pwc_label(tukey_sedge)) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -391,11 +383,9 @@ bare_change_Box =
   labs(subtitle = get_test_label(anova_bare, detailed = TRUE),
        caption = get_pwc_label(tukey_bare)) +
   ylim(-10,100) +
-  scale_fill_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                    values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_color_manual(labels=c('No Burn', 'Late-Spring', 'Winter'),
-                     values=c("#333333", "#FF9900", "#3366FF")) +
-  scale_x_discrete(labels=c('No Burn', 'Late-Spring', 'Winter')) +
+  scale_fill_manual(labels=c('No-Till', 'Late-Spring', 'Winter'),
+                    values=c("#FF3399", "#FFFF00", "#3366FF")) +
+  scale_x_discrete(labels=c('No-Till', 'Late-Spring', 'Winter')) +
   theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),

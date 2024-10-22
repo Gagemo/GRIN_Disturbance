@@ -1,0 +1,26 @@
+{
+    "id": "A458CBD3",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_ChangeCover.R",
+    "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_ChangeCover.R",
+    "type": "r_source",
+    "hash": "423269332",
+    "contents": "",
+    "dirty": false,
+    "created": 1727233155534.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "589,0",
+        "scrollLine": "578"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1727235100,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1727235100994,
+    "read_only": false,
+    "read_only_alternatives": []
+}

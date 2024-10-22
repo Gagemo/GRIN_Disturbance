@@ -203,8 +203,9 @@ write.csv(
 ####################Similarity Percentages (SIMPER)#############################
 ################################################################################
 
-simper_result <- simper(Spp, Treat$Fire)
+simper_result <- simper(Spp, Treat$Fire, permutations = 99)
 simper_summary <- summary(simper_result)
+simper_summary
 
 # Extract the first pairwise comparison (adjust as needed)
 pairwise_data <- simper_result[[1]]
@@ -213,23 +214,22 @@ pairwise_data <- simper_result[[1]]
 table_data <- data.frame(
   Species = names(pairwise_data$average),
   Contribution = pairwise_data$average,
-  P_value = pairwise_data$p
+  SD = pairwise_data$sd,
+  P_value = pairwise_data$p,
+  Cumulative_Contribution = pairwise_data$cusum
 )
 
-# Filter for significant species (p < 0.05)
-significant_species <- table_data[table_data$P_value < 0.05, ]
-
 # Sort by contribution
-significant_species <- 
-  significant_species[order(significant_species$Contribution, decreasing = TRUE), ]
+table_data <- 
+  table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
 # Add rank column
-significant_species$Rank <- seq_len(nrow(significant_species))
+table_data$Rank <- seq_len(nrow(table_data))
 
-head(significant_species)
+head(table_data)
 
 write.csv(
-  significant_species, 
+  table_data, 
   file = "Figures/Chapter 2 - Fire/SIMPER_23.csv", 
   row.names = TRUE)
 
@@ -349,7 +349,9 @@ saveWorkbook(wb, "Figures/Chapter 2 - Fire/pairwise_adonis_23_same_sheet.xlsx",
 
 ################################################################################
 ################################################################################
+################################################################################
 ########################### 2022 Data ##########################################
+################################################################################
 ################################################################################
 ################################################################################
 
@@ -473,8 +475,10 @@ write.csv(
 ####################Similarity Percentages (SIMPER)#############################
 ################################################################################
 
-simper_result <- simper(Spp, Treat$Fire)
+
+simper_result <- simper(Spp, Treat$Fire, permutations = 99)
 simper_summary <- summary(simper_result)
+simper_summary
 
 # Extract the first pairwise comparison (adjust as needed)
 pairwise_data <- simper_result[[1]]
@@ -483,24 +487,22 @@ pairwise_data <- simper_result[[1]]
 table_data <- data.frame(
   Species = names(pairwise_data$average),
   Contribution = pairwise_data$average,
-  P_value = pairwise_data$p
+  SD = pairwise_data$sd,
+  P_value = pairwise_data$p,
+  Cumulative_Contribution = pairwise_data$cusum
 )
 
-# Filter for significant species (p < 0.05)
-significant_species <- table_data[table_data$P_value < 0.05, ]
-
 # Sort by contribution
-significant_species <- 
-  significant_species[order(
-    significant_species$Contribution, decreasing = TRUE), ]
+table_data <- 
+  table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
 # Add rank column
-significant_species$Rank <- seq_len(nrow(significant_species))
+table_data$Rank <- seq_len(nrow(table_data))
 
-head(significant_species)
+head(table_data)
 
 write.csv(
-  significant_species, 
+  table_data, 
   file = "Figures/Chapter 2 - Fire/SIMPER_22.csv", 
   row.names = TRUE)
 
@@ -697,12 +699,6 @@ write.csv(
 ######################### Indicator Species Analysis ###########################
 ################################################################################
 
-# Identify columns with only zeros
-absent_species <- which(colSums(Spp) == 0)
-
-# Remove absent species
-Spp <- Spp[, -absent_species]
-
 # Perform Indicator Species Analysis
 indicator_results <- indval(Spp, Treat$Fire)
 
@@ -722,15 +718,15 @@ combined_df <- data.frame(
 )
 
 # Filter for significant species (p < 0.05)
-significant_species <- combined_df[combined_df$P_Value < 0.05, ]
+significant_species1 <- combined_df[combined_df$P_Value < 0.05, ]
 
 # Add rank column based on indicator value in the max class
-significant_species$Rank <- 
-  ave(significant_species$Max_Class, significant_species$Max_Class, FUN = rank)
+significant_species1$Rank <- 
+  ave(significant_species1$Max_Class, significant_species1$Max_Class, FUN = rank)
 
 # Save the combined data frame to CSV
 write.csv(
-  significant_species, 
+  significant_species1, 
   file = "Figures/Chapter 2 - Fire/indicator_species_analysis_results_21.csv", 
   row.names = TRUE)
 
@@ -738,8 +734,9 @@ write.csv(
 ####################Similarity Percentages (SIMPER)#############################
 ################################################################################
 
-simper_result <- simper(Spp, Treat$Fire)
+simper_result <- simper(Spp, Treat$Fire, permutations = 99)
 simper_summary <- summary(simper_result)
+simper_summary
 
 # Extract the first pairwise comparison (adjust as needed)
 pairwise_data <- simper_result[[1]]
@@ -748,24 +745,22 @@ pairwise_data <- simper_result[[1]]
 table_data <- data.frame(
   Species = names(pairwise_data$average),
   Contribution = pairwise_data$average,
-  P_value = pairwise_data$p
+  SD = pairwise_data$sd,
+  P_value = pairwise_data$p,
+  Cumulative_Contribution = pairwise_data$cusum
 )
 
-# Filter for significant species (p < 0.05)
-significant_species <- table_data[table_data$P_value < 0.05, ]
-
 # Sort by contribution
-significant_species <- 
-  significant_species[order(
-    significant_species$Contribution, decreasing = TRUE), ]
+table_data <- 
+  table_data[order(table_data$Contribution, decreasing = TRUE), ]
 
 # Add rank column
-significant_species$Rank <- seq_len(nrow(significant_species))
+table_data$Rank <- seq_len(nrow(table_data))
 
-head(significant_species)
+head(table_data)
 
 write.csv(
-  significant_species, 
+  table_data, 
   file = "Figures/Chapter 2 - Fire/SIMPER_21.csv", 
   row.names = TRUE)
 
@@ -1063,8 +1058,15 @@ ggsave("Figures/Chapter 2 - Fire/22-23_NMDS.png",
        width = 14, height = 12)
 
 NMDS_21_22 = 
-  ggarrange(NMDS_21, NMDS_Spp_graph_21, ncol = 2, nrow = 1, 
+  ggarrange(NMDS_graph_21, NMDS_Spp_graph_21, ncol = 2, nrow = 1, 
             common.legend = TRUE, legend="bottom")
 
 ggsave("Figures/Chapter 2 - Fire/21-22_NMDS.png", 
+       width = 18, height = 10)
+
+NMDS_20_21 = 
+  ggarrange(NMDS_20, NMDS_graph_21, ncol = 2, nrow = 1, 
+            common.legend = TRUE, legend="bottom")
+
+ggsave("Figures/Chapter 2 - Fire/20-21_NMDS.png", 
        width = 18, height = 10)

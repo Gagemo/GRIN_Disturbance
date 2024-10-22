@@ -1,0 +1,26 @@
+{
+    "id": "4E204763",
+    "path": "~/GitHub/GRIN_Disturbance/Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Bahiagrass.R",
+    "project_path": "Scripts/Chapter 1 - Soil Disturbance Seasonality/GRIN_ChapterOne_Bahiagrass.R",
+    "type": "r_source",
+    "hash": "3465914653",
+    "contents": "",
+    "dirty": false,
+    "created": 1727232918191.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "206,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1727245145,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1727245145510,
+    "read_only": false,
+    "read_only_alternatives": []
+}
