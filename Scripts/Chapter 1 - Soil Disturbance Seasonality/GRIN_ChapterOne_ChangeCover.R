@@ -595,5 +595,5 @@ Change
 annotate_figure(Change, top = text_grob("", color = "black", 
                                         face = "bold", size = 25))
 ggsave("Figures/Chapter 1 - Soil Disturbance Seasonality/Change.png", 
-       width = 10, height = 12)
+       width = 12, height = 14)
 
